@@ -11,7 +11,7 @@ middle_name: Sanjoy
 last_name: Sikdar
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
-description: Aniruddh Sikdar is a final-year Ph.D. student at the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science (IISc), Bengaluru. His research focuses on addressing real-world computer vision challenges for ground, aerial, and underwater robotic domains. He has worked on several real-world projects at the Artificial Intelligence and Robotics Lab (AIRL), IISc, and collaborated with multiple startups. He has published in top-tier conferences such as CVPR, AAAI, ICRA, IROS, and ICASSP, with multiple papers presented as oral presentations. He was also recognized with the Outstanding Reviewer Award at CVPR 2026. > # the ">" symbol means to ignore newlines until "footer_text:"
+description: "Aniruddh Sikdar is a student and researcher at... my portfolio and blog."
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
