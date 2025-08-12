@@ -11,7 +11,8 @@ middle_name: Sanjoy
 last_name: Sikdar
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
-description: "Aniruddh Sikdar is a student and researcher at... my portfolio and blog."
+description: >
+  Aniruddh Sikdar is a student and researcher at... my portfolio and blog.
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
