@@ -26,7 +26,16 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Aniruddh Sikdar is a final-year Ph.D. student at the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science (IISc), Bengaluru. His research focuses on addressing real-world computer vision challenges for ground, aerial, and underwater robotic domains. He has worked on several real-world projects at the Artificial Intelligence and Robotics Lab (AIRL), IISc, and collaborated with multiple startups. He has published in top-tier conferences such as CVPR, AAAI, ICRA, IROS, and ICASSP, with multiple papers presented as oral presentations. He was also recognized with the Outstanding Reviewer Award at CVPR 2026.
+I am a final-year Ph.D. student at the Artificial Intelligence and Robotics Lab (AIRL), RBCCPS, IISc, Bangalore, grateful to work under the supervision of Prof. Suresh Sundaram. My research focuses on computer vision for robotics applications, particularly in multi-sensor fusion, generalization to unseen target domains, and continual learning. I also had the opportunity to work with Prof. Sundarrajan during the earlier part of my Ph.D.
 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My research addresses real-world computer vision challenges in ground, aerial, and underwater robotic domains, with a focus on multi-sensor fusion, generalization to unseen domains, and continual learning. At the Artificial Intelligence and Robotics Lab (AIRL), IISc, I have worked on several real-world projects and collaborated with multiple startups. I have evaluated state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using sensors like RGB, Infrared (IR), and Synthetic Aperture Radar (SAR). My work includes sim-to-real evaluations and the use of generative AI techniques to improve generalization, reinforcing my commitment to practical, real-world solutions.
+
+
+
+ 
+I am motivated to publish in top-tier conferences, with publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I also received the Outstanding Reviewer Award at CVPR 2026.
+
+
+
+<!-- #Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
