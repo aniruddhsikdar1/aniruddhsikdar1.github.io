@@ -12,18 +12,8 @@ profile:
     <p>Meiji Jingu, Shibuya,</p>
     <p>Tokyo, Japan. (2024)</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"  Meiji Jingu, Shibuya, Tokyo, Japan. (2024)
+# selected_papers: true # includes a list of papers marked as "selected={true}"  Meiji Jingu, Shibuya, Tokyo, Japan. (2024)
 social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 I am a final-year Ph.D. student at the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bengaluru. 
  I am grateful to be working under the supervision of Professor Suresh Sundaram at the Artificial Intelligence and Robotics Lab (AIRL). 
@@ -41,10 +31,10 @@ I am motivated to publish in top-tier conferences, with publications in CVPR, AA
 ---
 
 <!-- Organization Logos Section -->
-<h2>Affiliations & Collaborations</h2>
+<h2>Affiliations </h2>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
   <a href="https://www.iisc.ac.in/" target="_blank">
-    <img src="prof_pic.jpg" alt="IISc Logo" style="height: 60px;">
+    <img src="/assets/img/rbccps.png" alt="RBCCPS Logo" style="height: 60px;" />
   </a>
   
   <!-- <a href="https://airl-iisc.github.io/" target="_blank">
