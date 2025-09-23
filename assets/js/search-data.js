@@ -51,9 +51,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
