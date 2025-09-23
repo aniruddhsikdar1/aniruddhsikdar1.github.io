@@ -11,7 +11,6 @@ profile:
   more_info: >
     <p>Meiji Jingu, Shibuya,</p>
     <p>Tokyo, Japan. (2024)</p>
-    <p>Your City, State 12345</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"  Meiji Jingu, Shibuya, Tokyo, Japan. (2024)
 social: true # includes social icons at the bottom of the page
@@ -45,10 +44,10 @@ I am motivated to publish in top-tier conferences, with publications in CVPR, AA
 <h2>Affiliations & Collaborations</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
   <a href="https://www.iisc.ac.in/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/IISc_Logo.svg/120px-IISc_Logo.svg.png" alt="IISc Logo" style="height: 60px;">
+    <img src="prof_pic.jpg" alt="IISc Logo" style="height: 60px;">
   </a>
   
-  <a href="https://airl-iisc.github.io/" target="_blank">
+  <!-- <a href="https://airl-iisc.github.io/" target="_blank">
     <img src="https://airl-iisc.github.io/assets/img/airl_logo.png" alt="AIRL Logo" style="height: 60px;">
   </a>
 
@@ -58,7 +57,7 @@ I am motivated to publish in top-tier conferences, with publications in CVPR, AA
 
   <a href="https://sid.iisc.ac.in/" target="_blank">
     <img src="https://sid.iisc.ac.in/wp-content/uploads/2021/02/logo_sid.png" alt="SID Logo" style="height: 60px;">
-  </a>
+  </a> -->
 </div>
 
 
