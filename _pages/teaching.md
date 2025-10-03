@@ -65,12 +65,6 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
   **Date**: 18th - 20th August, 2025
   **Description**: The International Conference on Emerging Technology in Autonomous Aerial Vehicles is the first flagship annual meeting, which offers a unique opportunity for researchers from national/international academic institutions, industrial practitioners, authorities, and end-users to interact and shape emerging technologies in autonomous aerial vehicles. (https://sites.google.com/view/etaav2025)
 
-<!-- - **Workshop**: *Perception for Autonomous Systems*  
-  **Role**: Technical Program Chair  
-  **Event**: CVPR Workshop Series  
-  **Date**: 20/06/2025  
-  **Description**: Focused on domain generalization and robust perception methods. -->
-
 ---
 
 ## 🎓 Courses 
