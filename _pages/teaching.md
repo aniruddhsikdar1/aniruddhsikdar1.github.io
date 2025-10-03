@@ -79,10 +79,10 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
   <!-- **Institution**: IISc, Bangalore  
   **Semester**: Spring 2025  
   **Role**: Instructor  
-  **Description**: Covered topics in robotics, perception, and machine learning for autonomous agents.
+  **Description**: Covered topics in robotics, perception, and machine learning for autonomous agents. -->
 
 <!-- - **Course**: *Drone Technology and AI Applications*  
   **Institution**: IISc, Bangalore  
   **Semester**: Fall 2024  
   **Role**: Co-Instructor  
-  **Description**: Focused on multispectral imaging, drone perception, and deployment strategies. --> -->
+  **Description**: Focused on multispectral imaging, drone perception, and deployment strategies. -->
