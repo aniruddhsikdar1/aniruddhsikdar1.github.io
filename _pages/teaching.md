@@ -1,13 +1,13 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Academic Activities
+description: Talks, paper presentations, conferences, and teaching activities.
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+<!-- You can also link to external content such as videos, syllabi, or conference websites here -->
 
 Paper presentations can also be found on the [AIRL YouTube Page](https://www.youtube.com/@airl_iisc).
 
@@ -54,3 +54,35 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 - **Presentation**: *SKD-Net: Spectral-based Knowledge Distillation in Low-Light Thermal Imagery for Robotic Perception*  
   **Event**: ICRA 2024, Yokohama, Japan  
   **Date**: 15/05/2024
+
+---
+
+## 🎪 Conferences Organized
+
+- **Conference**: *AI and Robotics for Good Symposium*  
+  **Role**: Co-organizer  
+  **Location**: Indian Institute of Science (IISc), Bangalore, India  
+  **Date**: 10/08/2025  
+  **Description**: A one-day symposium bringing together researchers in AI and aerial robotics to discuss real-world applications.
+
+- **Workshop**: *Perception for Autonomous Systems*  
+  **Role**: Technical Program Chair  
+  **Event**: CVPR Workshop Series  
+  **Date**: 20/06/2025  
+  **Description**: Focused on domain generalization and robust perception methods.
+
+---
+
+## 🎓 Courses Conducted
+
+- **Course**: *Autonomous Systems and Deep Learning*  
+  **Institution**: IISc, Bangalore  
+  **Semester**: Spring 2025  
+  **Role**: Instructor  
+  **Description**: Covered topics in robotics, perception, and machine learning for autonomous agents.
+
+- **Course**: *Drone Technology and AI Applications*  
+  **Institution**: IISc, Bangalore  
+  **Semester**: Fall 2024  
+  **Role**: Co-Instructor  
+  **Description**: Focused on multispectral imaging, drone perception, and deployment strategies.
