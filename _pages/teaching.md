@@ -57,32 +57,32 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 
 ---
 
-## 🎪 Conferences Organized
+## 🎪 Conferences/Workshops Organized
 
-- **Conference**: *AI and Robotics for Good Symposium*  
+- **Conference**: International Conference on Emerging Technology in Autonomous Aerial Vehicles (ETAAV)
   **Role**: Co-organizer  
   **Location**: Indian Institute of Science (IISc), Bangalore, India  
-  **Date**: 10/08/2025  
-  **Description**: A one-day symposium bringing together researchers in AI and aerial robotics to discuss real-world applications.
+  **Date**: 18th - 20th August, 2025
+  **Description**: The International Conference on Emerging Technology in Autonomous Aerial Vehicles is the first flagship annual meeting, which offers a unique opportunity for researchers from national/international academic institutions, industrial practitioners, authorities, and end-users to interact and shape emerging technologies in autonomous aerial vehicles. (https://sites.google.com/view/etaav2025)
 
-- **Workshop**: *Perception for Autonomous Systems*  
+<!-- - **Workshop**: *Perception for Autonomous Systems*  
   **Role**: Technical Program Chair  
   **Event**: CVPR Workshop Series  
   **Date**: 20/06/2025  
-  **Description**: Focused on domain generalization and robust perception methods.
+  **Description**: Focused on domain generalization and robust perception methods. -->
 
 ---
 
-## 🎓 Courses Conducted
+## 🎓 Courses 
 
-- **Course**: *Autonomous Systems and Deep Learning*  
-  **Institution**: IISc, Bangalore  
+- **Course**: To be updated soon. 
+  <!-- **Institution**: IISc, Bangalore  
   **Semester**: Spring 2025  
   **Role**: Instructor  
   **Description**: Covered topics in robotics, perception, and machine learning for autonomous agents.
 
-- **Course**: *Drone Technology and AI Applications*  
+<!-- - **Course**: *Drone Technology and AI Applications*  
   **Institution**: IISc, Bangalore  
   **Semester**: Fall 2024  
   **Role**: Co-Instructor  
-  **Description**: Focused on multispectral imaging, drone perception, and deployment strategies.
+  **Description**: Focused on multispectral imaging, drone perception, and deployment strategies. --> -->
