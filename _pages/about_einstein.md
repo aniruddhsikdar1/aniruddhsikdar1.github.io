@@ -7,4 +7,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
 
-Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning.
+At the Artificial Intelligence and Robotics Lab (AIRL), IISc, I have contributed to several real-world projects and collaborated with startups from the Society of Innovation and Development (SID) and Artpark. I have evaluated state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using sensors like RGB, Infrared (IR), and Synthetic Aperture Radar (SAR).  My work includes sim-to-real evaluations and the use of generative AI techniques to improve generalization, reinforcing my commitment to practical, real-world solutions. 
+
+I am also addressing challenging computer vision problems in noisy and fast-paced environments, particularly in sports analytics setups, working with Seshadri R.
+s
