@@ -1,47 +1,37 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Service
 description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
 nav: true
 nav_order: 4
 ---
 
-{% if site.data.repositories.github_users %}
+## 🧑‍⚖️ Professional Service
 
-## GitHub users
+### 🎓 Conference Reviewer
+- **WACV** 2026  
+- **AAAI** 2026  
+- **IJCNN** 2025  
+- **ICRA** 2025, 2026  
+- **CVPR** 2024, 2025, 2026  
+  - _Outstanding Reviewer Award, CVPR 2025_  
+- **ICCV** 2025  
+  - _Outstanding Reviewer Award, ICCV 2025_  
+- **ICASSP** 2024, 2025  
+- **ETAAV** 2025  
+- **AeroCON** 2024  
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
+### 🧭 Area Chair
+- **AI for Drones**, *Emerging Technology in Autonomous Aerial Vehicles (ETAAV)*, IISc Bangalore
+
+### 🧾 Program Committee
+- **AAAI 2026** – Program Committee Member
 
 ---
 
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
-
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
-  </div>
-
----
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
-</div>
-{% endif %}
+### 📘 Journal Reviewer
+- **IEEE Robotics and Automation Letters (RAL)**, 2024  
+  - *Impact Factor: 5.2*  
+- **ISPRS Journal of Photogrammetry and Remote Sensing**, 2023  
+  - *Impact Factor: 12.7*
