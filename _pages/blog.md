@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: Competitions
+title: Open-Source Contributions
 nav: true
 nav_order: 1
 pagination:
@@ -16,6 +16,34 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
+profiles:
+  # if you want to include more than one profile, just replicate the following block
+  # and create one content file for each profile inside _pages/
+  - align: right
+    image: prof_pic.jpg
+    content: about_einstein.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+      <p>555 your office number</p>
+      <p>123 your address street</p>
+      <p>Your City, State 12345</p>
+  - align: left
+    image: prof_pic.jpg
+    content: about_einstein.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+      <p>555 your office number</p>
+      <p>123 your address street</p>
+      <p>Your City, State 12345</p>
+  # - align: left
+  #   image: prof_pic.jpg
+  #   content: about_einstein2.md
+  #   image_circular: false # crops the image to make it circular
+  #   more_info: >
+  #     <p>555 your office number</p>
+  #     <p>123 your address street</p>
+  #     <p>Your City, State 12345</p>
+<!-- 
 <div class="post">
 
 {% assign blog_name_size = site.blog_name | size %}
@@ -193,4 +221,4 @@ pagination:
 {% include pagination.liquid %}
 {% endif %}
 
-</div>
+</div> -->
