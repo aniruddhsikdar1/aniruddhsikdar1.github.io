@@ -13,6 +13,24 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 
 ---
 
+🏆 Competitions
+Competition: Multi-modal Domain Fusion for Multi-modal Aerial View Object Classification
+Role: Participant
+Event: Multi-modal Aerial View Imagery Classification (MAVOC) Challenge, CVPR-W PBVS 2022
+Team: 2 members
+Description:
+Developed a multi-modal deep learning model for aerial object classification, learning domain-invariant features from Electro-Optical (EO) and Synthetic Aperture Radar (SAR) labeled and unlabeled imagery.
+Track 1 (EO + SAR test data, multi-modal case): Ranked 5th among 82 participating teams.
+Track 2 (SAR-only test data, missing modality case): Ranked 9th among 77 participating teams.
+Results published in: Multi-modal Aerial View Object Classification Challenge Results — PBVS 2022, Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2022.
+Competition: UAV RGB–IR Slant Angle Object Detection Challenge
+Role: Organizer
+Event: International Conference on Emerging Technology in Autonomous Aerial Vehicles (ETAAV), IISc Bangalore
+Description:
+Organized India’s first drone-based object detection competition using multi-spectral RGB and Infrared (IR) imagery.
+Built around the Indraeye dataset to promote research in multi-spectral perception and aerial robotics.
+Conducted as part of ETAAV 2025, sponsored by SwaYaan (MeitY).
+
 ## 🎤 Talks
 
 - **Tutorial**: *Advancing Drone Perception: Multi-Spectral Learning for Segmentation and Detection*  
