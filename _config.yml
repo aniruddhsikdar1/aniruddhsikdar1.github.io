@@ -165,7 +165,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-  parse_block_html: true      # ✅ Add THIS line
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
