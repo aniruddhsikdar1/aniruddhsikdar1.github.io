@@ -53,7 +53,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning.",
+          description: "Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning. 1. AI percpetion, 2. SSS, 3. Sports, 4. course - ml, 5. Course - ro-main.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
