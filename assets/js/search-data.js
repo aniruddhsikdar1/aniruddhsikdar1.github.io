@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-open-source-contributions",
           title: "Open-source contributions",
-          description: "Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning.",
+          description: "Our work is shared with the community via open-source software, datasets, and tools.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
