@@ -25,6 +25,15 @@ profiles:
     more_info: >
       <p>Office: 555-456</p>
 
+  - align: left
+    # image: newton.jpg
+    content: about_github-codess.md
+    image_circular: true
+    more_info: >
+      <p>Office: 555-456</p>
+
+
+
   # - align: left
   #   image: prof_pic.jpg
   #   content: about_einstein.md
