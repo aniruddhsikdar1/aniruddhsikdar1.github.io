@@ -19,7 +19,7 @@ profiles:
       <p>Your City, State 12345</p>
 
   - align: left
-    image: newton.jpg
+    # image: newton.jpg
     content: about_newton.md
     image_circular: true
     more_info: >
