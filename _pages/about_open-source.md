@@ -9,7 +9,7 @@ title: About Newton
 - Implemented **Gram-CAM generation** for CLIP to analyze and interpret attention patterns between images and text prompts.  
 
 
-### Dataset Contributions
+<!-- ### Dataset Contributions
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 1em;">
   <img src="prof_pic.jpg" alt="IndraEye" style="width: 120px; margin-right: 1em;"/>
@@ -33,6 +33,6 @@ title: About Newton
     <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
     [Dataset Link](https://example.com)
   </div>
-</div>
+</div> -->
 
 
