@@ -11,20 +11,20 @@ nav_order: 6
 
 Paper presentations can also be found on the [AIRL YouTube Page](https://www.youtube.com/@airl_iisc).
 
----
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <div style="font-family:'Poppins', sans-serif; margin-top:20px;">
 
   <!-- ===== CARD 1 ===== -->
-  <div style="background:white; border-left:5px solid #1f6feb; padding:20px 24px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.07); margin-bottom:25px; transition:0.3s;">
-    <h2 style="margin-top:0; font-weight:700; color:#1f2328; font-size:1.35rem;">📌 Multi-modal Domain Fusion for Multi-modal Aerial View Object Classification</h2>
-    <p style="margin:6px 0;"><strong>Role:</strong> Participant <br>
-       <strong>Event:</strong> MAVOC Challenge, CVPR-W PBVS 2022 <br>
-       <strong>Team:</strong> 2 members
+  <div style="background:white; border-left:5px solid #1f6feb; padding:20px 24px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.07); margin-bottom:25px;">
+    <h2 style="margin-top:0; font-weight:700; color:#0d1117; font-size:1.35rem;">📌 Multi-modal Domain Fusion for Multi-modal Aerial View Object Classification</h2>
+    <p style="margin:6px 0; color:#1f2328;">
+      <strong>Role:</strong> Participant <br>
+      <strong>Event:</strong> MAVOC Challenge, CVPR-W PBVS 2022 <br>
+      <strong>Team:</strong> 2 members
     </p>
-    <ul style="margin:12px 0; padding-left:20px; line-height:1.55;">
+    <ul style="margin:12px 0; padding-left:20px; line-height:1.55; color:#1f2328;">
       <li>Built a multi-modal aerial classification model using EO + SAR labeled and unlabeled data.</li>
       <li><strong>Track 1 (EO + SAR):</strong> Ranked <strong style="color:#1f6feb;">5th / 82</strong>.</li>
       <li><strong>Track 2 (SAR-only):</strong> Ranked <strong style="color:#1f6feb;">9th / 77</strong>.</li>
@@ -33,13 +33,14 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
   </div>
 
   <!-- ===== CARD 2 ===== -->
-  <div style="background:white; border-left:5px solid #e36209; padding:20px 24px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.07); margin-bottom:25px; transition:0.3s;">
-    <h2 style="margin-top:0; font-weight:700; color:#1f2328; font-size:1.35rem;">🚁 UAV RGB–IR Slant Angle Object Detection Challenge</h2>
-    <p style="margin:6px 0;"><strong>Role:</strong> Organizer <br>
-       <strong>Event:</strong> International Conference on Emerging Technology in Autonomous Aerial Vehicles (ETAAV), IISc Bangalore <br>
-       <strong>Sponsor:</strong> SwaYaan (MeitY)
+  <div style="background:white; border-left:5px solid #e36209; padding:20px 24px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.07); margin-bottom:25px;">
+    <h2 style="margin-top:0; font-weight:700; color:#0d1117; font-size:1.35rem;">🚁 UAV RGB–IR Slant Angle Object Detection Challenge</h2>
+    <p style="margin:6px 0; color:#1f2328;">
+      <strong>Role:</strong> Organizer <br>
+      <strong>Event:</strong> International Conference on Emerging Technology in Autonomous Aerial Vehicles (ETAAV), IISc Bangalore <br>
+      <strong>Sponsor:</strong> SwaYaan (MeitY)
     </p>
-    <ul style="margin:12px 0; padding-left:20px; line-height:1.55;">
+    <ul style="margin:12px 0; padding-left:20px; line-height:1.55; color:#1f2328;">
       <li>Organized India’s first drone-based multi-spectral (RGB + IR) object detection competition.</li>
       <li>Designed and released the <strong>IndraEye</strong> dataset to accelerate multi-spectral perception research.</li>
       <li>Hosted as part of <strong>ETAAV 2025</strong> at IISc Bangalore.</li>
