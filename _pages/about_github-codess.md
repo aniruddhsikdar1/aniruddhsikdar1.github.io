@@ -12,127 +12,87 @@ title: About Newton
 
 
 <style>
-.github-card {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.github-tile {
   background: #f8f9fa;
-  padding: 1em;
+  padding: 0.8em;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.2s ease;
 }
 
-.github-card img.project-img {
-  width: 80px;
-  height: 80px;
+.github-tile:hover {
+  background: #eef1f4;
+  transform: translateY(-2px);
+}
+
+.github-tile img.project-img {
+  width: 60px;
+  height: 60px;
   object-fit: cover;
-  margin-right: 1em;
-  flex-shrink: 0;
+  border-radius: 6px;
+  margin-bottom: 0.6em;
 }
 
-.github-card div {
-  flex: 1;
-  min-width: 200px;
-}
-
-.github-card a.project-link {
+.github-tile a.project-link {
   text-decoration: none;
+  font-weight: 600;
   color: #0366d6;
-  font-weight: bold;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.4em;
+  margin-bottom: 0.3em;
 }
 
-.github-card a.project-link:hover {
+.github-tile a.project-link:hover {
   text-decoration: underline;
 }
 
 .github-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 </style>
 
-<div class="github-card">
-  <img class="project-img" src="prof_pic.jpg" alt="IndraEye"/>
-  <div>
+<div class="github-grid">
+
+  <!-- Tile 1 -->
+  <div class="github-tile">
+    <img class="project-img" src="prof_pic.jpg" alt="IndraEye"/>
     <a href="https://github.com/airl-iisc/IndraEye" target="_blank" class="project-link">
-      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> IndraEye
-    </a><br>
-    A large-scale ophthalmic imaging dataset and tools for automated diagnosis and medical imaging research.
+      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> 
+      IndraEye
+    </a>
+    <span>A large-scale ophthalmic imaging dataset.</span>
   </div>
-</div>
 
-<div class="github-card">
-  <img class="project-img" src="prof_pic.jpg" alt="MRFP"/>
-  <div>
+  <!-- Tile 2 -->
+  <div class="github-tile">
+    <img class="project-img" src="prof_pic.jpg" alt="MRFP"/>
     <a href="https://github.com/airl-iisc/MRFP" target="_blank" class="project-link">
-      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> MRFP
-    </a><br>
-    Multi-robot perception and planning framework, supporting simulations and real-world robotics deployments.
+      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> 
+      MRFP
+    </a>
+    <span>Multi-robot perception & planning framework.</span>
   </div>
-</div>
 
-<div class="github-card">
-  <img class="project-img" src="prof_pic.jpg" alt="OV-COAST"/>
-  <div>
+  <!-- Tile 3 -->
+  <div class="github-tile">
+    <img class="project-img" src="prof_pic.jpg" alt="OV-COAST"/>
     <a href="https://github.com/adityagandhamal/OV-COAST/" target="_blank" class="project-link">
-      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> OV-COAST
-    </a><br>
-    Open-source tools for coastal and oceanic perception using multi-modal sensors, including sonar and imagery datasets.
+      <img class="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"/> 
+      OV-COAST
+    </a>
+    <span>Open-source tools for coastal & oceanic sensing.</span>
   </div>
+
 </div>
-
-
-
-<!-- ### Dataset Contributions
-
-<style>
-.dataset-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
-}
-
-.dataset-item img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-right: 1em;
-  flex-shrink: 0;
-}
-
-.dataset-item div {
-  flex: 1;
-  min-width: 200px;
-}
-</style>
-
-<div class="dataset-item">
-  <img src="prof_pic.jpg" alt="IndraEye"/>
-  <div>
-    <strong>IndraEye</strong>: A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
-    [Dataset Link](https://example.com)
-  </div>
-</div>
-
-<div class="dataset-item">
-  <img src="prof_pic.jpg" alt="Side Scan Sonar"/>
-  <div>
-    <strong>Side Scan Sonar</strong>: Provides sonar imagery for underwater mapping and object detection, useful for marine robotics and exploration tasks.  
-    [Dataset Link](https://example.com)
-  </div>
-</div>
-
-<div class="dataset-item">
-  <img src="prof_pic.jpg" alt="IR Imagery"/>
-  <div>
-    <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
-    [Dataset Link](https://example.com)
-  </div>
-</div>
-
- -->
