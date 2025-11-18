@@ -11,6 +11,9 @@ nav_order: 6
 
 Paper presentations can also be found on the [AIRL YouTube Page](https://www.youtube.com/@airl_iisc).
 
+
+## 🏆 Competitions & Challenges
+
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
