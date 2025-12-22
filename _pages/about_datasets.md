@@ -6,8 +6,8 @@ title: About Newton
 
 ### Clip-CAM: Grad-CAM-style Heatmaps for Image–Text Matching
 - Developed **clip-cam**, a Python package for visualizing image–prompt feature alignment in ViT-based CLIP models.  
-- Implemented **Gram-CAM generation** for CLIP to analyze and interpret attention patterns between images and text prompts.   -->
-
+- Implemented **Gram-CAM generation** for CLIP to analyze and interpret attention patterns between images and text prompts.  
+-->
 
 ### Dataset Contributions
 
@@ -34,27 +34,25 @@ title: About Newton
 </style>
 
 <div class="dataset-item">
-  <img src="prof_pic.jpg" alt="IndraEye"/>
+  <img src="/assets/images/indraeye.jpg" alt="IndraEye"/>
   <div>
     <strong>IndraEye</strong>: A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
-    [Dataset Link](https://example.com)
+    [Dataset Link: To be updated.]
   </div>
 </div>
 
 <div class="dataset-item">
-  <img src="prof_pic.jpg" alt="Side Scan Sonar"/>
+  <img src="/assets/images/side_scan_sonar.jpg" alt="Side Scan Sonar"/>
   <div>
     <strong>Side Scan Sonar</strong>: Provides sonar imagery for underwater mapping and object detection, useful for marine robotics and exploration tasks.  
-    [Dataset Link](https://example.com)
+    [Dataset Link: To be updated.]
   </div>
 </div>
 
 <div class="dataset-item">
-  <img src="prof_pic.jpg" alt="IR Imagery"/>
+  <img src="/assets/images/ir_imagery.jpg" alt="IR Imagery"/>
   <div>
     <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
-    [Dataset Link](https://example.com)
+    [Dataset Link: To be updated.]
   </div>
 </div>
-
-
