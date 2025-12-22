@@ -34,7 +34,7 @@ title: About Newton
 </style>
 
 <div class="dataset-item">
-  <img src="/assets/images/indraeye.jpg" alt="IndraEye"/>
+  <img src="/assets/images/indraeye.png" alt="IndraEye"/>
   <div>
     <strong>IndraEye</strong>: A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
     [Dataset Link: To be updated.]
