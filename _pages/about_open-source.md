@@ -1,12 +1,22 @@
----
+<!-- ---
 title: About Newton
----
+--- -->
 
-## Open-Source Contributions
+## 🌟 Open-Source Contributions
 
-### Clip-CAM: Grad-CAM-style Heatmaps for Image–Text Matching
-- Developed **clip-cam**, a Python package for visualizing image–prompt feature alignment in ViT-based CLIP models.  
-- Implemented **Gram-CAM generation** for CLIP to analyze and interpret attention patterns between images and text prompts.  
+### **CLIP-CAM — Explainable Image–Text Alignment for CLIP Models**
+- **GitHub:** https://github.com/adityagandhamal/clip_cam  
+- **PyPI:** https://pypi.org/project/clip-cam/
+
+CLIP-CAM is an open-source Python package for generating **Grad-CAM–style visual explanations** in **Vision Transformer (ViT)–based CLIP models**, enabling deeper insight into image–text alignment.
+
+- Developed **CLIP-CAM**, a modular and extensible framework for visualizing how specific image regions contribute to text–image similarity scores.
+- Implemented **Gram-CAM–based heatmap generation** customized for CLIP, allowing fine-grained interpretation of cross-modal attention.
+
+
+
+
+
 
 
 <!-- ### Dataset Contributions
