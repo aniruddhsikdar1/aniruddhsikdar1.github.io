@@ -2,7 +2,7 @@
 title: About Newton
 --- -->
 
-## 🌟 Open-Source Contributions
+<!-- ## 🌟 Open-Source Contributions -->
 
 ### **CLIP-CAM — Explainable Image–Text Alignment for CLIP Models**
 - **GitHub:** https://github.com/adityagandhamal/clip_cam  
