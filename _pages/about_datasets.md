@@ -2,7 +2,7 @@
 title: About Newton
 --- -->
 
-### Dataset Contributions
+### **Dataset Contributions**
 
 <style>
 .dataset-item {
@@ -41,7 +41,7 @@ title: About Newton
 }
 </style>
 
----
+
 
 <div class="dataset-item">
   <div class="dataset-media">
