@@ -70,7 +70,7 @@ title: About Newton
 
 <div class="dataset-item">
   <div class="dataset-media">
-    <img src="/assets/images/gta.drawio.png" alt="IR Imagery">
+    <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
   </div>
   <div class="dataset-content">
     <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
