@@ -77,10 +77,58 @@ title: About Newton
     ">
       Course Project
     </span>
+    <!-- Course Project -->
+    <span style="
+      background-color: #007BFF; /* Blue */
+      color: white;
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 0.85em;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    ">
+      Course Project
+    </span>
+
+  <!-- Project Deliverables -->
+  <span style="
+    background-color: #DC3545; /* Red */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.85em;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  ">
+    Project Deliverables
+  </span>
+
+  <!-- Published Paper -->
+  <span style="
+    background-color: #6F42C1; /* Purple */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.85em;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    display: inline-block;
+    vertical-align: middle;
+  ">
+    Published Paper
+  </span>
+
     : A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
     [Dataset Link: To be updated.]
   </div>
 </div>
+
 
 ---
 
