@@ -60,6 +60,20 @@ title: About Newton
 
 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
+  <!-- PDF preview -->
+  <iframe src="/assets/images/mask-rcnn_arch.pdf" 
+          style="width: 300px; height: 400px; border: 1px solid #ccc;" 
+          title="Side Scan Sonar PDF"></iframe>
+
+  <!-- Description -->
+  <div style="flex: 1;">
+    <strong>Side Scan Sonar</strong>: Provides sonar imagery for underwater mapping and object detection, useful for marine robotics and exploration tasks.  
+    [Dataset Link: To be updated.]
+  </div>
+</div>
+
+
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
   <!-- Image -->
   <img src="/assets/images/gta.drawio.png" alt="IR Imagery" 
        style="width: 300px; height: auto; object-fit: contain; display: block;"/>
