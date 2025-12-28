@@ -22,15 +22,15 @@ profiles:
     # image: newton.jpg
     content: about_datasets.md
     image_circular: true
-    more_info: >
-      <p>Office: 555-456</p>
+    # more_info: >
+    #   <p>Office: 555-456</p>
 
   - align: left
     # image: newton.jpg
     content: about_github-codess.md
     image_circular: true
-    more_info: >
-      <p>Office: 555-456</p>
+    # more_info: >
+    #   <p>Office: 555-456</p>
 
 
 
