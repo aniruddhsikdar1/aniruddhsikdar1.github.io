@@ -33,13 +33,18 @@ title: About Newton
 }
 </style>
 
-<div class="dataset-item">
-  <img src="/assets/images/indraeye.png" alt="IndraEye"/>
-  <div>
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em;">
+  <!-- Image -->
+  <img src="/assets/images/indraeye.png" alt="IndraEye" 
+       style="width: 300px; height: auto; object-fit: contain; display: block;"/>
+
+  <!-- Description -->
+  <div style="flex: 1;">
     <strong>IndraEye</strong>: A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
     [Dataset Link: To be updated.]
   </div>
 </div>
+
 
 <div class="dataset-item">
   <img src="/assets/images/side_scan_sonar.jpg" alt="Side Scan Sonar"/>

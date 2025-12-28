@@ -37,7 +37,7 @@ title: About Newton
 
   <!-- Right side: image with description below -->
   <div style="text-align: center; max-width: 320px;">
-    <img src="/assets/images/indraeye.png" alt="IndraEye" style="width: 100%; height: auto; display: block; margin-bottom: 0.5em;">
+    <img src="/assets/images/clip_cam.png" alt="IndraEye" style="width: 100%; height: auto; display: block; margin-bottom: 0.5em;">
     <div>
       <strong>Example visualization showing attention heatmap over the image for the provided text prompt.</strong>
     </div>
