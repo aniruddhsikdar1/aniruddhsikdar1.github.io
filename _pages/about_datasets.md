@@ -123,7 +123,20 @@ title: About Newton
   ">
     Published Paper
   </span>
-
+  <!-- Consultancy -->
+  <span style="
+      background-color: #0d9488; /* Teal for Consultancy */
+      color: white;
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 0.85em;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      display: inline-block;
+      vertical-align: middle;
+  ">
+      Consultancy
+  </span>
     : A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
     [Dataset Link: To be updated.]
   </div>
