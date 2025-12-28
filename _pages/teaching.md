@@ -12,8 +12,6 @@ nav_order: 6
 Paper presentations can also be found on the [AIRL YouTube Page](https://www.youtube.com/@airl_iisc).
 
 
-## 🏆 Competitions & Challenges
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +48,18 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
             font-size: 1.35rem;
             color: #111111;
         }
-        .card p, .card ul {
-            color: #333333;
-            line-height: 1.55;
+        .card p {
+            color: #111111; /* dark text for full visibility */
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        .card p strong {
+            color: #1f6feb; /* labels like Role / Event / Sponsor in blue */
         }
         .card ul {
             padding-left: 20px;
+            line-height: 1.6;
+            color: #111111; /* ensure list items are visible */
         }
         .card a.button {
             display: inline-block;
@@ -99,8 +103,8 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
         </p>
         <ul>
             <li>Built a multi-modal aerial classification model using EO + SAR labeled and unlabeled data.</li>
-            <li><strong>Track 1 (EO + SAR):</strong> Ranked <strong>5th / 82</strong>.</li>
-            <li><strong>Track 2 (SAR-only):</strong> Ranked <strong>9th / 77</strong>.</li>
+            <li><strong>Track 1 (EO + SAR):</strong> Ranked <strong style="color:#1f6feb;">5th / 82</strong>.</li>
+            <li><strong>Track 2 (SAR-only):</strong> Ranked <strong style="color:#1f6feb;">9th / 77</strong>.</li>
             <li>Published in <em>CVPR Workshops, PBVS 2022</em>.</li>
         </ul>
         <a href="https://arxiv.org/pdf/2212.07039" target="_blank" class="button">📄 View Paper (arXiv)</a>
@@ -124,6 +128,7 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 </div>
 </body>
 </html>
+
 
 
 <!-- Google Font -->
