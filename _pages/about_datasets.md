@@ -46,18 +46,28 @@ title: About Newton
 </div>
 
 
-<div class="dataset-item">
-  <img src="/assets/images/side_scan_sonar.jpg" alt="Side Scan Sonar"/>
-  <div>
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
+  <!-- Image -->
+  <img src="/assets/images/side_scan_sonar.jpg" alt="Side Scan Sonar" 
+       style="width: 300px; height: auto; object-fit: contain; display: block;"/>
+
+  <!-- Description -->
+  <div style="flex: 1;">
     <strong>Side Scan Sonar</strong>: Provides sonar imagery for underwater mapping and object detection, useful for marine robotics and exploration tasks.  
     [Dataset Link: To be updated.]
   </div>
 </div>
 
-<div class="dataset-item">
-  <img src="/assets/images/ir_imagery.jpg" alt="IR Imagery"/>
-  <div>
+
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
+  <!-- Image -->
+  <img src="/assets/images/ir_imagery.jpg" alt="IR Imagery" 
+       style="width: 300px; height: auto; object-fit: contain; display: block;"/>
+
+  <!-- Description -->
+  <div style="flex: 1;">
     <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
     [Dataset Link: To be updated.]
   </div>
 </div>
+
