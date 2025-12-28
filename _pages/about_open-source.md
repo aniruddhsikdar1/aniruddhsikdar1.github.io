@@ -14,11 +14,14 @@ title: About Newton
     <i class="fab fa-github" style="font-size: 1.5em;"></i>
   </a>
 
-  <!-- PyPI icon -->
-  <a href="https://pypi.org/project/clip-cam/" target="_blank" style="text-decoration: none;">
-    <img src="/assets/icons/pypi-alt-icon.png" alt="PyPI" style="height: 24px; vertical-align: middle;">
+  <!-- PyPI link (emoji icon) -->
+  <a href="https://pypi.org/project/clip-cam/" 
+     target="_blank" 
+     style="text-decoration: none; font-size: 1.4em;">
+    🌐
   </a>
 </div>
+
 
 <!-- Main content with image on the right -->
 <div style="display: flex; align-items: flex-start; gap: 1em; flex-wrap: wrap;">
