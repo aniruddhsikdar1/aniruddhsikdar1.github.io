@@ -44,13 +44,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-academic-activities",
-          title: "Academic Activities",
-          description: "Talks, paper presentations, conferences, and teaching activities.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
         },{id: "nav-open-source-contributions",
           title: "Open-source contributions",
           description: "Our work is shared with the community via open-source software, datasets, and tools.",
