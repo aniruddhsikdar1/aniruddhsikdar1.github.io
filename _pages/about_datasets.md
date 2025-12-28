@@ -66,6 +66,22 @@ title: About Newton
   </div>
 </div>
 
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em;">
+
+  <div class="dataset-media"
+       style="width: 300px; height: 220px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid #ddd; flex-shrink: 0;">
+    <iframe src="/assets/images/mask-rcnn_arch.pdf"
+            title="Side Scan Sonar PDF"
+            style="max-width: 100%; max-height: 100%; border: none;"></iframe>
+  </div>
+
+  <div class="dataset-content" style="flex: 1; min-width: 240px;">
+    <strong>Side Scan Sonar (Architecture)</strong>: PDF visualization of model architecture used in sonar-based perception pipelines.  
+    [Dataset Link: To be updated.]
+  </div>
+
+</div>
+
 ---
 
 <div class="dataset-item">
