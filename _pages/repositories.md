@@ -31,7 +31,10 @@ nav_order: 4
 ---
 
 ### 📘 Journal Reviewer
-- **IEEE Robotics and Automation Letters (RAL)**, 2024  
+- **IEEE Robotics and Automation Letters (RAL)**, 2024, 2025.  
   - *Impact Factor: 5.2*  
 - **ISPRS Journal of Photogrammetry and Remote Sensing**, 2023  
   - *Impact Factor: 12.7*
+- **Transactions on Image Processing**, 2025  
+  - *Impact Factor: 13.7*
+
