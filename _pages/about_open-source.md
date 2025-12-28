@@ -3,11 +3,11 @@ title: About Newton
 --- -->
 
 <!-- ## 🌟 Open-Source Contributions -->
-### **CLIP-CAM: Explainable Image–Text Alignment for CLIP Models**
+### **Open-Source Packages**
 
 <!-- GitHub and PyPI icons -->
 <div style="display: flex; align-items: center; margin-bottom: 1em; gap: 1em;">
-  <h3 style="margin: 0; flex: 1;">CLIP-CAM</h3>
+  <h3 style="margin: 0; flex: 1;">CLIP-CAM: Explainable Image–Text Alignment for CLIP Models</h3>
 
   <!-- GitHub icon -->
   <a href="https://github.com/adityagandhamal/clip_cam" target="_blank" style="text-decoration: none;">
