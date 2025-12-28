@@ -61,7 +61,7 @@ title: About Newton
 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
   <!-- Image -->
-  <img src="/assets/images/ir_imagery.jpg" alt="IR Imagery" 
+  <img src="/assets/images/gta.drawio.png" alt="IR Imagery" 
        style="width: 300px; height: auto; object-fit: contain; display: block;"/>
 
   <!-- Description -->
