@@ -53,6 +53,35 @@ title: About Newton
   </div>
 </div>
 
+
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
+  <!-- Image -->
+  <div class="dataset-media">
+    <img src="/assets/images/indraeye.png" alt="IndraEye" style="width: 300px; height: auto; object-fit: contain; display: block;">
+  </div>
+
+  <!-- Description -->
+  <div class="dataset-content" style="flex: 1;">
+    <strong>IndraEye</strong> 
+    <span style="
+      background-color: #007BFF; 
+      color: white; 
+      padding: 5px 12px; 
+      border-radius: 16px; 
+      font-size: 0.85em; 
+      margin-left: 0.5em;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      display: inline-block;
+      vertical-align: middle;
+    ">
+      Course Project
+    </span>
+    : A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
+    [Dataset Link: To be updated.]
+  </div>
+</div>
+
 ---
 
 <div class="dataset-item">
