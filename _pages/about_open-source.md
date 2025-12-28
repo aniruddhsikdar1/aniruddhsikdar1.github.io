@@ -3,42 +3,47 @@ title: About Newton
 --- -->
 
 <!-- ## 🌟 Open-Source Contributions -->
-
 ### **CLIP-CAM: Explainable Image–Text Alignment for CLIP Models**
 
-<div style="margin-bottom: 1em;">
-  <!-- GitHub and PyPI icons -->
-  <a href="https://github.com/adityagandhamal/clip_cam" target="_blank" style="margin-right: 1em; text-decoration: none;">
+<!-- GitHub and PyPI icons -->
+<div style="display: flex; align-items: center; margin-bottom: 1em; gap: 1em;">
+  <h3 style="margin: 0; flex: 1;">CLIP-CAM</h3>
+
+  <!-- GitHub icon -->
+  <a href="https://github.com/adityagandhamal/clip_cam" target="_blank" style="text-decoration: none;">
     <i class="fab fa-github" style="font-size: 1.5em;"></i>
   </a>
+
+  <!-- PyPI icon -->
   <a href="https://pypi.org/project/clip-cam/" target="_blank" style="text-decoration: none;">
-    <img src="/assets/icons/pypi-icon.png" alt="PyPI" style="height: 24px; vertical-align: middle;">
+    <img src="/assets/icons/pypi-alt-icon.png" alt="PyPI" style="height: 24px; vertical-align: middle;">
   </a>
 </div>
 
-<p>
-CLIP-CAM is an open-source Python package for generating <strong>Grad-CAM–style visual explanations</strong> in <strong>Vision Transformer (ViT)–based CLIP models</strong>, enabling deeper insight into image–text alignment.
-</p>
+<!-- Main content with image on the right -->
+<div style="display: flex; align-items: flex-start; gap: 1em; flex-wrap: wrap;">
 
-<ul>
-  <li>Developed <strong>CLIP-CAM</strong>, a modular and extensible framework for visualizing how specific image regions contribute to text–image similarity scores.</li>
-  <li>Implemented <strong>Gram-CAM–based heatmap generation</strong> customized for CLIP, allowing fine-grained interpretation of cross-modal attention.</li>
-</ul>
-
-<div style="display: flex; align-items: flex-start; margin-bottom: 1em; gap: 1em;">
-  <!-- Left side can be empty or content -->
-  <div style="flex: 1;"></div>
+  <!-- Left side: text content -->
+  <div style="flex: 1; min-width: 250px;">
+    <p>
+      CLIP-CAM is an open-source Python package for generating <strong>Grad-CAM–style visual explanations</strong> in 
+      <strong>Vision Transformer (ViT)–based CLIP models</strong>, enabling deeper insight into image–text alignment.
+    </p>
+    <ul>
+      <li>Developed <strong>CLIP-CAM</strong>, a modular and extensible framework for visualizing how specific image regions contribute to text–image similarity scores.</li>
+      <li>Implemented <strong>Gram-CAM–based heatmap generation</strong> customized for CLIP, allowing fine-grained interpretation of cross-modal attention.</li>
+    </ul>
+  </div>
 
   <!-- Right side: image with description below -->
-  <div style="text-align: center;">
-    <img src="/assets/images/indraeye.png" alt="IndraEye" style="max-width: 300px; height: auto; display: block; margin-bottom: 0.5em;">
+  <div style="text-align: center; max-width: 320px;">
+    <img src="/assets/images/indraeye.png" alt="IndraEye" style="width: 100%; height: auto; display: block; margin-bottom: 0.5em;">
     <div>
       <strong>Example visualization showing attention heatmap over the image for the provided text prompt.</strong>
     </div>
   </div>
+
 </div>
-
-
 
 
 
