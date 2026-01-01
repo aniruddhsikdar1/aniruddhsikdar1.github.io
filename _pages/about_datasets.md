@@ -218,13 +218,35 @@ title: About Newton
 </div>
 
 ---
-
 <div class="dataset-item">
   <div class="dataset-media">
     <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
   </div>
+
   <div class="dataset-content">
-    <strong>IR Imagery</strong>: Infrared imagery dataset for research in thermal perception, multi-modal learning, and robotics in low-light conditions.  
-    [Dataset Link: To be updated.]
+    <strong>IR Imagery</strong>: Infrared imagery dataset supporting thermal perception, multi-modal learning, and sim-to-real robotics in low-light environments.
+    <ul>
+      <li>Introduces SSL-RGB2IR, a self-supervised image-to-image translation framework for generating high-quality infrared (IR) data.</li>
+      <li>Deep learning models consistently achieve superior performance when trained on IR images synthesized using SSL-RGB2IR compared to other translation methods.</li>
+      <li>For semantic segmentation, DeepLabV3+ trained on SSL-RGB2IR data achieves a <strong>6.11% improvement</strong> over Scenimefy-generated IR images.</li>
+      <li>In object detection, YOLOv5s and Mask R-CNN trained on SSL-RGB2IR images outperform Scenimefy by <strong>8.3%</strong> and <strong>8.22%</strong>, respectively.</li>
+      <li>In sim-to-real transfer, DeepLabV3+ trained on SSL-RGB2IR data surpasses the baseline by <strong>4.2%</strong> and outperforms Scenimefy by <strong>3.5%</strong>.</li>
+      <li>
+        <span style="
+          background-color: #6F42C1;
+          color: white;
+          padding: 5px 12px;
+          border-radius: 16px;
+          font-size: 0.85em;
+          font-family: 'Segoe UI', Arial, sans-serif;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+          display: inline-block;
+        ">
+          Published · IROS 2024
+        </span>
+      </li>
+    </ul>
+    <em>Dataset Link: To be updated.</em>
   </div>
 </div>
+
