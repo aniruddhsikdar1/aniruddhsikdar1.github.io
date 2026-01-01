@@ -45,22 +45,6 @@ title: About Newton
 
 <div class="dataset-item">
   <div class="dataset-media">
-
-    <!-- Published Paper Badge -->
-    <span style="
-      background-color: #6F42C1;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 16px;
-      font-size: 0.85em;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      display: inline-block;
-      margin-bottom: 8px;
-    ">
-      Published Paper · CVPR-W PBVS 2025
-    </span>
-
     <img src="/assets/images/indraeye.png" alt="IndraEye">
   </div>
 
@@ -70,10 +54,25 @@ title: About Newton
       <li>Benchmarked for <strong>object detection</strong> and <strong>semantic segmentation</strong> tasks.</li>
       <li>Captures diverse conditions including <strong>multiple viewpoints, altitudes, and backgrounds</strong>.</li>
       <li>Includes variations across <strong>times of day</strong> to evaluate robustness under changing illumination.</li>
+      <li>
+        <span style="
+          background-color: #6F42C1;
+          color: white;
+          padding: 5px 12px;
+          border-radius: 16px;
+          font-size: 0.85em;
+          font-family: 'Segoe UI', Arial, sans-serif;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+          display: inline-block;
+        ">
+          Published · CVPR-W PBVS 2025
+        </span>
+      </li>
     </ul>
     <em>Dataset Link: To be updated.</em>
   </div>
 </div>
+
 
 
 
