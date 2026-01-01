@@ -45,13 +45,36 @@ title: About Newton
 
 <div class="dataset-item">
   <div class="dataset-media">
+
+    <!-- Published Paper Badge -->
+    <span style="
+      background-color: #6F42C1;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 16px;
+      font-size: 0.85em;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      display: inline-block;
+      margin-bottom: 8px;
+    ">
+      Published Paper · CVPR-W PBVS 2025
+    </span>
+
     <img src="/assets/images/indraeye.png" alt="IndraEye">
   </div>
+
   <div class="dataset-content">
-    <strong>IndraEye</strong>: A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
-    [Dataset Link: To be updated.]
+    <strong>IndraEye</strong>: A challenging aerial perception dataset designed to advance robust and accurate vision systems under real-world conditions.
+    <ul>
+      <li>Benchmarked for <strong>object detection</strong> and <strong>semantic segmentation</strong> tasks.</li>
+      <li>Captures diverse conditions including <strong>multiple viewpoints, altitudes, and backgrounds</strong>.</li>
+      <li>Includes variations across <strong>times of day</strong> to evaluate robustness under changing illumination.</li>
+    </ul>
+    <em>Dataset Link: To be updated.</em>
   </div>
 </div>
+
 
 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
