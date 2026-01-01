@@ -170,13 +170,36 @@ title: About Newton
 <div class="dataset-item">
   <div class="dataset-media">
     <iframe src="/assets/images/mask-rcnn_arch.pdf"
-            title="Side Scan Sonar PDF"></iframe>
+            title="Side Scan Sonar Architecture PDF"></iframe>
   </div>
+
   <div class="dataset-content">
-    <strong>Side Scan Sonar (Architecture)</strong>: PDF visualization of model architecture used in sonar-based perception pipelines.  
-    [Dataset Link: To be updated.]
+    <strong>Side Scan Sonar (Architecture)</strong>: Model architecture and methodology for robust underwater perception using side-scan sonar imagery.
+    <ul>
+      <li>Underwater object detection using deep learning is challenged by the limited availability of real-world side-scan sonar (SSS) data.</li>
+      <li>Data scarcity often leads to overfitting, where models generalize poorly to unseen underwater environments.</li>
+      <li>Introduces a <strong>Synthetic-to-Real (Syn2Real)</strong> domain generalization approach using diffusion models.</li>
+      <li>Proposes a synthetic side-scan sonar dataset generated using diffusion models.</li>
+      <li>The synthetic dataset demonstrates clear improvements in downstream tasks such as object detection and semantic segmentation.</li>
+      <li>
+        <span style="
+          background-color: #6F42C1;
+          color: white;
+          padding: 5px 12px;
+          border-radius: 16px;
+          font-size: 0.85em;
+          font-family: 'Segoe UI', Arial, sans-serif;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+          display: inline-block;
+        ">
+          Published · IEEE OCEANS · IEEE Remote Sensing Letters
+        </span>
+      </li>
+    </ul>
+    <em>Dataset Link: To be updated.</em>
   </div>
 </div>
+
 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em;">
 
