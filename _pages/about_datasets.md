@@ -49,7 +49,7 @@ title: About Newton
   </div>
 
   <div class="dataset-content">
-    <strong>IndraEye</strong>: A challenging aerial perception dataset designed to advance robust and accurate vision systems under real-world conditions.
+    <strong>IndraEye</strong>: The first multi-view drone-based RGB-IR dataset from the Indian subcontinent, built to support robust and accurate real-world vision systems.
     <ul>
       <li>Benchmarked for <strong>object detection</strong> and <strong>semantic segmentation</strong> tasks.</li>
       <li>Captures diverse conditions including <strong>multiple viewpoints, altitudes, and backgrounds</strong>.</li>
@@ -73,17 +73,17 @@ title: About Newton
   </div>
 </div>
 
-
+<!-- 
 
 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1em;">
   <!-- Image -->
-  <div class="dataset-media">
+  <!-- <div class="dataset-media">
     <img src="/assets/images/indraeye.png" alt="IndraEye" style="width: 300px; height: auto; object-fit: contain; display: block;">
-  </div>
+  </div> -->
 
   <!-- Description -->
-  <div class="dataset-content" style="flex: 1;">
+  <!-- <div class="dataset-content" style="flex: 1;">
     <strong>IndraEye</strong> 
     <span style="
       background-color: #007BFF; 
@@ -98,8 +98,8 @@ title: About Newton
       vertical-align: middle;
     ">
       Course Project
-    </span>
-    <!-- Course Project -->
+    </span> -->
+    <!-- Course Project
     <span style="
       background-color: #007BFF; /* Blue */
       color: white;
@@ -113,9 +113,9 @@ title: About Newton
       margin-right: 0.5em;
     ">
       Course Project
-    </span>
+    </span> -->
 
-  <!-- Project Deliverables -->
+  <!-- Project Deliverables
   <span style="
     background-color: #DC3545; /* Red */
     color: white;
@@ -129,10 +129,10 @@ title: About Newton
     margin-right: 0.5em;
   ">
     Project Deliverables
-  </span>
+  </span> -->
 
   <!-- Published Paper -->
-  <span style="
+  <!-- <span style="
     background-color: #6F42C1; /* Purple */
     color: white;
     padding: 5px 12px;
@@ -144,9 +144,9 @@ title: About Newton
     vertical-align: middle;
   ">
     Published Paper
-  </span>
+  </span> -->
   <!-- Consultancy -->
-  <span style="
+  <!-- <span style="
       background-color: #0d9488; /* Teal for Consultancy */
       color: white;
       padding: 5px 12px;
@@ -162,11 +162,10 @@ title: About Newton
     : A large-scale ophthalmic imaging dataset designed to support automated diagnosis and research in medical imaging.  
     [Dataset Link: To be updated.]
   </div>
-</div>
+</div> --> -->
 
 
 ---
-
 <div class="dataset-item">
   <div class="dataset-media">
     <iframe src="/assets/images/mask-rcnn_arch.pdf"
@@ -174,13 +173,12 @@ title: About Newton
   </div>
 
   <div class="dataset-content">
-    <strong>Side Scan Sonar (Architecture)</strong>: Model architecture and methodology for robust underwater perception using side-scan sonar imagery.
+    <strong>Side Scan Sonar Dataset</strong>: A proposed dataset to enable robust underwater perception using side-scan sonar imagery.
     <ul>
-      <li>Underwater object detection using deep learning is challenged by the limited availability of real-world side-scan sonar (SSS) data.</li>
-      <li>Data scarcity often leads to overfitting, where models generalize poorly to unseen underwater environments.</li>
-      <li>Introduces a <strong>Synthetic-to-Real (Syn2Real)</strong> domain generalization approach using diffusion models.</li>
-      <li>Proposes a synthetic side-scan sonar dataset generated using diffusion models.</li>
-      <li>The synthetic dataset demonstrates clear improvements in downstream tasks such as object detection and semantic segmentation.</li>
+      <li>Addresses the challenge of limited real-world side-scan sonar (SSS) data for deep learning–based underwater object detection and segmentation.</li>
+      <li>Highlights data scarcity as a key cause of overfitting and poor generalization to unseen underwater environments.</li>
+      <li>Proposes a synthetic side-scan sonar dataset generated via diffusion-based modeling.</li>
+      <li>Demonstrates significant improvements in downstream tasks, including object detection and semantic segmentation.</li>
       <li>
         <span style="
           background-color: #6F42C1;
@@ -201,6 +199,7 @@ title: About Newton
 </div>
 
 
+<!-- 
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1em; margin-bottom: 1.5em;">
 
   <div class="dataset-media"
@@ -215,7 +214,7 @@ title: About Newton
     [Dataset Link: To be updated.]
   </div>
 
-</div>
+</div> -->
 
 ---
 <div class="dataset-item">
@@ -224,13 +223,11 @@ title: About Newton
   </div>
 
   <div class="dataset-content">
-    <strong>IR Imagery</strong>: Infrared imagery dataset supporting thermal perception, multi-modal learning, and sim-to-real robotics in low-light environments.
+    <strong>Simulated IR dataset</strong>: Infrared imagery dataset supporting thermal perception, multi-modal learning, and sim-to-real robotics in low-light environments.
     <ul>
       <li>Introduces SSL-RGB2IR, a self-supervised image-to-image translation framework for generating high-quality infrared (IR) data.</li>
       <li>Deep learning models consistently achieve superior performance when trained on IR images synthesized using SSL-RGB2IR compared to other translation methods.</li>
-      <li>For semantic segmentation, DeepLabV3+ trained on SSL-RGB2IR data achieves a <strong>6.11% improvement</strong> over Scenimefy-generated IR images.</li>
-      <li>In object detection, YOLOv5s and Mask R-CNN trained on SSL-RGB2IR images outperform Scenimefy by <strong>8.3%</strong> and <strong>8.22%</strong>, respectively.</li>
-      <li>In sim-to-real transfer, DeepLabV3+ trained on SSL-RGB2IR data surpasses the baseline by <strong>4.2%</strong> and outperforms Scenimefy by <strong>3.5%</strong>.</li>
+      <li>It demonstrates consistent performance gains in semantic segmentation and object detection, particularly in sim-to-real scenarios.
       <li>
         <span style="
           background-color: #6F42C1;
