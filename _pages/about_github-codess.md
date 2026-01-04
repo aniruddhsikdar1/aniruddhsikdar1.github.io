@@ -117,7 +117,7 @@
            alt="GitHub">
       IndraEye
     </a>
-    <span>A large-scale ophthalmic imaging dataset designed for automated diagnosis and research in medical imaging.</span>
+    <span>A challenging aerial perception dataset designed to advance robust and accurate vision systems under real-world conditions.</span>
   </div>
 
   <!-- MRFP -->
@@ -128,7 +128,7 @@
            alt="GitHub">
       MRFP
     </a>
-    <span>Multi-robot perception & planning framework for robotics research and development.</span>
+    <span>Domain generalization technique for sim-2-real scenarios.</span>
   </div>
 
   <!-- OV-COAST -->
@@ -139,7 +139,7 @@
            alt="GitHub">
       OV-COAST
     </a>
-    <span>Open-source tools for coastal & oceanic sensing, including data collection and analysis frameworks.</span>
+    <span>Optimal transpost-based training for Open-Vocabulary Segmentation models.</span>
   </div>
 
 </div>
