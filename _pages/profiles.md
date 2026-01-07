@@ -8,7 +8,7 @@ nav_order: 7
 
 profiles:
   - align: left
-    image: prof_pic.jpg
+    image:  /assets/images/img.png
     content: about_project3.md
     image_circular: false # crops the image to make it circular
     # more_info: >
