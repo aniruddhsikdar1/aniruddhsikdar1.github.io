@@ -53,7 +53,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Some of these projects are related to topics like Multi-modal Learning, Sim-2-real training, continual learning, complex-valued deep learning. 1. AI percpetion, 2. SSS, 3. Sports, 4. course - ml, 5. Course - ro-main.",
+          description: "I work on projects and consultancies at the intersection of AI, robotics, and computer vision, developing practical solutions for real-world challenges. My experience spans course projects, technical deliverables, and applied research, bridging innovative algorithms with deployable systems.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
