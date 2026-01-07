@@ -7,6 +7,14 @@ nav: true
 nav_order: 7
 
 profiles:
+  - align: left
+    image: prof_pic.jpg
+    content: about_project3.md
+    image_circular: false # crops the image to make it circular
+    # more_info: >
+    #   <p>555 your office number</p>
+    #   <p>123 your address street</p>
+    #   <p>Your City, State 12345</p>
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
   - align: right
@@ -19,7 +27,7 @@ profiles:
     #   <p>Your City, State 12345</p>
   - align: left
     image: /assets/images/result.png
-    content: about_project2.md
+    content: about_project12.md
     image_circular: false # crops the image to make it circular
  
   # - align: left
