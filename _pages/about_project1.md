@@ -1,9 +1,10 @@
 <div class="dataset-item">
-  <!-- Course Project banner and title -->
   <div style="display: flex; flex-direction: column; gap: 1em;">
-    
+
     <div class="dataset-content">
-      <strong>
+      
+      <!-- Legend / Title -->
+      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5em;">
         <span style="
           background-color: #007BFF;
           color: white;
@@ -12,14 +13,12 @@
           font-size: 0.85em;
           font-family: 'Segoe UI', Arial, sans-serif;
           box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 0.5em;
+          white-space: nowrap;
         ">
           Course Project
         </span>
-        Unsupervised Domain Adaptation
-      </strong>
+        <strong>Unsupervised Domain Adaptation</strong>
+      </div>
 
       <ul>
         <li><strong>Objectives</strong>
@@ -39,6 +38,7 @@
           </ul>
         </li>
       </ul>
+
     </div>
   </div>
 </div>
