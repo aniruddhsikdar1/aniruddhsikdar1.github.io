@@ -4,7 +4,7 @@
     <div class="dataset-content">
       <strong>
         <span style="
-          background-color: #DC3545;
+          background-color: #0d9488;
           color: white;
           padding: 5px 12px;
           border-radius: 16px;
@@ -15,16 +15,15 @@
           vertical-align: middle;
           margin-right: 0.5em;
         ">
-          Project Deliverables
+          Consultancy
         </span>
-        Data Generation to Train Deep Learning Models for Side-Scan Imagery Using Generative Modeling
+        Computer Vision Analytics for Sports Video Understanding
       </strong>
 
       <ul>
-        <li>Addresses the challenge of limited real-world side-scan sonar (SSS) data for deep learning–based underwater object detection and segmentation.</li>
-        <li>Highlights data scarcity as a primary cause of overfitting and poor generalization to unseen underwater environments.</li>
-        <li>Proposes a synthetic side-scan sonar dataset generated via diffusion-based generative modeling.</li>
-        <li>Demonstrates significant improvements in downstream tasks, including object detection and semantic segmentation.</li>
+        <li>Developed deep learning–based computer vision pipelines for sports analytics, focusing on racquet detection, shuttle tracking, and player tracking.</li>
+        <li>Designed optimized inference pipelines for large-scale video data, significantly reducing computational overhead.</li>
+        <li>Improved end-to-end inference efficiency while maintaining detection and tracking accuracy.</li>
       </ul>
 
     </div>
