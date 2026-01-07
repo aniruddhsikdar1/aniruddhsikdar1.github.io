@@ -18,24 +18,24 @@
         ">
           Course Project
         </span>
-        Unsupervised Domain Adaptation
+        Picking a Novel Object of Interest with One-Shot Localization Using a Visual Cue
       </strong>
 
       <ul>
         <li><strong>Objectives</strong>
           <ul>
-            <li>Mitigate performance degradation caused by domain shifts between source and target domains.</li>
-            <li>Enable effective learning on unlabeled target data through unsupervised domain adaptation.</li>
-            <li>Evaluate self-ensembling strategies for robust cross-domain generalization.</li>
+            <li>Localize a novel object using a single visual cue without prior object-specific training.</li>
+            <li>Enable robotic pick-and-place in unstructured environments.</li>
+            <li>Integrate vision-based localization with inverse kinematics control.</li>
           </ul>
         </li>
 
         <li><strong>Methodology & Contributions</strong>
           <ul>
-            <li>Developed an unsupervised domain adaptation framework based on the Mean Teacher self-ensembling paradigm.</li>
-            <li>Conducted cross-domain adaptation experiments between MNIST and SVHN using labeled source and unlabeled target data.</li>
-            <li>Incorporated confidence thresholding and extensive data augmentation to stabilize and enhance learning.</li>
-            <li>Demonstrated near-supervised performance, validating the effectiveness of self-ensembling for domain transfer.</li>
+            <li>Implemented a Siamese CNN with shared weights for one-shot object localization.</li>
+            <li>Designed a spatial attention mechanism to extract object-specific features from a cue image.</li>
+            <li>Generated a similarity score map and applied SoftArgMax to predict object coordinates.</li>
+            <li>Integrated localization with inverse kinematics for robotic picking in simulation and real hardware.</li>
           </ul>
         </li>
       </ul>
