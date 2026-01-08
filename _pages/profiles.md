@@ -8,7 +8,7 @@ nav_order: 7
 
 profiles:
   - align: left
-    image:  assets/images/visit.png
+    image:  /assets/images/visit.png
     content: about_project5.md
     image_circular: false # crops the image to make it circular
     # more_info: >
