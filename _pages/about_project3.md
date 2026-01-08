@@ -17,13 +17,12 @@
         ">
           Project Deliverables
         </span>
-        Data Generation to Train Deep Learning Models for Side-Scan Imagery Using Generative Modeling
+        Data Generation Using Generative Modeling for Side-Scan Imagery.
       </strong>
 
       <ul>
-        <li>Addresses the challenge of limited real-world side-scan sonar (SSS) data for deep learning–based underwater object detection and segmentation.</li>
-        <li>Highlights data scarcity as a primary cause of overfitting and poor generalization to unseen underwater environments.</li>
-        <li>Proposes a synthetic side-scan sonar dataset generated via diffusion-based generative modeling.</li>
+        <li>Addressed the challenge of limited real-world side-scan sonar (SSS) data for deep learning–based underwater object detection and segmentation.</li>
+        <li>Proposed a synthetic side-scan sonar dataset generated via diffusion-based generative modeling.</li>
         <li>Demonstrates significant improvements in downstream tasks, including object detection and semantic segmentation.</li>
       </ul>
 
