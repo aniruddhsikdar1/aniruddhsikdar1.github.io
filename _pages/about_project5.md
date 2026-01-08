@@ -21,8 +21,9 @@
       </strong>
 
       <ul>
-        <li>Developed deep learning–based computer vision pipelines for sports analytics, focusing on racquet detection, shuttle tracking, and player tracking.</li>
-        <li>Designed optimized inference pipelines for large-scale video data, significantly reducing computational overhead.</li>
+        <li>Developed deep learning–based computer vision pipelines for sports analytics in fast-paced and dynamic environemtns. </li>
+        <li>Developed techniques for racquet detection, shuttle tracking, hit detection and player tracking.</li>
+        <li>Designed optimized inference pipelines for large-scale video data.</li>
         <li>Improved end-to-end inference efficiency while maintaining detection and tracking accuracy.</li>
       </ul>
 
