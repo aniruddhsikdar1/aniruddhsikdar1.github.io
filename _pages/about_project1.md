@@ -21,22 +21,11 @@
       </div>
 
       <ul>
-        <li><strong>Objectives</strong>
-          <ul>
-            <li>Mitigate performance degradation due to domain shifts between source and target domains.</li>
-            <li>Enable effective learning on unlabeled target data through unsupervised domain adaptation.</li>
-            <li>Evaluate self-ensembling strategies for robust cross-domain generalization.</li>
-          </ul>
-        </li>
-
-        <li><strong>Methodology & Contributions</strong>
-          <ul>
-            <li>Implemented an unsupervised domain adaptation framework based on the Mean Teacher self-ensembling paradigm.</li>
-            <li>Conducted cross-domain adaptation experiments between MNIST and SVHN using labeled source and unlabeled target data.</li>
-            <li>Incorporated confidence thresholding and extensive data augmentation to stabilize and enhance learning.</li>
-            <li>Demonstrated near-supervised performance, validating the effectiveness of self-ensembling for domain transfer.</li>
-          </ul>
-        </li>
+        <li>Addressed performance degradation caused by domain shifts by enabling learning on unlabeled target data through unsupervised domain adaptation.</li>
+        <li>Implemented a Mean Teacher–based self-ensembling framework to improve robustness and cross-domain generalization.</li>
+        <li>Performed cross-domain adaptation experiments between MNIST and SVHN using labeled source data and unlabeled target data.</li>
+        <li>Incorporated confidence thresholding and extensive data augmentation to stabilize training and enhance learning.</li>
+        <li>Achieved near-supervised performance, demonstrating the effectiveness of self-ensembling strategies for domain transfer.</li>
       </ul>
 
     </div>
