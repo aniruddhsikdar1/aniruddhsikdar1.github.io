@@ -1,9 +1,10 @@
 <div class="dataset-item">
-  <!-- Course Project banner and title -->
   <div style="display: flex; flex-direction: column; gap: 1em;">
-    
+
     <div class="dataset-content">
-      <strong>
+      
+      <!-- Legend / Title -->
+      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5em;">
         <span style="
           background-color: #007BFF;
           color: white;
@@ -12,32 +13,22 @@
           font-size: 0.85em;
           font-family: 'Segoe UI', Arial, sans-serif;
           box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 0.5em;
+          white-space: nowrap;
         ">
           Course Project
         </span>
-        Picking a Novel Object of Interest Using a Visual Cue.
-      </strong>
+        <strong>One-Shot Object Localization for Robotic Manipulation</strong>
+      </div>
 
       <ul>
-        <li><strong>Objectives</strong>
-          <ul>
-            <li>Localize a novel object using a single visual cue.</li>
-            <li>Enable robotic pick-and-place in unstructured environments.</li>
-            <li>Integrate vision-based localization with inverse kinematics control.</li>
-          </ul>
-        </li>
-
-        <li><strong>Methodology & Contributions</strong>
-          <ul>
-            <li>Implemented a Siamese CNN with shared weights for one-shot object localization.</li>
-            <li>Implemented a spatial attention mechanism to extract features from a cue image.</li>
-            <li>Applied SoftArgMax to predict object coordinates.</li>
-          </ul>
-        </li>
+        <li>Addressed the challenge of localizing novel objects from a single visual cue without prior object-specific training.</li>
+        <li>Enabled robotic pick-and-place in unstructured environments through vision-based one-shot localization.</li>
+        <li>Implemented a Siamese CNN with shared weights to learn similarity between cue and scene images.</li>
+        <li>Designed a spatial attention mechanism to extract object-specific features from the cue image.</li>
+        <li>Generated similarity score maps and applied SoftArgMax to accurately predict object coordinates.</li>
+        <li>Integrated vision-based localization with inverse kinematics control for robotic picking in both simulation and real hardware.</li>
       </ul>
+
     </div>
   </div>
 </div>
