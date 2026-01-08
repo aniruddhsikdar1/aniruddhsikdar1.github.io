@@ -18,13 +18,13 @@
         ">
           Course Project
         </span>
-        Picking a Novel Object of Interest with One-Shot Localization Using a Visual Cue
+        Picking a Novel Object of Interest Using a Visual Cue.
       </strong>
 
       <ul>
         <li><strong>Objectives</strong>
           <ul>
-            <li>Localize a novel object using a single visual cue without prior object-specific training.</li>
+            <li>Localize a novel object using a single visual cue.</li>
             <li>Enable robotic pick-and-place in unstructured environments.</li>
             <li>Integrate vision-based localization with inverse kinematics control.</li>
           </ul>
@@ -33,9 +33,8 @@
         <li><strong>Methodology & Contributions</strong>
           <ul>
             <li>Implemented a Siamese CNN with shared weights for one-shot object localization.</li>
-            <li>Designed a spatial attention mechanism to extract object-specific features from a cue image.</li>
-            <li>Generated a similarity score map and applied SoftArgMax to predict object coordinates.</li>
-            <li>Integrated localization with inverse kinematics for robotic picking in simulation and real hardware.</li>
+            <li>Implemented a spatial attention mechanism to extract features from a cue image.</li>
+            <li>Applied SoftArgMax to predict object coordinates.</li>
           </ul>
         </li>
       </ul>
