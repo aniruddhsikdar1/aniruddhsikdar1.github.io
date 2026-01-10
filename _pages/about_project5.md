@@ -1,6 +1,6 @@
 <div class="dataset-item" style="display: flex; flex-direction: row-reverse; align-items: flex-start;">
   <div class="dataset-media">
-    <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
+    <img src="/assets/images/visit.png" alt="Sports Video Analytics">
   </div>
 
   <div class="dataset-content">
