@@ -1,8 +1,10 @@
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1.5em;">
   
-  <!-- Image on the left -->
-  <div class="dataset-media">
-    <img src="/assets/images/map_cab.png" alt="Aerial Imagery Map CAB">
+  <!-- Image on the left (size matched to visit image) -->
+  <div class="dataset-media" style="max-width: 260px; flex-shrink: 0;">
+    <img src="/assets/images/map_cab.png"
+         alt="Aerial Imagery Map CAB"
+         style="width: 100%; height: auto;">
   </div>
 
   <!-- Existing content (unchanged) -->
