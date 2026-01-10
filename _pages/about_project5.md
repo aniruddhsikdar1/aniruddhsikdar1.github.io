@@ -1,4 +1,4 @@
-<div class="dataset-item">
+<div class="dataset-item" style="display: flex; flex-direction: row-reverse; align-items: flex-start;">
   <div class="dataset-media">
     <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
   </div>
@@ -28,6 +28,5 @@
       <li>Designed optimized inference pipelines for large-scale video data.</li>
       <li>Improved end-to-end inference efficiency while maintaining detection and tracking accuracy.</li>
     </ul>
-
   </div>
 </div>
