@@ -1,8 +1,11 @@
 <div class="dataset-item" style="display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 1.5em;">
   
-  <!-- Image on the right -->
-  <div class="dataset-media">
-    <img src="/assets/images/gta_2.drawio.png" alt="Side-Scan Imagery">
+  <!-- PDF on the right -->
+  <div class="dataset-media" style="max-width: 260px; flex-shrink: 0;">
+    <iframe src="/assets/images/mask-rcnn_arch.pdf"
+            title="Side Scan Sonar Architecture PDF"
+            style="width: 100%; height: 300px; border: 1px solid #ccc;">
+    </iframe>
   </div>
 
   <!-- Existing content (unchanged) -->
