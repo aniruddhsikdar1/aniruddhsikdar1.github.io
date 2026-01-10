@@ -1,8 +1,14 @@
-<div class="dataset-item" style="display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 1.5em;">
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1.5em;">
   
-  <!-- Image on the right (same image & size) -->
-  <div class="dataset-media">
-    <img src="/assets/images/gta_2.drawio.png" alt="Robotic Manipulation">
+  <!-- Images on the left (stacked vertically) -->
+  <div class="dataset-media" style="max-width: 260px; display: flex; flex-direction: column; gap: 0.75em; flex-shrink: 0;">
+    <img src="/assets/images/result.png"
+         alt="Robotic Manipulation Result 1"
+         style="width: 100%; height: auto;">
+
+    <img src="/assets/images/result.png"
+         alt="Robotic Manipulation Result 2"
+         style="width: 100%; height: auto;">
   </div>
 
   <!-- Existing content (unchanged) -->

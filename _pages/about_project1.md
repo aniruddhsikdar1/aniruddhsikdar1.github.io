@@ -2,7 +2,7 @@
   
   <!-- Image on the left (same pattern as above) -->
   <div class="dataset-media">
-    <img src="/assets/images/gta_2.drawio.png" alt="Unsupervised Domain Adaptation">
+    <img src="/assets/images/img.png" alt="Unsupervised Domain Adaptation">
   </div>
 
   <!-- Existing content (unchanged) -->
