@@ -2,7 +2,7 @@
   
   <!-- Image on the left -->
   <div class="dataset-media">
-    <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
+    <img src="/assets/images/map_cab.png" alt="Aerial Imagery Map CAB">
   </div>
 
   <!-- Existing content (unchanged) -->
