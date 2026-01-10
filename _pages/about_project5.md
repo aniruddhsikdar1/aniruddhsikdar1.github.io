@@ -29,6 +29,5 @@
       <li>Improved end-to-end inference efficiency while maintaining detection and tracking accuracy.</li>
     </ul>
 
-    <em>Project Details: <code>about_project5.md</code></em>
   </div>
 </div>
