@@ -1,4 +1,11 @@
-<div class="dataset-item">
+<div class="dataset-item" style="display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 1.5em;">
+  
+  <!-- Image on the right (same image & size) -->
+  <div class="dataset-media">
+    <img src="/assets/images/gta_2.drawio.png" alt="Robotic Manipulation">
+  </div>
+
+  <!-- Existing content (unchanged) -->
   <div style="display: flex; flex-direction: column; gap: 1em;">
 
     <div class="dataset-content">
