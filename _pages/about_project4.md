@@ -1,4 +1,11 @@
-<div class="dataset-item">
+<div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1.5em;">
+  
+  <!-- Image on the left -->
+  <div class="dataset-media">
+    <img src="/assets/images/gta_2.drawio.png" alt="IR Imagery">
+  </div>
+
+  <!-- Existing content (unchanged) -->
   <div style="display: flex; flex-direction: column; gap: 1em;">
     
     <div class="dataset-content">
