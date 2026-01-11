@@ -53,7 +53,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "I work on projects and consultancies at the intersection of AI, robotics, and computer vision, developing practical solutions for real-world challenges. My experience spans course projects, technical deliverables, and applied research, bridging innovative algorithms with deployable systems.",
+          description: "I work at the intersection of AI, robotics, and computer vision, developing practical solutions across funded projects, consultancies, course projects, and applied research, with a strong focus on efficient inference pipelines and scalable ML processing stacks that bridge innovative algorithms with deployable, real-world systems.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
