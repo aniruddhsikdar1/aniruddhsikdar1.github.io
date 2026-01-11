@@ -1,8 +1,10 @@
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1.5em;">
   
-  <!-- Image on the left (same pattern as above) -->
-  <div class="dataset-media">
-    <img src="/assets/images/img.png" alt="Unsupervised Domain Adaptation">
+  <!-- Image on the left (size constrained to match others) -->
+  <div class="dataset-media" style="max-width: 260px; flex-shrink: 0;">
+    <img src="/assets/images/img.png"
+         alt="Unsupervised Domain Adaptation"
+         style="width: 100%; height: auto;">
   </div>
 
   <!-- Existing content (unchanged) -->
