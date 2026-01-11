@@ -9,7 +9,7 @@ nav_order: 7
 profiles:
   - align: right
     image:  false
-    content: about_project4.md
+    content: about_project6.md
     image_circular: false # crops the image to make it circular
     # more_info: >
     #   <p>555 your office number</p>
