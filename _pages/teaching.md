@@ -13,7 +13,7 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 
 
 ## 🏆 Competitions & Challenges
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,21 +89,6 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 <div class="container">
     <h1>🏆 Competitions & Challenges</h1>
 
-    <!-- ===== CARD 1 ===== -->
-    <div class="card card-blue">
-        <h2>📌 Multi-modal Domain Fusion for Multi-modal Aerial View Object Classification</h2>
-        <p>
-            <strong>Role:</strong> Participant <br>
-            <strong>Event:</strong> MAVOC Challenge, CVPR-W PBVS 2022 <br>
-            <strong>Team:</strong> 2 members
-        </p>
-        <ul>
-            <li>Built a multi-modal aerial classification model using EO + SAR labeled and unlabeled data.</li>
-            <li><strong>Track 1 (EO + SAR):</strong> Ranked <strong>5th / 82</strong>.</li>
-            <li><strong>Track 2 (SAR-only):</strong> Ranked <strong>9th / 77</strong>.</li>
-            <li>Published in <em>CVPR Workshops, PBVS 2022</em>.</li>
-        </ul>
-        <a href="https://arxiv.org/pdf/2212.07039" target="_blank" class="button">📄 View Paper (arXiv)</a>
 
 
 
@@ -126,31 +111,8 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
 
 
 
-
-
-
-    </div>
-
-    <!-- ===== CARD 2 ===== -->
-    <div class="card card-orange">
-        <h2>🚁 UAV RGB–IR Slant Angle Object Detection Challenge</h2>
-        <p>
-            <strong>Role:</strong> Organizer <br>
-            <strong>Event:</strong> International Conference on Emerging Technology in Autonomous Aerial Vehicles (ETAAV), IISc Bangalore <br>
-            <strong>Sponsor:</strong> SwaYaan (MeitY)
-        </p>
-        <ul>
-            <li>Organized India's first drone-based multi-spectral (RGB + IR) object detection competition.</li>
-            <li>Designed and released the <strong>IndraEye</strong> dataset to accelerate multi-spectral perception research.</li>
-            <li>Hosted as part of <strong>ETAAV 2025</strong> at IISc Bangalore.</li>
-        </ul>
-        <a href="https://www.kaggle.com/competitions/etaav-eo-ir/overview" target="_blank" class="button">🏆 View Challenge (Kaggle)</a>
-    </div>
-</div>
-</body>
-</html>
 
 
 <!-- Google Font -->
 <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<div style="font-family:'Poppins', sans-serif; margin-top:20px;">
+<div style="font-family:'Poppins', sans-serif; margin-top:20px;"> -->
