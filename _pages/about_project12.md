@@ -8,7 +8,7 @@
          alt="Robotic Manipulation Result 1"
          style="max-width: 100%; height: auto; object-fit: contain;">
 
-    <img src="/assets/images/result.png"
+    <img src="/assets/images/pyb.png"
          alt="Robotic Manipulation Result 2"
          style="max-width: 100%; height: auto; object-fit: contain;">
   </div>
@@ -21,7 +21,7 @@
       <!-- Legend / Title -->
       <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5em;">
         <span style="
-          background-color: #007BFF;
+          background-color: rgba(0, 123, 255, 1);
           color: white;
           padding: 5px 12px;
           border-radius: 16px;
