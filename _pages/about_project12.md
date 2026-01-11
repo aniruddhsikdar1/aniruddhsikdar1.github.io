@@ -1,14 +1,16 @@
 <div class="dataset-item" style="display: flex; align-items: flex-start; gap: 1.5em;">
   
-  <!-- Images on the left (stacked vertically) -->
-  <div class="dataset-media" style="max-width: 260px; display: flex; flex-direction: column; gap: 0.75em; flex-shrink: 0;">
+  <!-- Images on the left (stacked vertically, resolution preserved) -->
+  <div class="dataset-media"
+       style="max-width: 260px; display: flex; flex-direction: column; gap: 0.75em; flex-shrink: 0;">
+    
     <img src="/assets/images/result.png"
          alt="Robotic Manipulation Result 1"
-         style="width: 100%; height: auto;">
+         style="max-width: 100%; height: auto; object-fit: contain;">
 
     <img src="/assets/images/result.png"
          alt="Robotic Manipulation Result 2"
-         style="width: 100%; height: auto;">
+         style="max-width: 100%; height: auto; object-fit: contain;">
   </div>
 
   <!-- Existing content (unchanged) -->
