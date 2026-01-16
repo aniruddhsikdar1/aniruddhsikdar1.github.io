@@ -9,7 +9,7 @@
       }
     ]
   },
-  "work": [
+  "Work Experience": [
     {
       "name": "Department of Aerospace Engineering, Indian Institute of Science (Bengaluru)",
       "position": "Research Associate I",
@@ -29,7 +29,7 @@
       "endDate": "01-06-2026"
     }
   ],
-  "consulting": {
+  "Professional Consulting and Advisory Roles": {
     "note": "Part-time technical advisory roles alongside full-time employment, undertaken with formal organizational permissions.",
     "roles": [
       {
@@ -47,7 +47,7 @@
       }
     ]
   },
-  "education": [
+  "Education": [
     {
       "institution": "University of Zurich, Zurich, Switzerland",
       "location": "Zurich, Switzerland",
@@ -60,7 +60,7 @@
       "courses": ["Theory of Relativity"]
     }
   ],
-  "awards": [
+  "Awards": [
     {
       "title": "SPARC Research Fellowship",
       "date": "2023-08-01",
@@ -76,7 +76,7 @@
       "summary": "Recognized for outstanding contribution to research in computational fluid dynamics and aerodynamic optimization."
     }
   ],
-  "languages": [
+  "Languages": [
     {
       "language": "German",
       "fluency": "Native speaker",
