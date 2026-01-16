@@ -29,7 +29,9 @@
       "endDate": "01-06-2026"
     }
   ],
-  "volunteer": [
+"Professional Consulting and Advisory Roles": {
+  "note": "Part-time technical advisory roles alongside full-time employment, undertaken with formal organizational permissions.",
+  "roles": [
     {
       "organization": "People's Climate March",
       "location": "Zurich, Switzerland",
@@ -38,7 +40,10 @@
       "startDate": "2014-04-01",
       "endDate": "2015-07-01",
       "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "highlights": [
+        "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.",
+        "Men of the year 2014 by Time magazine"
+      ]
     }
   ],
   "education": [
