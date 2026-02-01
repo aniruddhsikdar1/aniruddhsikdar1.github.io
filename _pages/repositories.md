@@ -20,7 +20,9 @@ nav_order: 4
   - _Outstanding Reviewer Award, ICCV 2025_  
 - **ICASSP** 2024, 2025  
 - **ETAAV** 2025  
-- **AeroCON** 2024  
+- **AeroCON** 2024 
+- **ECCV** 2026 
+- **ICML** 2026  
 
 ### 🧭 Area Chair
 - **AI for Drones**, *Emerging Technology in Autonomous Aerial Vehicles (ETAAV)*, IISc Bangalore
