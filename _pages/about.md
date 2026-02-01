@@ -15,18 +15,13 @@ profile:
 # selected_papers: true # includes a list of papers marked as "selected={true}"  Meiji Jingu, Shibuya, Tokyo, Japan. (2024)
 social: true # includes social icons at the bottom of the page
 ---
-I am a final-year Ph.D. student at the Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science, Bengaluru. 
- I am grateful to be working under the supervision of Professor Suresh Sundaram at the Artificial Intelligence and Robotics Lab (AIRL). 
-
- 
-
-My research focuses on computer vision for robotics applications, particularly in multi-sensor fusion, generalization to unseen target domains, and continual learning. I also had the opportunity to work with Prof. Sundarrajan during the earlier part of my Ph.D. 
-
-At the Artificial Intelligence and Robotics Lab (AIRL), IISc, I have contributed to several real-world projects and collaborated with startups from the Society of Innovation and Development (SID) and Artpark. I have evaluated state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using sensors like RGB, Infrared (IR), and Synthetic Aperture Radar (SAR).  My work includes sim-to-real evaluations and the use of generative AI techniques to improve generalization, reinforcing my commitment to practical, real-world solutions. 
-
-I am also addressing challenging computer vision problems in noisy and fast-paced environments, particularly in sports analytics setups, working with Seshadri R. 
-
-I am motivated to publish in top-tier conferences, with publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I also received the Outstanding Reviewer Award at CVPR 2026. 
+I am a <strong>Project Scientist</strong> at the <strong>Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc)</strong>, working under the supervision of <strong>Prof. Suresh Sundaram</strong>
+(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>).
+I earned my <strong>Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), IISc Bengaluru</strong>. I am grateful for the opportunity to continue my research at AIRL under Prof. Sundaram’s guidance. During the earlier part of my Ph.D., I also had the opportunity to work with <strong>Prof. Sundarrajan</strong>, which significantly influenced my research direction.
+My research focuses on <strong>computer vision for robotics</strong>, with particular emphasis on <strong>multi-sensor fusion</strong>, <strong>generalization to unseen target domains</strong>, and <strong>continual learning</strong>. I am interested in developing <strong>robust perception models</strong> that can be reliably deployed in real-world environments.
+At <strong>AIRL, IISc</strong>, I have contributed to several <strong>real-world, deployable projects</strong> and collaborated with startups incubated at the <strong>Society of Innovation and Development (SID)</strong> and <strong>ARTPARK</strong>. My work involves evaluating and developing <strong>state-of-the-art deep learning models</strong> for <strong>segmentation, detection, and change detection</strong> across platforms such as <strong>ground vehicles, drones, and satellites</strong>, using <strong>RGB, Infrared (IR), and Synthetic Aperture Radar (SAR)</strong> sensors. I have extensive experience with <strong>sim-to-real evaluation</strong> and the use of <strong>generative AI techniques</strong> to improve model generalization and robustness.
+I also work as a <strong>Consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a></strong>, a startup incubated at the <strong>Foundation for Science, Innovation and Development (formerly SID)</strong>. In parallel, I address challenging <strong>computer vision problems in noisy and fast-paced environments</strong>, particularly in <strong>sports analytics</strong>, where robustness and real-time performance are critical.
+I am motivated to publish in <strong>top-tier conferences</strong> and have publications in <strong>CVPR, AAAI, ICRA, IROS, and ICASSP</strong>, including several <strong>oral presentations</strong>. I have also been recognized for my service to the research community with the <strong>Outstanding Reviewer Award at CVPR 2026</strong>. 
 
 ---
 
