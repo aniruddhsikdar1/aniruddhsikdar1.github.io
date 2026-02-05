@@ -39,6 +39,15 @@
       "startDate": "2019-08-01",
       "endDate": "2022-07-01",
       "advisor": "Prof. Suresh Sundaram"
+    },
+    {
+      "institution": "Charotar University of Science and Technology (CHARUSAT)",
+      "location": "Gujarat, India",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor of Technology (BTech)",
+      "startDate": "2014-06-01",
+      "endDate": "2018-04-01",
+      "gpa": "8.82/10"
     }
   ],
 
