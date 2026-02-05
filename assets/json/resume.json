@@ -3,8 +3,6 @@
     "name": "Aniruddh Sikdar",
     "label": "Dr.",
     "image": "",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -37,22 +35,14 @@
       "institution": "Indian Institute of Science (IISc)",
       "location": "Bangalore, India",
       "area": "Cyber-Physical Systems",
-      "studyType": "Master of Technology (MTech)",
+      "studyType": "Master of Technology (MTech-by-Research)",
       "startDate": "2019-08-01",
       "endDate": "2022-07-01",
-      "advisor": "Prof. Suresh Sundaram",
-      "url": "https://scholar.google.co.in/citations?user=5iAMbhMAAAAJ&hl=en"
+      "advisor": "Prof. Suresh Sundaram"
     }
   ],
 
   "work": [
-    {
-      "name": "Artificial Intelligence and Robotics Lab (AIRL), IISc",
-      "position": "Research Associate II",
-      "startDate": "2023-08-01",
-      "endDate": "2025-07-31",
-      "summary": "Worked at the Artificial Intelligence and Robotics Lab (AIRL), IISc under the guidance of Prof. Suresh Sundaram."
-    },
     {
       "name": "Artificial Intelligence and Robotics Lab (AIRL), IISc",
       "position": "Project Scientist I",
@@ -61,11 +51,25 @@
       "summary": "Working at the Artificial Intelligence and Robotics Lab (AIRL), IISc under the guidance of Prof. Suresh Sundaram."
     },
     {
+      "name": "Artificial Intelligence and Robotics Lab (AIRL), IISc",
+      "position": "Research Associate II",
+      "startDate": "2025-08-01",
+      "endDate": "2025-12-31",
+      "summary": "Worked as Research Associate II at the Artificial Intelligence and Robotics Lab (AIRL), IISc under the guidance of Prof. Suresh Sundaram."
+    },
+    {
       "name": "Consulting Engagements",
       "position": "Technical Consultant for Vision and Sports Analytics",
       "startDate": "2025-07-01",
       "endDate": "2025-09-01",
       "summary": "Part-time technical advisory role in vision and sports analytics, undertaken alongside full-time employment with formal organizational permissions."
+    },
+    {
+      "name": "Artificial Intelligence and Robotics Lab (AIRL), IISc",
+      "position": "Research Associate I",
+      "startDate": "2023-08-01",
+      "endDate": "2025-07-31",
+      "summary": "Worked as Research Associate I at the Artificial Intelligence and Robotics Lab (AIRL), IISc under the guidance of Prof. Suresh Sundaram."
     }
   ],
 
