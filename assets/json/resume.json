@@ -29,7 +29,7 @@
       "endDate": "2025-07-01",
       "advisor": "Prof. Suresh Sundaram",
       "thesis": "Development of Perception Systems to Enhance Robustness for Robotic Applications",
-      "url": "https://scholar.google.co.in/citations?user=5iAMbhMAAAAJ&hl=en"
+      "url": "https://scholar.google.com/citations?user=FdgpBuoAAAAJ&hl=en&authuser=2"
     },
     {
       "institution": "Indian Institute of Science (IISc)",
@@ -70,7 +70,7 @@
       "name": "Consulting Engagements",
       "position": "Technical Consultant for Vision and Sports Analytics",
       "startDate": "2025-07-01",
-      "endDate": "2026-04-01",
+      "endDate": "Present",
       "summary": "Part-time technical consultancy alongside full-time employment with formal permissions."
     },
     {
@@ -131,14 +131,12 @@
 
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Professor Suresh Sundaram",
+      "reference": "Department Chair, Robert Bosch Centre for Cyber-Physical Systems, Indian Institute of Science (IISc), Bangalore, India."
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Dr. Narasimhan Sundararajan",
+      "reference": "Professor (Retd.),  School of Electrical and Electronic Engineering, Nanyang Technological University (NTU), Singapore."
     }
   ]
 }
