@@ -21,7 +21,7 @@
 
   "education": [
     {
-      "institution": "Indian Institute of Science (IISc)",
+      "institution": "Cyber-Physical Systems, Indian Institute of Science (IISc)",
       "location": "Bangalore, India",
       "area": "Cyber-Physical Systems",
       "studyType": "Doctor of Philosophy (PhD)",
@@ -32,13 +32,13 @@
       "url": "https://scholar.google.com/citations?user=FdgpBuoAAAAJ&hl=en&authuser=2"
     },
     {
-      "institution": "Indian Institute of Science (IISc)",
+      "institution": "Cyber-Physical Systems, Indian Institute of Science (IISc)",
       "location": "Bangalore, India",
-      "area": "Cyber-Physical Systems",
+      "area": "Computational Methods of Optimization, Matrix Theory, Stochastic Models and Applications,  Mathematics for Electrical Engineers, Machine Learning, Foundations of Robotics, Topics in Neural Computation, Navigation, Guidance and Control, Dynamics of Linear Systems",
       "studyType": "Master of Technology (MTech-by-Research)",
       "startDate": "2019-08-30",
       "endDate": "2022-07-01",
-      "advisor": "Prof. Suresh Sundaram"
+      "advisor": "Prof. Suresh Sundaram" 
     },
     {
       "institution": "Charotar University of Science and Technology (CHARUSAT)",
