@@ -2,7 +2,7 @@
   
   <!-- Image on the left (size matched to visit image) -->
   <div class="dataset-media" style="max-width: 260px; flex-shrink: 0;">
-    <img src="assets/images/Screenshot-2025-09-10-at-7.36.13---AM.png copy.png"
+    <img src="assets/images/corrosion.png"
          alt="Aerial Imagery Map CAB"
          style="width: 100%; height: auto;">
   </div>
