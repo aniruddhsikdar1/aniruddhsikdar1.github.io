@@ -100,3 +100,23 @@ Paper presentations can also be found on the [AIRL YouTube Page](https://www.you
   Talk: *“AI Perception for Aerial Robotics.”*  
   Faculty Development Program – UAV Technology and Applications  
   *(Date: 16/09/2023)*  
+
+---
+
+# Teaching Activities
+
+## **Neural Computation**  
+**Department of Aerospace Engineering, IISc**  
+*(August 2023 – 2024)*  
+
+- Teaching Assistant for the graduate-level course on Neural Computation.  
+- Conducted tutorials and discussion sessions on deep learning, backpropagation, optimization, and neural architectures.  
+- Assisted with assignments, project mentoring, and evaluation.
+
+---
+
+## **NPTEL Course – AI-Driven Perception, Learning and Mapping for Drones**
+
+- Contributed to the development and delivery of the NPTEL course on AI-driven perception and mapping for autonomous drones.  
+- Covered topics including multi-spectral perception, domain adaptation, semantic segmentation, object detection, and SLAM for UAVs.  
+- Assisted in content preparation, assignments, and learner engagement.
