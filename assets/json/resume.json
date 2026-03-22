@@ -21,17 +21,17 @@
 
   "education": [
     {
-  "institution": "Cyber-Physical Systems, Indian Institute of Science (IISc)",
-  "location": "Bangalore, India",
-  "area": "Cyber-Physical Systems",
-  "studyType": "Doctor of Philosophy (PhD)",
-  "startDate": "2019-08-01",
-  "endDate": "2025-07-01",
-  "advisor": "Prof. Suresh Sundaram",
-  "thesis": "Development of Perception Systems to Enhance Robustness for Robotic Applications",
-  "url": "https://scholar.google.com/citations?user=FdgpBuoAAAAJ&hl=en&authuser=2",
-  "summary": "Research focused on computer vision for robotics, with emphasis on:<ul><li>Multi-sensor fusion</li><li>Generalization to unseen target domains</li><li>Continual learning</li></ul>Interested in developing robust perception models that can be reliably deployed in real-world environments.<br><br>Briefly collaborated with <a href='https://ensundara.wordpress.com/biography/' target='_blank'>Prof. Sundararajan</a>, <a href='https://www.arjunjain.co.in' target='_blank'>Dr. Arjun Jain</a>, and <a href='https://chandan-iiti.github.io' target='_blank'>Dr. Chandan Gautham</a> during the early part of the PhD."
-  },  
+      "institution": "Cyber-Physical Systems, Indian Institute of Science (IISc)",
+      "location": "Bangalore, India",
+      "area": "Cyber-Physical Systems",
+      "studyType": "Doctor of Philosophy (PhD)",
+      "startDate": "2019-08-01",
+      "endDate": "2025-07-01",
+      "advisor": "Prof. Suresh Sundaram",
+      "thesis": "Development of Perception Systems to Enhance Robustness for Robotic Applications",
+      "url": "https://scholar.google.com/citations?user=FdgpBuoAAAAJ&hl=en&authuser=2",
+      "summary": "Research focused on computer vision for robotics, with emphasis on:<ul><li>Multi-sensor fusion</li><li>Generalization to unseen target domains</li><li>Continual learning</li></ul>Interested in developing robust perception models that can be reliably deployed in real-world environments.<br><br>Briefly collaborated with <a href='https://ensundara.wordpress.com/biography/' target='_blank'>Prof. Sundararajan</a>, <a href='https://www.arjunjain.co.in' target='_blank'>Dr. Arjun Jain</a>, and <a href='https://chandan-iiti.github.io' target='_blank'>Dr. Chandan Gautham</a> during the early part of the PhD."
+    },
     {
       "institution": "Cyber-Physical Systems, Indian Institute of Science (IISc)",
       "location": "Bangalore, India",
@@ -39,7 +39,7 @@
       "studyType": "Master of Technology (MTech-by-Research)",
       "startDate": "2019-08-30",
       "endDate": "2022-07-01",
-      "advisor": "Prof. Suresh Sundaram" 
+      "advisor": "Prof. Suresh Sundaram"
     },
     {
       "institution": "Charotar University of Science and Technology (CHARUSAT)",
@@ -126,7 +126,7 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "Fluent", 
+      "fluency": "Fluent",
       "icon": ""
     }
   ],
