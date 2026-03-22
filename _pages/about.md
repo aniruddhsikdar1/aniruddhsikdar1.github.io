@@ -15,7 +15,7 @@ profile:
 social: true # includes social icons at the bottom of the page
 ---
 I am a Project Scientist at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), working under the supervision of Prof. Suresh Sundaram
-(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>).
+(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>). .....
 
 I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), IISc Bengaluru. I am deeply grateful for the mentorship of Professor Suresh Sundaram at the Artificial Intelligence and Robotics Lab (AIRL). In the initial stages of my Ph.D., I also worked with Prof. Sundarrajan, an experience that strongly influenced the trajectory of my research.
 My research focuses on computer vision for robotics, with particular emphasis on multi-sensor fusion, generalization to unseen target domains, and continual learning. I am interested in developing robust perception models that can be reliably deployed in real-world environments.
