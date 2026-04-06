@@ -14,6 +14,7 @@ nav_order: 4
 - **AAAI** 2026  
 - **IJCNN** 2025  
 - **ICRA** 2025, 2026  
+- **IROS** 2026 
 - **CVPR** 2024, 2025, 2026  
   - _Outstanding Reviewer Award, CVPR 2025_  
 - **ICCV** 2025  
@@ -23,6 +24,7 @@ nav_order: 4
 - **AeroCON** 2024 
 - **ECCV** 2026 
 - **ICML** 2026  
+- **BMVC** 2026  
 
 ### 🧭 Area Chair
 - **AI for Drones**, *Emerging Technology in Autonomous Aerial Vehicles (ETAAV)*, IISc Bangalore
