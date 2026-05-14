@@ -23,7 +23,9 @@ nav_order: 4
 - **ETAAV** 2025  
 - **AeroCON** 2024 
 - **ECCV** 2026 
-- **ICML** 2026  
+- **ICML** 2026
+  - Gold Reviewer at ICML 2026.
+  - Placed among the top reviewers for the conference, and complimentary registration in recognition of this contribution. 
 - **BMVC** 2026  
 
 ### 🧭 Area Chair
