@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "Research",
-          description: "Research, consultancy, and course projects in computer vision, robotics, and deep learning.",
+          description: "Research areas spanning domain generalization, multi-spectral learning, target tracking, generative AI, view-agnostic perception, and complex-valued deep learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
