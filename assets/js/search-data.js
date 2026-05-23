@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "Research",
-          description: "To be updated.",
+          description: "Research, consultancy, and course projects in computer vision, robotics, and deep learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -437,34 +437,34 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-domain-generalization",
+          title: 'Domain Generalization',
+          description: "Learning models that generalize to unseen target domains without target data during training.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-multi-spectral-learning",
+          title: 'Multi-Spectral Learning',
+          description: "Fusion and cross-modal learning across RGB, infrared, and SAR imaging modalities for robust perception.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-target-tracking",
+          title: 'Target Tracking',
+          description: "Robust detection and tracking of objects in dynamic, fast-paced environments across aerial and ground platforms.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-generative-ai-for-perception",
+          title: 'Generative AI for Perception',
+          description: "Using generative models to synthesize training data and bridge domain gaps for visual perception tasks.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-view-agnostic-domain-generalization",
+          title: 'View-Agnostic Domain Generalization',
+          description: "Segmentation and detection models that generalize across aerial and ground viewpoints without view-specific retraining.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-complex-valued-deep-learning",
+          title: 'Complex-Valued Deep Learning',
+          description: "Fully complex-valued neural architectures for signal and image processing with richer representational capacity.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "projects-project-7",
