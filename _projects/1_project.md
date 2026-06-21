@@ -163,4 +163,4 @@ Extending OV-COAST's optimal transport formulation, CoLoRA combines optimal tran
 
 A broader overview of this research, including its motivation, methodology, and real-world impact, is presented in my [PhD thesis defence](https://youtu.be/GEYRJsyct4c?si=OdDc6-BjTMDvDKXm).
 
-Additionally, several of these themes — domain generalization, robust perception, and multi-sensor fusion — are covered in depth in our **NPTEL course on AI-Driven Perception, Mapping and Planning for Autonomous Drones**, which provides a structured treatment of how these techniques translate to deployable aerial systems.
+Additionally, several of these themes — domain generalization, robust perception, and multi-sensor fusion — are covered in depth in our [NPTEL course on AI-Driven Perception, Mapping and Planning for Autonomous Drones](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96), which provides a structured treatment of how these techniques translate to deployable aerial systems.
