@@ -94,6 +94,19 @@ We proposed a systematic contrastive learning framework that leverages textual a
     Picazo: Pixel-aligned contrastive learning for zero-shot domain adaptation. (CVPR 2025)
 </div>
 
+**CROMPT**
+
+We further extended this line of work with CROMPT, which adapts CLIP via cross-modal prompting to achieve robust zero-shot generalization under adverse weather conditions. By jointly conditioning visual and textual prompts on weather-aware context, the model retains CLIP's broad generalization capabilities while substantially improving robustness in rain, fog, and low-light scenes.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/publication_preview/m1_m2_detection_2.png" title="CROMPT" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    CROMPT: Adapting CLIP via cross-modal prompting for robust zero-shot generalization under adverse weather.
+</div>
+
 **Open-Vocabulary and Out-of-Distribution Generalization**
 
 Another major direction of my research involves understanding and improving open-vocabulary segmentation models under challenging out-of-distribution scenarios. I have worked extensively on prompt learning for open-vocabulary models, cost aggregation mechanisms, optimal transport formulations, and cross-domain generalization across highly diverse benchmarks — including medical imaging, agriculture, autonomous navigation, aerial imagery, and underwater perception.
@@ -111,6 +124,19 @@ In OV-COAST, we introduced a cost aggregation framework based on optimal transpo
     OV-COAST: Cost aggregation with optimal transport for open-vocabulary semantic segmentation. (CVPRW 2025)
 </div>
 
+**CoLoRA**
+
+Extending OV-COAST's optimal transport formulation, CoLoRA combines optimal transport with low-rank adaptation (LoRA) to enable efficient multi-domain open-vocabulary segmentation. The method allows lightweight domain-specific adaptation of large vision-language backbones without full fine-tuning, improving generalization across highly diverse benchmarks while keeping adaptation cost low.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/publication_preview/EP_1st_pageV8_no_shadow.png" title="CoLoRA" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    CoLoRA: Optimal transport meets LoRA for multi-domain open-vocabulary segmentation. (2026)
+</div>
+
 ---
 
 ## Publications
@@ -125,9 +151,11 @@ In OV-COAST, we introduced a cost aggregation framework based on optimal transpo
 
 **Vision-Language and Foundation Models**
 - PICAZO: Pixel-Aligned Contrastive Learning for Zero-Shot Domain Adaptation — *CVPR 2025*
+- CROMPT: Adapting CLIP via Cross-Modal Prompting for Robust Zero-Shot Generalization under Adverse Weather
 
 **Open-Vocabulary Segmentation**
 - OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation — *CVPRW 2025*
+- CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation — *2026*
 
 ---
 
