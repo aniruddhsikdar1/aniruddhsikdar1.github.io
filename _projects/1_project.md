@@ -126,7 +126,7 @@ In OV-COAST, we introduced a cost aggregation framework based on optimal transpo
 
 **CoLoRA**
 
-Extending OV-COAST's optimal transport formulation, CoLoRA combines optimal transport with low-rank adaptation (LoRA) to enable efficient multi-domain open-vocabulary segmentation. The method allows lightweight domain-specific adaptation of large vision-language backbones without full fine-tuning, improving generalization across highly diverse benchmarks while keeping adaptation cost low.
+Extending OV-COAST's optimal transport formulation, CoLoRA is a prompt learning framework that combines two key components: Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation applied at model convergence. Evaluated across 19 multi-domain datasets, CoLoRA achieves state-of-the-art performance, producing a more generalizable open-vocabulary segmentation model while adding only a marginal increase in parameters compared to the baseline, and consistently outperforms existing methods across diverse domains. [Project page](/publications/colora/)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -134,7 +134,7 @@ Extending OV-COAST's optimal transport formulation, CoLoRA combines optimal tran
     </div>
 </div>
 <div class="caption">
-    CoLoRA: Optimal transport meets LoRA for multi-domain open-vocabulary segmentation. (2026)
+    CoLoRA: Optimal transport meets LoRA for multi-domain open-vocabulary segmentation. (IROS 2026)
 </div>
 
 ---
@@ -155,7 +155,7 @@ Extending OV-COAST's optimal transport formulation, CoLoRA combines optimal tran
 
 **Open-Vocabulary Segmentation**
 - OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation — *CVPRW 2025*
-- CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation — *2026*
+- CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation — *IROS 2026* — [project page](/publications/colora/)
 
 ---
 
