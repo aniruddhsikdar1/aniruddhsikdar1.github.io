@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="SSL-RGB2IR - Aniruddh Sikdar, Qiranul Saadiyean, Prahlad Anand, Suresh Sundaram">
+  <meta name="description" content="SSL-RGB2IR: a semi-supervised RGB-to-IR image-to-image translation framework that improves training for semantic segmentation and object detection. IROS 2024.">
+  <meta name="keywords" content="domain adaptation, image-to-image translation, infrared imaging, semantic segmentation, object detection, robotic perception, IROS 2024">
+  <meta name="author" content="Aniruddh Sikdar, Qiranul Saadiyean, Prahlad Anand, Suresh Sundaram">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Artificial Intelligence and Robotics Lab (AIRL), IISc">
+  <meta property="og:title" content="SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation">
+  <meta property="og:description" content="A semi-supervised RGB-to-IR image-to-image translation framework that improves training for semantic segmentation and object detection. IROS 2024.">
+  <meta property="og:url" content="https://aniruddhsikdar1.github.io/publications/ssl-rgb2ir/">
+  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/ssl-rgb2ir/static/images/teaser.png">
+  <meta property="article:published_time" content="2024-10-01T00:00:00.000Z">
+  <meta property="article:author" content="Aniruddh Sikdar">
+  <meta property="article:section" content="Research">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation">
+  <meta name="twitter:description" content="A semi-supervised RGB-to-IR image-to-image translation framework that improves training for semantic segmentation and object detection. IROS 2024.">
+  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/ssl-rgb2ir/static/images/teaser.png">
+
+  <meta name="citation_title" content="SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation for Enhancing Visual Task Training in Semantic Segmentation and Object Detection">
+  <meta name="citation_author" content="Sikdar, Aniruddh">
+  <meta name="citation_author" content="Saadiyean, Qiranul">
+  <meta name="citation_author" content="Anand, Prahlad">
+  <meta name="citation_author" content="Sundaram, Suresh">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation | IROS 2024</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation for Enhancing Visual Task Training in Semantic Segmentation and Object Detection</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://aniruddhsikdar1.github.io/" target="_blank">Aniruddh Sikdar</a>,</span>
+              <span class="author-block">Qiranul Saadiyean,</span>
+              <span class="author-block">Prahlad Anand,</span>
+              <span class="author-block">Suresh Sundaram</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), Bengaluru<br>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://ieeexplore.ieee.org/document/10802815" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="SSL-RGB2IR overview" style="width:100%; border-radius: 6px;">
+        <h2 class="subtitle has-text-centered">
+          SSL-RGB2IR translates RGB imagery into the infrared domain in a semi-supervised manner, generating useful IR training signal without requiring paired IR annotations.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              RGB-based perception models degrade significantly under low-light and adverse visibility conditions where infrared (IR) sensing is far more reliable, yet large-scale annotated IR datasets remain scarce. We propose SSL-RGB2IR, a semi-supervised RGB-to-IR image-to-image translation framework that synthesizes realistic IR imagery from abundant labeled RGB data, propagating existing semantic segmentation and object detection annotations into the IR domain without requiring manual IR labeling. By combining supervised translation losses on a small labeled IR subset with consistency-based semi-supervised learning on unlabeled IR data, our framework produces IR training data that meaningfully improves downstream segmentation and detection performance. Extensive experiments demonstrate that models trained with our synthesized IR data significantly outperform baselines trained on limited real IR annotations, offering a scalable path toward robust multi-spectral perception for robotic systems operating in low-light and IR-only conditions.
+            </p>
+            <p style="font-size: 0.85rem; color: #888;">
+              <em>Placeholder abstract — replace with the exact text from the paper.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Method / Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/results.png" alt="SSL-RGB2IR results" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              RGB-to-IR translation results used to train downstream segmentation and detection models.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Method / Results -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{sikdar2024sslrgb2ir,
+  title={SSL-RGB2IR: Semi-Supervised RGB-to-IR Image-to-Image Translation for Enhancing Visual Task Training in Semantic Segmentation and Object Detection},
+  author={Sikdar, Aniruddh and Saadiyean, Qiranul and Anand, Prahlad and Sundaram, Suresh},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={5017--5023},
+  year={2024},
+  organization={IEEE},
+  url={https://ieeexplore.ieee.org/document/10802815}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              <a href="https://aniruddhsikdar1.github.io/" target="_blank">&larr; Back to Aniruddh Sikdar's homepage</a>
+            </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

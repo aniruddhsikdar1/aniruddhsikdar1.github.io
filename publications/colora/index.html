@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="CoLoRA - Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
+  <meta name="description" content="CoLoRA: a prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
+  <meta name="keywords" content="open-vocabulary segmentation, optimal transport, LoRA, prompt learning, CLIP, domain generalization, IROS 2026">
+  <meta name="author" content="Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Artificial Intelligence and Robotics Lab (AIRL), IISc">
+  <meta property="og:title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
+  <meta property="og:description" content="A prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
+  <meta property="og:url" content="https://aniruddhsikdar1.github.io/publications/colora/">
+  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/teaser.png">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Aniruddh Sikdar">
+  <meta property="article:section" content="Research">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
+  <meta name="twitter:description" content="A prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
+  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/teaser.png">
+
+  <meta name="citation_title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
+  <meta name="citation_author" content="Sikdar, Aniruddh">
+  <meta name="citation_author" content="Gandhamal, Aditya">
+  <meta name="citation_author" content="Sundaram, Suresh">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation | IROS 2026</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://aniruddhsikdar1.github.io/" target="_blank">Aniruddh Sikdar</a><sup>*</sup>,</span>
+              <span class="author-block">Aditya Gandhamal,</span>
+              <span class="author-block">Suresh Sundaram</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), Bengaluru<br>2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <span class="external-link button is-normal is-rounded is-dark" style="opacity: 0.6; cursor: default;">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper (coming soon)</span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png" alt="CoLoRA overview" style="width:100%; border-radius: 6px;">
+        <h2 class="subtitle has-text-centered">
+          CoLoRA combines Cost-Aware Optimal Transport via Aggregation (COAT) with LoRA adaptation applied at model convergence, enabling efficient and generalizable multi-domain open-vocabulary segmentation.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Robust robotic perception is essential for embodied AI applications, enabling autonomous systems such as ground vehicles and drones to accurately interpret and navigate complex environments. These applications span specialized domains, including medical imaging, remote sensing, drone-based monitoring, agriculture, and engineering, as well as broader real-world scenarios such as autonomous driving and maritime operations. A major challenge in these systems is achieving semantic understanding of previously unseen categories, which is addressed by open-vocabulary semantic segmentation (OVSS). OVSS leverages large-scale vision–language models like CLIP to assign pixel-level labels based on textual descriptions. However, existing models often struggle to generalize across domains, limiting their effectiveness in real-world, multi-domain settings.
+            </p>
+            <p>
+              To address these limitations, we propose CoLoRA, a novel prompt learning framework that combines two key components: Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation applied at model convergence. Evaluated across 19 multi-domain datasets, CoLoRA achieves state-of-the-art performance, producing a more generalizable OVSS model while adding only a marginal increase in parameters compared to the baseline. Moreover, it consistently outperforms existing methods across diverse domains.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Method -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <p><strong>Cost-Aware Optimal Transport via Aggregation (COAT).</strong> Aligns visual and textual representations by formulating label assignment as a cost-aware optimal transport problem, improving correspondence between CLIP's textual embeddings and pixel-level visual features across domains.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <p><strong>LoRA Adaptation at Convergence.</strong> Once the COAT-guided model converges, lightweight low-rank adapters (LoRA) are introduced to fine-tune domain-specific behavior with only a marginal increase in parameters, avoiding full fine-tuning of the vision-language backbone.</p>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-centered" style="color: #888; font-size: 0.85rem;">
+          <em>Architecture diagram and qualitative results across the 19 evaluation datasets to be added.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End Method -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{sikdar2026colora,
+  title={CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation},
+  author={Sikdar, Aniruddh and Gandhamal, Aditya and Sundaram, Suresh},
+  booktitle={2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026}
+}</code></pre>
+      <p style="font-size: 0.8rem; color: #888;"><em>Citation details will be updated upon publication.</em></p>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              <a href="https://aniruddhsikdar1.github.io/" target="_blank">&larr; Back to Aniruddh Sikdar's homepage</a>
+            </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
