@@ -77,3 +77,27 @@ hr {
 .copy-bibtex-btn {
   background: var(--primary-color) !important;
 }
+
+.table {
+  background-color: var(--background-secondary) !important;
+  color: var(--text-secondary) !important;
+}
+
+.table th {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+  background-color: var(--background-accent) !important;
+}
+
+.table td {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+  background-color: var(--background-accent) !important;
+}
+
+.table tbody tr:hover {
+  background-color: var(--border-color) !important;
+}

@@ -6,7 +6,7 @@
 
   <meta name="title" content="CoLoRA - Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
   <meta name="description" content="CoLoRA: a prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
-  <meta name="keywords" content="open-vocabulary segmentation, optimal transport, LoRA, prompt learning, CLIP, domain generalization, IROS 2026">
+  <meta name="keywords" content="open-vocabulary segmentation, optimal transport, LoRA, prompt learning, CLIP, domain generalization, MESS benchmark, IROS 2026">
   <meta name="author" content="Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -16,7 +16,7 @@
   <meta property="og:title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
   <meta property="og:description" content="A prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
   <meta property="og:url" content="https://aniruddhsikdar1.github.io/publications/colora/">
-  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/teaser.png">
+  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/architecture.png">
   <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
   <meta property="article:author" content="Aniruddh Sikdar">
   <meta property="article:section" content="Research">
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
   <meta name="twitter:description" content="A prompt learning framework combining Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation for multi-domain open-vocabulary segmentation. IROS 2026.">
-  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/teaser.png">
+  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/colora/static/images/architecture.png">
 
   <meta name="citation_title" content="CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation">
   <meta name="citation_author" content="Sikdar, Aniruddh">
@@ -54,6 +54,14 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+
+  <style>
+    .results-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    .results-table-wrap table { font-size: 0.78rem; white-space: nowrap; }
+    .results-table-wrap th, .results-table-wrap td { padding: 0.35em 0.6em !important; }
+    .highlight-row td, .highlight-row th { font-weight: 700 !important; color: var(--accent-color) !important; }
+    .table-caption { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+  </style>
 </head>
 <body>
 
@@ -126,35 +134,18 @@
     </div>
   </section>
 
-  <!-- Teaser image -->
+  <!-- Teaser: architecture figure -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/teaser.png" alt="CoLoRA overview" style="width:100%; border-radius: 6px;">
+        <img src="static/images/architecture.png" alt="CoLoRA architecture overview" style="width:100%; border-radius: 6px; background: #fff; padding: 0.5rem;">
         <h2 class="subtitle has-text-centered">
-          CoLoRA combines Cost-Aware Optimal Transport via Aggregation (COAT) with LoRA adaptation applied at model convergence, enabling efficient and generalizable multi-domain open-vocabulary segmentation.
+          CoLoRA augments the CAT-Seg cost-aggregation baseline with Cost-Aware Optimal Transport via Aggregation (COAT) for visual–textual alignment, then introduces LoRA adapters on the aggregation layers near convergence — leaving the CLIP encoders and the rest of the model frozen.
         </h2>
       </div>
     </div>
   </section>
-  <!-- End teaser image -->
-
-  <!-- Youtube video -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3 has-text-centered">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/IB3zdfZwoh4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End youtube video -->
+  <!-- End teaser -->
 
   <!-- Paper abstract -->
   <section class="section hero is-light">
@@ -184,22 +175,179 @@
         <div class="columns">
           <div class="column">
             <div class="content">
-              <p><strong>Cost-Aware Optimal Transport via Aggregation (COAT).</strong> Aligns visual and textual representations by formulating label assignment as a cost-aware optimal transport problem, improving correspondence between CLIP's textual embeddings and pixel-level visual features across domains.</p>
+              <p><strong>Cost-Aware Optimal Transport via Aggregation (COAT).</strong> CLIP image and text embeddings are combined via cosine similarity into a multi-modal cost volume. COAT treats label assignment as an optimal transport problem over this cost volume: a transport plan is iteratively refined with Sinkhorn updates (inner loop) to align visual embeddings with textual embeddings, then held fixed while the cost-aggregation model (spatial + class aggregation, built on Swin/linear-attention blocks) is trained with cross-entropy loss (outer loop). Unlike PLOT-style prompt learning, COAT introduces no learnable prompt tokens — it directly improves visual–textual alignment of the base CAT-Seg model.</p>
             </div>
           </div>
           <div class="column">
             <div class="content">
-              <p><strong>LoRA Adaptation at Convergence.</strong> Once the COAT-guided model converges, lightweight low-rank adapters (LoRA) are introduced to fine-tune domain-specific behavior with only a marginal increase in parameters, avoiding full fine-tuning of the vision-language backbone.</p>
+              <p><strong>LoRA Adaptation at Model Convergence.</strong> Once COAT training approaches convergence (iteration τ), low-rank LoRA adapters are introduced — but only on the spatial and class aggregation Transformer layers, not on the CLIP encoders. The pretrained weights stay frozen; only the low-rank update matrices are optimized. This selective, late-stage adaptation avoids the performance collapse seen when LoRA or prompt-tuning methods are applied conventionally (see ablation below), while adding only <strong>1.014%</strong> more parameters.</p>
             </div>
           </div>
         </div>
-        <p class="has-text-centered" style="color: #888; font-size: 0.85rem;">
-          <em>Architecture diagram and qualitative results across the 19 evaluation datasets to be added.</em>
-        </p>
+
+        <div class="columns is-centered" style="margin-top: 1rem;">
+          <div class="column is-7">
+            <img src="static/images/training_curve.png" alt="Training accuracy vs. iterations, showing the COAT phase and the COAT+LoRA fine-tuning phase after &#964;" style="width:100%; background:#fff; border-radius: 6px; padding: 0.5rem;">
+            <p class="table-caption has-text-centered">Training accuracy over iterations. The model trains with COAT alone, then LoRA fine-tuning is introduced at &#964; = 50K (of 80K total iterations), giving a further accuracy gain.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!-- End Method -->
+
+  <!-- What is MESS -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What is the MESS Benchmark?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Most open-vocabulary segmentation models are benchmarked on everyday-scene datasets like ADE20K and Pascal VOC — useful, but a poor proxy for the domain shifts a robot actually meets in deployment. <strong>MESS</strong> (<em>Multi-domain Evaluation of zero-Shot Semantic Segmentation</em>, Blumenstiel et al., NeurIPS 2024) was built to close that gap: it aggregates <strong>19 datasets across six real-world domains</strong> — General, Earth Monitoring, Medical Sciences, Engineering, Agriculture, and Biology — and reports zero-shot mIoU across all of them.
+          </p>
+          <p>
+            Concretely, MESS spans scenes as different as <em>Dark Zurich</em> (night-time driving), <em>iSAID</em> and <em>ISPRS</em> (aerial/satellite remote sensing), <em>WorldFloods</em> and <em>FloodNet</em> (disaster monitoring), <em>Kvasir-instrument</em> and <em>CryoNuSeg</em> (medical imaging), <em>Corrosion CS</em>, <em>DeepCrack</em> and <em>PST900</em> (engineering inspection), <em>CWFID</em> (agriculture), and <em>SUIM</em> (underwater perception) — exactly the kind of specialized, out-of-distribution domains where a model that only "memorized" COCO-Stuff-style scenes falls apart. We train CoLoRA once on COCO-Stuff and evaluate zero-shot across all 19 MESS datasets, which is what makes the gains below a meaningful test of cross-domain generalization rather than benchmark overfitting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End What is MESS -->
+
+  <!-- Quantitative Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+        <h3 class="title is-5">Multi-domain evaluation on MESS (mIoU, ViT-B/16)</h3>
+        <p class="table-caption">CoLoRA improves <strong>+2.32 mIoU</strong> over the CAT-Seg baseline and outperforms all competing OVSS methods, including those trained with additional grounding data.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth">
+            <thead>
+              <tr>
+                <th>Method</th><th>Dark Zurich</th><th>MHP v1</th><th>FoodSeg103</th><th>ATLANTIS</th><th>iSAID</th><th>ISPRS</th><th>WorldFloods</th><th>FloodNet</th><th>UAVid</th><th>Kvasir-inst.</th><th>CHASE DB1</th><th>CryoNuSeg</th><th>Corrosion CS</th><th>DeepCrack</th><th>PST900</th><th>ZeroWaste-f</th><th>SUIM</th><th>CUB-200</th><th>CWFID</th><th>Mean</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Random (L.B)</td><td>1.31</td><td>1.27</td><td>0.23</td><td>0.56</td><td>0.56</td><td>8.02</td><td>18.43</td><td>3.39</td><td>5.18</td><td>27.99</td><td>27.25</td><td>31.25</td><td>9.30</td><td>26.52</td><td>4.52</td><td>6.49</td><td>5.30</td><td>0.06</td><td>13.08</td><td>10.27</td></tr>
+              <tr><td>Best Sup. (U.B)</td><td>63.90</td><td>50.00</td><td>45.10</td><td>42.22</td><td>65.30</td><td>87.56</td><td>92.71</td><td>82.22</td><td>67.80</td><td>93.70</td><td>97.05</td><td>73.45</td><td>49.92</td><td>85.90</td><td>82.30</td><td>52.5</td><td>74.00</td><td>84.60</td><td>87.23</td><td>70.99</td></tr>
+              <tr><td>ZSSeg-B</td><td>16.86</td><td>7.08</td><td>8.17</td><td>22.19</td><td>3.80</td><td>11.57</td><td>23.25</td><td>20.98</td><td>30.27</td><td>46.93</td><td>37.00</td><td>38.70</td><td>3.06</td><td>25.39</td><td>18.76</td><td>8.78</td><td>30.16</td><td>4.35</td><td>32.46</td><td>22.73</td></tr>
+              <tr><td>ZegFormer-B</td><td>4.52</td><td>4.33</td><td>10.01</td><td>18.98</td><td>2.68</td><td>14.04</td><td>25.93</td><td>22.74</td><td>20.84</td><td>27.39</td><td>12.47</td><td>11.94</td><td>4.78</td><td>29.77</td><td>19.63</td><td>17.52</td><td>28.28</td><td>16.80</td><td>32.24</td><td>17.57</td></tr>
+              <tr><td>X-Decoder-T</td><td>24.16</td><td>3.54</td><td>2.61</td><td>27.51</td><td>2.43</td><td>31.47</td><td>26.23</td><td>8.83</td><td>25.65</td><td>55.77</td><td>10.16</td><td>11.94</td><td>1.72</td><td>24.65</td><td>19.44</td><td>15.44</td><td>24.75</td><td>0.51</td><td>29.25</td><td>19.8</td></tr>
+              <tr><td>SAN-B</td><td>24.35</td><td>8.87</td><td>19.27</td><td>36.51</td><td>4.77</td><td>37.56</td><td>31.75</td><td>37.44</td><td>41.65</td><td>69.88</td><td>17.85</td><td>11.95</td><td>19.73</td><td>50.27</td><td>19.67</td><td>21.27</td><td>22.64</td><td>16.91</td><td>5.67</td><td>26.21</td></tr>
+              <tr><td>OpenSeeD-T</td><td>28.13</td><td>2.06</td><td>9.00</td><td>18.55</td><td>1.45</td><td>31.07</td><td>30.11</td><td>23.14</td><td>39.78</td><td>59.69</td><td>46.88</td><td>33.76</td><td>13.38</td><td>47.84</td><td>2.50</td><td>2.28</td><td>19.45</td><td>0.13</td><td>11.47</td><td>21.82</td></tr>
+              <tr><td>Gr.-SAM-B</td><td>20.91</td><td>29.38</td><td>10.48</td><td>17.33</td><td>12.22</td><td>26.68</td><td>33.41</td><td>19.19</td><td>38.35</td><td>46.82</td><td>23.56</td><td>38.06</td><td>20.88</td><td>59.02</td><td>21.39</td><td>16.74</td><td>14.13</td><td>0.43</td><td>38.41</td><td>25.65</td></tr>
+              <tr><td>ODISE</td><td>28.88</td><td>7.31</td><td>16.62</td><td>36.73</td><td>11.71</td><td>54.83</td><td>26.30</td><td>35.06</td><td>43.46</td><td>28.02</td><td>20.60</td><td>12.27</td><td>10.74</td><td>24.34</td><td>20.18</td><td>5.74</td><td>26.24</td><td>4.62</td><td>30.43</td><td>23.37</td></tr>
+              <tr><td>CAT-Seg</td><td>28.86</td><td>23.74</td><td>26.69</td><td>40.31</td><td>19.34</td><td>45.36</td><td>35.72</td><td>37.57</td><td>41.55</td><td>48.20</td><td>16.99</td><td>15.70</td><td>12.29</td><td>31.67</td><td>19.88</td><td>17.52</td><td>44.71</td><td>10.23</td><td>42.77</td><td>29.42</td></tr>
+              <tr class="highlight-row"><td>CoLoRA (Ours)</td><td>29.07</td><td>22.00</td><td>23.32</td><td>38.75</td><td>17.23</td><td>43.88</td><td>38.79</td><td>34.01</td><td>42.52</td><td>58.78</td><td>43.31</td><td>32.53</td><td>11.67</td><td>50.97</td><td>19.09</td><td>18.54</td><td>34.44</td><td>6.47</td><td>37.78</td><td>31.74</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-5">Comparison with prompt-learning techniques</h3>
+        <p class="table-caption">Existing prompt-learning methods (and vanilla LoRA) consistently <em>degrade</em> CAT-Seg under multi-domain evaluation. CoLoRA is the only adaptation strategy that improves it.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth">
+            <thead><tr><th>Base Model</th><th>Adaptation</th><th>mIoU (MESS)</th><th>&Delta;</th></tr></thead>
+            <tbody>
+              <tr><td>CAT-Seg</td><td>&mdash;</td><td>29.42</td><td>&mdash;</td></tr>
+              <tr><td>CAT-Seg</td><td>VPT</td><td>21.75</td><td>&darr; 7.67</td></tr>
+              <tr><td>CAT-Seg</td><td>CoOp</td><td>23.85</td><td>&darr; 5.57</td></tr>
+              <tr><td>CAT-Seg</td><td>CoCoOp</td><td>26.36</td><td>&darr; 3.06</td></tr>
+              <tr><td>CAT-Seg</td><td>KgCoOp</td><td>13.57</td><td>&darr; 15.85</td></tr>
+              <tr><td>CAT-Seg</td><td>TCP</td><td>10.46</td><td>&darr; 18.96</td></tr>
+              <tr><td>CAT-Seg</td><td>PLOT</td><td>26.61</td><td>&darr; 2.81</td></tr>
+              <tr><td>CAT-Seg</td><td>CoPLOT</td><td>26.50</td><td>&darr; 2.92</td></tr>
+              <tr><td>CAT-Seg</td><td>LoRA</td><td>10.79</td><td>&darr; 18.63</td></tr>
+              <tr class="highlight-row"><td>CAT-Seg</td><td>CoLoRA (Ours)</td><td>31.74</td><td>&uarr; 2.36</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <h3 class="title is-5">Model complexity</h3>
+            <p class="table-caption">LoRA adapters add only <strong>1.014%</strong> parameters, with no change in inference time.</p>
+            <div class="results-table-wrap">
+              <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                <thead><tr><th></th><th>ZSSeg</th><th>CAT-Seg</th><th>CoLoRA</th></tr></thead>
+                <tbody>
+                  <tr><td># learnable params (M)</td><td>102.8</td><td>70.30</td><td>70.37</td></tr>
+                  <tr><td># total params (M)</td><td>530.8</td><td>433.7</td><td>433.7</td></tr>
+                  <tr><td>Inference time (s)</td><td>2.73</td><td>0.54</td><td>0.54</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="title is-5">Ablation: CoLoRA components</h3>
+            <p class="table-caption">Each component contributes; combining COAT with convergence-stage LoRA is best.</p>
+            <div class="results-table-wrap">
+              <table class="table is-bordered is-striped is-narrow is-fullwidth">
+                <thead><tr><th>Method</th><th>mIoU</th></tr></thead>
+                <tbody>
+                  <tr><td>CAT-Seg</td><td>29.42</td></tr>
+                  <tr><td>CAT-Seg + COAT</td><td>31.15</td></tr>
+                  <tr><td>CAT-Seg + LoRA</td><td>10.79</td></tr>
+                  <tr class="highlight-row"><td>CAT-Seg + CoLoRA (LoRA at Convergence)</td><td>31.74</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-5">When to introduce LoRA: the role of &tau;</h3>
+        <p class="table-caption">Introducing LoRA earlier (35K iterations) already helps, but waiting until closer to convergence (50K) is best.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth">
+            <thead><tr><th>Method</th><th>&tau;</th><th>mIoU (MESS)</th><th>&Delta;</th></tr></thead>
+            <tbody>
+              <tr><td>CAT-Seg</td><td>&mdash;</td><td>29.42</td><td>&mdash;</td></tr>
+              <tr><td>CAT-Seg + CoLoRA</td><td>35k</td><td>31.10</td><td>&uarr; 1.26</td></tr>
+              <tr class="highlight-row"><td>CAT-Seg + CoLoRA</td><td>50k</td><td>31.74</td><td>&uarr; 2.32</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Quantitative Results -->
+
+  <!-- Qualitative Results -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <img src="static/images/qualitative.png" alt="Qualitative comparison between CoLoRA and CAT-Seg on MHP and Atlantis" style="width:100%; background:#fff; border-radius: 6px; padding: 0.5rem;">
+          </div>
+        </div>
+        <p class="has-text-centered table-caption">
+          Qualitative comparison between CoLoRA and the baseline CAT-Seg on the MHP (top row) and ATLANTIS (bottom row) datasets from the MESS benchmark. CoLoRA produces masks that align more closely with ground truth, particularly for fine-grained and out-of-distribution categories.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End Qualitative Results -->
+
+  <!-- Youtube video -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/IB3zdfZwoh4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -217,7 +365,7 @@
   booktitle={2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
   year={2026}
 }</code></pre>
-      <p style="font-size: 0.8rem; color: #888;"><em>Citation details will be updated upon publication.</em></p>
+      <p style="font-size: 0.8rem; color: var(--text-light);"><em>Citation details will be updated upon publication.</em></p>
     </div>
   </section>
   <!--End BibTex citation -->
