@@ -11,20 +11,36 @@ profile:
     <p>Meiji Jingu, Shibuya,</p>
     <p>Tokyo, Japan. (2024)</p>
 
-# selected_papers: true # includes a list of papers marked as "selected={true}"  Meiji Jingu, Shibuya, Tokyo, Japan. (2024)
+announcements:
+  enabled: true # includes a list of news items
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+selected_papers: true # includes a list of papers marked as "selected={true}"
+
 social: true # includes social icons at the bottom of the page
 ---
 I am a Project Scientist at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), working under the supervision of Prof. Suresh Sundaram
-(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>). .....
+(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>).
 
 I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), IISc Bengaluru. I am deeply grateful for the mentorship of Professor Suresh Sundaram at the Artificial Intelligence and Robotics Lab (AIRL). In the initial stages of my Ph.D., I also worked with Prof. Sundarrajan, an experience that strongly influenced the trajectory of my research.
-My research focuses on computer vision for robotics, with particular emphasis on multi-sensor fusion, generalization to unseen target domains, and continual learning. I am interested in developing robust perception models that can be reliably deployed in real-world environments.
-
-At AIRL, IISc, I have contributed to several real-world, deployable projects and collaborated with startups incubated at the Society of Innovation and Development (SID) and ARTPARK. My work involves evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using RGB, Infrared (IR), and Synthetic Aperture Radar (SAR) sensors. I have extensive experience with sim-to-real evaluation and the use of generative AI techniques to improve model generalization and robustness.
 
 I also work as a Consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, a startup incubated at the Foundation for Science, Innovation and Development (formerly SID). In parallel, I address challenging computer vision problems in noisy and fast-paced environments, particularly in sports analytics, where robustness and real-time performance are critical.
 
 I am motivated to publish in top-tier conferences and have publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I have also been recognized for my service to the research community with the Outstanding Reviewer Award at CVPR 2026.
+
+---
+
+<h2>Research Statement</h2>
+<div style="padding: 1.25rem 1.5rem; border-left: 4px solid #6c757d; background: rgba(108, 117, 125, 0.07); border-radius: 4px; margin-bottom: 1.5rem;">
+  <p style="margin-bottom: 0.75rem;">
+    My research focuses on <strong>computer vision for robotics</strong>, with particular emphasis on <strong>multi-sensor fusion</strong>, <strong>generalization to unseen target domains</strong>, and <strong>continual learning</strong>. I am interested in developing robust perception models that can be reliably deployed in real-world environments &mdash; not just on curated benchmarks.
+  </p>
+  <p style="margin-bottom: 0;">
+    At AIRL, IISc, I have contributed to several real-world, deployable projects and collaborated with startups incubated at the Society of Innovation and Development (SID) and ARTPARK. My work involves evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using RGB, Infrared (IR), and Synthetic Aperture Radar (SAR) sensors. I have extensive experience with sim-to-real evaluation and the use of generative AI techniques to improve model generalization and robustness.
+  </p>
+</div>
+<p><a href="/projects/">Read more about my research areas &rarr;</a></p>
 
 ---
 
