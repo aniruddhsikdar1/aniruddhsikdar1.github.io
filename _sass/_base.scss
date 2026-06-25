@@ -164,6 +164,42 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
+// Profile page section boxes (research statement, news, selected publications, affiliations, etc.)
+
+.profile-section {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+  padding: 1.75rem 2rem;
+  margin: 2rem 0;
+
+  > h2 {
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    a {
+      color: var(--global-text-color);
+    }
+  }
+
+  > h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: 0.5rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--global-theme-color), transparent);
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Card
 
 .card {

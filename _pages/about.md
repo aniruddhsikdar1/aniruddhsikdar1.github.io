@@ -29,38 +29,36 @@ I also work as a Consultant at <a href="https://www.visist.ai/#/" target="_blank
 
 I am motivated to publish in top-tier conferences and have publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I have also been recognized for my service to the research community with the Outstanding Reviewer Award at CVPR 2026.
 
----
-
-<h2><a href="/projects/" style="color: inherit">research statement</a></h2>
-<div style="padding: 1.25rem 1.5rem; border-left: 4px solid #6c757d; background: rgba(108, 117, 125, 0.07); border-radius: 4px; margin-bottom: 1.5rem;">
-  <p style="margin-bottom: 0.75rem;">
+<div class="profile-section">
+  <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
+  <p>
     My research focuses on <strong>computer vision for robotics</strong>, with particular emphasis on <strong>multi-sensor fusion</strong>, <strong>generalization to unseen target domains</strong>, and <strong>continual learning</strong>. I am interested in developing robust perception models that can be reliably deployed in real-world environments &mdash; not just on curated benchmarks.
   </p>
-  <p style="margin-bottom: 0;">
+  <p>
     At AIRL, IISc, I have contributed to several real-world, deployable projects and collaborated with startups incubated at the Society of Innovation and Development (SID) and ARTPARK. My work involves evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using RGB, Infrared (IR), and Synthetic Aperture Radar (SAR) sensors. I have extensive experience with sim-to-real evaluation and the use of generative AI techniques to improve model generalization and robustness.
   </p>
 </div>
 
----
-
 <!-- Organization Logos Section -->
-<h2>Affiliations </h2>
-<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
-  <a href="https://www.iisc.ac.in/" target="_blank">
-    <img src="/assets/img/rbccps.png" alt="RBCCPS Logo" style="height: 60px;" />
-  </a>
-  
-  <!-- <a href="https://airl-iisc.github.io/" target="_blank">
-    <img src="https://airl-iisc.github.io/assets/img/airl_logo.png" alt="AIRL Logo" style="height: 60px;">
-  </a>
+<div class="profile-section">
+  <h2>affiliations</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <a href="https://www.iisc.ac.in/" target="_blank">
+      <img src="/assets/img/rbccps.png" alt="RBCCPS Logo" style="height: 60px;" />
+    </a>
 
-  <a href="https://artpark.in/" target="_blank">
-    <img src="https://artpark.in/wp-content/uploads/2021/08/logo-color.svg" alt="ArtPark Logo" style="height: 60px;">
-  </a>
+    <!-- <a href="https://airl-iisc.github.io/" target="_blank">
+      <img src="https://airl-iisc.github.io/assets/img/airl_logo.png" alt="AIRL Logo" style="height: 60px;">
+    </a>
 
-  <a href="https://sid.iisc.ac.in/" target="_blank">
-    <img src="https://sid.iisc.ac.in/wp-content/uploads/2021/02/logo_sid.png" alt="SID Logo" style="height: 60px;">
-  </a> -->
+    <a href="https://artpark.in/" target="_blank">
+      <img src="https://artpark.in/wp-content/uploads/2021/08/logo-color.svg" alt="ArtPark Logo" style="height: 60px;">
+    </a>
+
+    <a href="https://sid.iisc.ac.in/" target="_blank">
+      <img src="https://sid.iisc.ac.in/wp-content/uploads/2021/02/logo_sid.png" alt="SID Logo" style="height: 60px;">
+    </a> -->
+  </div>
 </div>
 
 
