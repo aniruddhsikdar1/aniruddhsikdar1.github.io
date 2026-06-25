@@ -61,6 +61,32 @@
     .results-table-wrap th, .results-table-wrap td { padding: 0.35em 0.6em !important; }
     .highlight-row td, .highlight-row th { font-weight: 700 !important; color: var(--accent-color) !important; }
     .table-caption { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+
+    /* Animated stat counters */
+    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin: 1.5rem 0 0.5rem; }
+    .stat-item { text-align: center; min-width: 150px; }
+    .stat-number { display: block; font-size: 2.3rem; font-weight: 800; color: var(--accent-color); font-family: 'Inter', sans-serif; }
+    .stat-label { font-size: 0.8rem; color: var(--text-light); }
+
+    /* Before/after image compare slider */
+    .img-compare { position: relative; width: 100%; max-width: 560px; margin: 0 auto 0.75rem; border-radius: 6px; overflow: hidden; cursor: ew-resize; box-shadow: var(--shadow-lg); }
+    .img-compare .compare-img { display: block; width: 100%; height: auto; user-select: none; pointer-events: none; }
+    .img-compare .compare-clip { position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; clip-path: inset(0 50% 0 0); }
+    .img-compare .compare-clip img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+    .img-compare .compare-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 6px rgba(0,0,0,.6); }
+    .img-compare .compare-handle::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 34px; height: 34px; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+    .img-compare .compare-handle::before { content: '\2194'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 16px; color: #1e293b; z-index: 2; font-weight: 700; }
+    .img-compare .compare-label { position: absolute; bottom: 10px; padding: 4px 10px; background: rgba(15,23,42,.78); color: #fff; font-size: 0.72rem; border-radius: 4px; font-family: 'Inter', sans-serif; pointer-events: none; letter-spacing: 0.02em; }
+    .img-compare .label-before { left: 10px; }
+    .img-compare .label-after { right: 10px; }
+    .compare-caption { font-size: 0.8rem; color: var(--text-light); text-align: center; margin-bottom: 2rem; }
+
+    /* Sortable table headers */
+    .sortable-table thead th { cursor: pointer; }
+    .sortable-table thead th:hover { background: var(--border-color) !important; }
+    .sortable-table thead th.sorted-asc::after { content: ' \2191'; color: var(--accent-color); }
+    .sortable-table thead th.sorted-desc::after { content: ' \2193'; color: var(--accent-color); }
+    .sort-hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
@@ -161,6 +187,25 @@
               To address these limitations, we propose CoLoRA, a novel prompt learning framework that combines two key components: Cost-Aware Optimal Transport via Aggregation (COAT) and LoRA adaptation applied at model convergence. Evaluated across 19 multi-domain datasets, CoLoRA achieves state-of-the-art performance, producing a more generalizable OVSS model while adding only a marginal increase in parameters compared to the baseline. Moreover, it consistently outperforms existing methods across diverse domains.
             </p>
           </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2.32" data-prefix="+">0</span>
+              <span class="stat-label">mIoU gain over CAT-Seg on MESS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="19">0</span>
+              <span class="stat-label">multi-domain evaluation datasets</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1.014" data-suffix="%">0</span>
+              <span class="stat-label">extra parameters vs. baseline</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="0.54" data-suffix="s">0</span>
+              <span class="stat-label">inference time (unchanged)</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -222,8 +267,9 @@
 
         <h3 class="title is-5">Multi-domain evaluation on MESS (mIoU, ViT-B/16)</h3>
         <p class="table-caption">CoLoRA improves <strong>+2.32 mIoU</strong> over the CAT-Seg baseline and outperforms all competing OVSS methods, including those trained with additional grounding data.</p>
+        <p class="sort-hint">Click any column header to sort the table by that dataset.</p>
         <div class="results-table-wrap">
-          <table class="table is-bordered is-striped is-narrow is-fullwidth">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
             <thead>
               <tr>
                 <th>Method</th><th>Dark Zurich</th><th>MHP v1</th><th>FoodSeg103</th><th>ATLANTIS</th><th>iSAID</th><th>ISPRS</th><th>WorldFloods</th><th>FloodNet</th><th>UAVid</th><th>Kvasir-inst.</th><th>CHASE DB1</th><th>CryoNuSeg</th><th>Corrosion CS</th><th>DeepCrack</th><th>PST900</th><th>ZeroWaste-f</th><th>SUIM</th><th>CUB-200</th><th>CWFID</th><th>Mean</th>
@@ -319,13 +365,46 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+
         <div class="columns is-centered">
-          <div class="column is-8">
-            <img src="static/images/qualitative.png" alt="Qualitative comparison between CoLoRA and CAT-Seg on MHP and Atlantis" style="width:100%; background:#fff; border-radius: 6px; padding: 0.5rem;">
+          <div class="column is-6">
+            <img src="static/images/qualitative_flicker.gif" alt="Animated comparison cycling through Ground Truth, CAT-Seg, and CoLoRA on the ATLANTIS dataset" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption">ATLANTIS sample, cycling Ground Truth &rarr; CAT-Seg &rarr; CoLoRA.</p>
           </div>
         </div>
+
+        <p class="has-text-centered table-caption" style="margin-top: 1rem;">
+          Drag the handles below to directly compare the baseline CAT-Seg against CoLoRA, panel-for-panel, on the MHP and ATLANTIS samples from the MESS benchmark.
+        </p>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="img-compare" data-before="static/images/panel_mhp_catseg.png" data-after="static/images/panel_mhp_colora.png">
+              <img class="compare-img compare-base" src="static/images/panel_mhp_catseg.png" alt="CAT-Seg prediction on MHP">
+              <div class="compare-clip">
+                <img class="compare-img" src="static/images/panel_mhp_colora.png" alt="CoLoRA prediction on MHP">
+              </div>
+              <div class="compare-handle"></div>
+              <span class="compare-label label-before">CAT-Seg</span>
+              <span class="compare-label label-after">CoLoRA</span>
+            </div>
+            <p class="compare-caption">MHP sample &mdash; drag to compare</p>
+          </div>
+          <div class="column is-6">
+            <div class="img-compare" data-before="static/images/panel_atlantis_catseg.png" data-after="static/images/panel_atlantis_colora.png">
+              <img class="compare-img compare-base" src="static/images/panel_atlantis_catseg.png" alt="CAT-Seg prediction on ATLANTIS">
+              <div class="compare-clip">
+                <img class="compare-img" src="static/images/panel_atlantis_colora.png" alt="CoLoRA prediction on ATLANTIS">
+              </div>
+              <div class="compare-handle"></div>
+              <span class="compare-label label-before">CAT-Seg</span>
+              <span class="compare-label label-after">CoLoRA</span>
+            </div>
+            <p class="compare-caption">ATLANTIS sample &mdash; drag to compare</p>
+          </div>
+        </div>
+
         <p class="has-text-centered table-caption">
-          Qualitative comparison between CoLoRA and the baseline CAT-Seg on the MHP (top row) and ATLANTIS (bottom row) datasets from the MESS benchmark. CoLoRA produces masks that align more closely with ground truth, particularly for fine-grained and out-of-distribution categories.
+          CoLoRA produces masks that align more closely with ground truth than the baseline CAT-Seg, particularly for fine-grained and out-of-distribution categories.
         </p>
       </div>
     </div>
@@ -388,6 +467,83 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Before/after image compare sliders
+    document.querySelectorAll('.img-compare').forEach(function (container) {
+      var clip = container.querySelector('.compare-clip');
+      var handle = container.querySelector('.compare-handle');
+      var dragging = false;
+
+      function setPercent(p) {
+        p = Math.max(0, Math.min(100, p));
+        clip.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+        handle.style.left = p + '%';
+      }
+      function moveAt(clientX) {
+        var rect = container.getBoundingClientRect();
+        setPercent(((clientX - rect.left) / rect.width) * 100);
+      }
+      container.addEventListener('mousedown', function (e) { dragging = true; moveAt(e.clientX); e.preventDefault(); });
+      window.addEventListener('mousemove', function (e) { if (dragging) moveAt(e.clientX); });
+      window.addEventListener('mouseup', function () { dragging = false; });
+      container.addEventListener('touchstart', function (e) { dragging = true; moveAt(e.touches[0].clientX); }, { passive: true });
+      container.addEventListener('touchmove', function (e) { if (dragging) moveAt(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener('touchend', function () { dragging = false; });
+      setPercent(50);
+    });
+
+    // Animated stat counters, triggered when scrolled into view
+    function animateCount(el) {
+      var raw = el.dataset.target;
+      var target = parseFloat(raw);
+      var decimals = (raw.split('.')[1] || '').length;
+      var prefix = el.dataset.prefix || '';
+      var suffix = el.dataset.suffix || '';
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = prefix + (target * progress).toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      var statObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            statObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.stat-number').forEach(function (el) { statObserver.observe(el); });
+    }
+
+    // Sortable results table
+    document.querySelectorAll('.sortable-table').forEach(function (table) {
+      var headers = table.querySelectorAll('thead th');
+      headers.forEach(function (th, idx) {
+        th.addEventListener('click', function () {
+          var tbody = table.querySelector('tbody');
+          var rows = Array.from(tbody.querySelectorAll('tr'));
+          var asc = th.classList.contains('sorted-asc') ? false : true;
+          rows.sort(function (a, b) {
+            var av = a.children[idx].textContent.trim();
+            var bv = b.children[idx].textContent.trim();
+            var an = parseFloat(av), bn = parseFloat(bv);
+            if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+            return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+          });
+          rows.forEach(function (r) { tbody.appendChild(r); });
+          headers.forEach(function (h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+          th.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
