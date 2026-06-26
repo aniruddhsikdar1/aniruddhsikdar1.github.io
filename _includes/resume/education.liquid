@@ -1,5 +1,5 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-  {% assign education = data[1] | sort: 'startDate' | reverse %}
+  {% assign education = data[1] | sort: 'endDate' | reverse %}
   {% for content in education %}
     <li class="list-group-item">
       <div class="row">
@@ -20,6 +20,17 @@
 
           <table class="table-cv">
             <tbody>
+              {% if content.logo %}
+                <tr>
+                  <td style="text-align: center;">
+                    <img
+                      src="{{ content.logo | relative_url }}"
+                      alt="{{ content.institution }}"
+                      style="max-width: 120px; max-height: 120px; object-fit: contain; margin-bottom: 0.5rem; display: block; margin-left: auto; margin-right: auto;"
+                    />
+                  </td>
+                </tr>
+              {% endif %}
               <tr>
                 <td>
                   {% if date %}
