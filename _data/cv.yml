@@ -8,27 +8,15 @@
   type: time_table
   contents:
     - title: PhD
-      institution: Indian Institute of Science, Bangalore, India
+      institution: Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bangalore, India
       year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "Advisor: Prof. Suresh Sundaram, Artificial Intelligence and Robotics Lab (AIRL)"
+    - title: MTech (Research)
+      institution: TODO — institution, year
+      year: TODO
       description:
-        - Description 1.
-        - Description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - TODO — add specialization / thesis title
 
 - title: Work Experience
   type: time_table
