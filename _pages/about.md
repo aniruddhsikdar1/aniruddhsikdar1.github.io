@@ -32,10 +32,16 @@ I am motivated to advance challenging real-world computer vision research throug
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
   <p>
-    My research focuses on <strong>computer vision for robotics</strong>, with particular emphasis on <strong>multi-sensor fusion</strong>, <strong>generalization to unseen target domains</strong>, and <strong>continual learning</strong>. I am interested in developing robust perception models that can be reliably deployed in real-world environments &mdash; not just on curated benchmarks.
+    My research focuses on <strong>computer vision for robotics</strong>, with an emphasis on <strong>video understanding</strong>, <strong>multi-sensor fusion</strong>, <strong>continual learning</strong>, and <strong>generalization to unseen target domains</strong>. I am particularly interested in developing robust perception systems that can be reliably deployed in complex real-world environments.
   </p>
   <p>
-    At AIRL, IISc, I have contributed to several real-world, deployable projects and collaborated with startups incubated at the Society of Innovation and Development (SID) and ARTPARK. My work involves evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across platforms such as ground vehicles, drones, and satellites, using RGB, Infrared (IR), and Synthetic Aperture Radar (SAR) sensors. I have extensive experience with sim-to-real evaluation and the use of generative AI techniques to improve model generalization and robustness.
+    During my tenure at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science, I contributed to several real-world research and deployment-oriented projects in collaboration with startups incubated at the Society for Innovation and Development (SID) and ARTPARK. My work involved evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across diverse robotic platforms, including ground vehicles, drones, and satellite systems. These systems leveraged multimodal sensing modalities such as RGB, Infrared (IR), Side-Scan Sonar, and Synthetic Aperture Radar (SAR).
+  </p>
+  <p>
+    I also have significant experience in sim-to-real evaluation pipelines and in leveraging generative AI techniques to improve model robustness, adaptation, and generalization under challenging operational conditions.
+  </p>
+  <p>
+    In addition, I have worked on deploying task-specific computer vision models for sports analytics in fast-paced and highly dynamic environments, with a focus on maintaining reliability and performance under unseen real-world scenarios.
   </p>
 </div>
 
