@@ -20,14 +20,14 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 
 social: true # includes social icons at the bottom of the page
 ---
-I am a Project Scientist at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), working under the supervision of Prof. Suresh Sundaram
+I am a Project Scientist 1 at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), working under the supervision of Prof. Suresh Sundaram
 (<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>).
 
-I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), IISc Bengaluru. I am deeply grateful for the mentorship of Professor Suresh Sundaram at the Artificial Intelligence and Robotics Lab (AIRL). In the initial stages of my Ph.D., I also worked with Prof. Sundarrajan, an experience that strongly influenced the trajectory of my research.
+I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>), IISc Bengaluru. In the initial stages of my Ph.D., I also briefly worked with Prof. Sundarrajan, <a href="https://chandan-iiti.github.io" target="_blank">Dr. Chandan Gautham</a>, and <a href="https://www.arjunjain.co.in" target="_blank">Dr. Arjun Jain</a>.
 
-I also work as a Consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, a startup incubated at the Foundation for Science, Innovation and Development (formerly SID). In parallel, I address challenging computer vision problems in noisy and fast-paced environments, particularly in sports analytics, where robustness and real-time performance are critical.
+I also worked as a consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, where I developed computer vision solutions for noisy, high-speed environments, particularly in sports analytics, with a focus on robustness and real-time performance. I also served as a Co-PI in launching an NPTEL course on AI-driven perception, learning, and mapping for drones, aimed at advancing practical autonomous navigation and aerial robotics education.
 
-I am motivated to publish in top-tier conferences and have publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I have also been recognized for my service to the research community with the Outstanding Reviewer Award at CVPR 2025 (top 711 out of 12,593 reviewers) and ICCV 2025, and the Gold Reviewer Award at ICML 2026.
+I am motivated to advance challenging real-world computer vision research through publications in top-tier conferences, and my contributions have been recognized through multiple oral presentations as well as outstanding reviewer awards for service to the research community.
 
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
