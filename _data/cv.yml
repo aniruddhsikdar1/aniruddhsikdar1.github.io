@@ -67,13 +67,14 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2026
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Gold Reviewer Award, ICML 2026 (Top Reviewers)
+        - 3IA Côte d'Azur–funded Postdoctoral Position (2026), with INRIA (Sophia Antipolis), France
+    - year: 2025
       items:
-        - Max Planck Medal
+        - Outstanding Reviewer Award, CVPR 2025 (Top 711 out of 12,593 reviewers)
+        - Outstanding Reviewer Award, ICCV 2025
 
 
 

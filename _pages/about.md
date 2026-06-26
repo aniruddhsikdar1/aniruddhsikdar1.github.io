@@ -27,7 +27,7 @@ I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (RBCCP
 
 I also work as a Consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, a startup incubated at the Foundation for Science, Innovation and Development (formerly SID). In parallel, I address challenging computer vision problems in noisy and fast-paced environments, particularly in sports analytics, where robustness and real-time performance are critical.
 
-I am motivated to publish in top-tier conferences and have publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I have also been recognized for my service to the research community with the Outstanding Reviewer Award at CVPR 2026.
+I am motivated to publish in top-tier conferences and have publications in CVPR, AAAI, ICRA, IROS, and ICASSP, including several oral presentations. I have also been recognized for my service to the research community with the Outstanding Reviewer Award at CVPR 2025 (top 711 out of 12,593 reviewers) and ICCV 2025, and the Gold Reviewer Award at ICML 2026.
 
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
