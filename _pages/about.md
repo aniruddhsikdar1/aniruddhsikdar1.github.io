@@ -39,30 +39,6 @@ I am motivated to publish in top-tier conferences and have publications in CVPR,
   </p>
 </div>
 
-<!-- Organization Logos Section -->
-<div class="profile-section">
-  <h2>affiliations</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-    <a href="https://www.iisc.ac.in/" target="_blank">
-      <img src="/assets/img/rbccps.png" alt="RBCCPS Logo" style="height: 60px;" />
-    </a>
-
-    <!-- <a href="https://airl-iisc.github.io/" target="_blank">
-      <img src="https://airl-iisc.github.io/assets/img/airl_logo.png" alt="AIRL Logo" style="height: 60px;">
-    </a>
-
-    <a href="https://artpark.in/" target="_blank">
-      <img src="https://artpark.in/wp-content/uploads/2021/08/logo-color.svg" alt="ArtPark Logo" style="height: 60px;">
-    </a>
-
-    <a href="https://sid.iisc.ac.in/" target="_blank">
-      <img src="https://sid.iisc.ac.in/wp-content/uploads/2021/02/logo_sid.png" alt="SID Logo" style="height: 60px;">
-    </a> -->
-  </div>
-</div>
-
-
-
 <!-- #Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->   
   <!-- <p>Meiji Jingu, Shibuya,</p>
     <p>Tokyo, Japan. (2024)</p>
