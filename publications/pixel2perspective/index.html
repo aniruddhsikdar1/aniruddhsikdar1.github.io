@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="Pixel2Perspective - Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
+  <meta name="description" content="Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models. Extends AetherVision-Bench (CVPR 2025 Workshop) to 13 datasets, object localization, and the MSRIQ uncertainty framework.">
+  <meta name="keywords" content="open-vocabulary segmentation, vision-language models, multi-view generalization, RGB-infrared, benchmark, CLIP, uncertainty quantification">
+  <meta name="author" content="Aniruddh Sikdar, Aditya Gandhamal, Suresh Sundaram">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Artificial Intelligence and Robotics Lab (AIRL), IISc">
+  <meta property="og:title" content="Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models">
+  <meta property="og:description" content="An extended open-vocabulary RGB-Infrared benchmark across 13 datasets, building on AetherVision-Bench.">
+  <meta property="og:url" content="https://aniruddhsikdar1.github.io/publications/pixel2perspective/">
+  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/pixel2perspective/static/images/p2p_wheel.png">
+  <meta property="article:author" content="Aniruddh Sikdar">
+  <meta property="article:section" content="Research">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models">
+  <meta name="twitter:description" content="An extended open-vocabulary RGB-Infrared benchmark across 13 datasets, building on AetherVision-Bench.">
+  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/pixel2perspective/static/images/p2p_wheel.png">
+
+  <meta name="citation_title" content="Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models">
+  <meta name="citation_author" content="Sikdar, Aniruddh">
+  <meta name="citation_author" content="Gandhamal, Aditya">
+  <meta name="citation_author" content="Sundaram, Suresh">
+  <meta name="citation_conference_title" content="ICRA 2026 (under review)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>Pixel2Perspective &amp; AetherVision-Bench | Multi-View OVSS Benchmarks</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <style>
+    .results-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    .results-table-wrap table { font-size: 0.78rem; white-space: nowrap; }
+    .results-table-wrap th, .results-table-wrap td { padding: 0.35em 0.6em !important; }
+    .highlight-row td, .highlight-row th { font-weight: 700 !important; color: var(--accent-color) !important; }
+    .table-caption { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+    .sort-hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem; }
+
+    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin: 1.5rem 0 0.5rem; }
+    .stat-item { text-align: center; min-width: 150px; }
+    .stat-number { display: block; font-size: 2.3rem; font-weight: 800; color: var(--accent-color); font-family: 'Inter', sans-serif; }
+    .stat-label { font-size: 0.8rem; color: var(--text-light); }
+
+    .sortable-table thead th { cursor: pointer; }
+    .sortable-table thead th:hover { background: var(--border-color) !important; }
+    .sortable-table thead th.sorted-asc::after { content: ' \2191'; color: var(--accent-color); }
+    .sortable-table thead th.sorted-desc::after { content: ' \2193'; color: var(--accent-color); }
+
+    .paper-divider { border: none; border-top: 2px dashed var(--border-color); margin: 1rem 0 2.5rem; }
+    .status-badge { display: inline-block; padding: 0.25rem 0.85rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; margin: 0 0.3rem; }
+    .status-published { background: rgba(16,185,129,0.12); color: #047857; border: 1px solid rgba(16,185,129,0.35); }
+    .status-review { background: rgba(245,158,11,0.12); color: #92400e; border: 1px solid rgba(245,158,11,0.35); }
+    .paper-section-title { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models</h1>
+            <h2 class="subtitle" style="margin-top: -0.5rem; font-size: 1.15rem; color: var(--text-light);">
+              An expanded successor to <strong>AetherVision-Bench</strong> &mdash; from 6 RGB / 4 IR datasets to a 13-dataset, multi-view, multi-weather benchmark with a new uncertainty quantification framework.
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://aniruddhsikdar1.github.io/" target="_blank">Aniruddh Sikdar</a><sup>*,1</sup>,</span>
+              <span class="author-block">Aditya Gandhamal<sup>*,2</sup>,</span>
+              <span class="author-block">Suresh Sundaram<sup>1,3</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Robert Bosch Centre for Cyber Physical Systems &nbsp;
+              <sup>2</sup>Kotak IISc AI-ML Centre &nbsp;
+              <sup>3</sup>Department of Aerospace Engineering<br>Indian Institute of Science, Bengaluru, India</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <p style="margin-bottom: 0.75rem;">
+                <span class="status-badge status-review">Pixel2Perspective &mdash; ICRA 2026 (under review)</span>
+                <span class="status-badge status-published">AetherVision-Bench &mdash; CVPR 2025 Workshop (published)</span>
+              </p>
+              <div class="publication-links">
+                <span class="link-block">
+                  <span class="external-link button is-normal is-rounded is-dark" style="opacity: 0.6; cursor: default;">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Pixel2Perspective Paper (coming soon)</span>
+                  </span>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.03709" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>AetherVision-Bench arXiv</span>
+                </a>
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/p2p_wheel.png" alt="Pixel2Perspective viewpoint, modality, and weather taxonomy" style="width:100%; max-width: 720px; display: block; margin: 0 auto; border-radius: 6px; box-shadow: var(--shadow-lg);">
+        <h2 class="subtitle has-text-centered">
+          Pixel2Perspective spans three viewpoints (ground-level, slant-angle, bird's-eye), two sensor modalities (RGB, IR), and adverse weather conditions (clear, rain, snow, fog, night) across 13 curated datasets.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Overview -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              Open-vocabulary semantic segmentation (OVSS) models leverage CLIP-style vision-language pretraining to segment objects from open-ended text prompts, but their zero-shot generalization degrades sharply under real-world domain shifts. We first introduced <strong>AetherVision-Bench</strong> (CVPR 2025 Workshop) to systematically study this across viewing angle and sensor modality. <strong>Pixel2Perspective</strong> substantially expands that effort: more datasets (6&rarr;13), an added object-localization evaluation track for foundation VLMs (CLIP, SigLIP, FG-CLIP), explicit adverse-weather coverage, and a new <strong>Multi-Source RGB&ndash;IR Uncertainty Quantification (MSRIQ)</strong> metric for evaluating segmentation reliability across co-registered RGB/IR pairs.
+            </p>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="13">0</span>
+              <span class="stat-label">datasets in Pixel2Perspective (up from 6)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">viewpoint/scenario categories</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">foundation VLMs benchmarked for localization</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1">0</span>
+              <span class="stat-label">new uncertainty metric: MSRIQ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Overview -->
+
+  <!-- ============================================================ -->
+  <!-- AETHERVISION-BENCH SECTION -->
+  <!-- ============================================================ -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 paper-section-title">
+          AetherVision-Bench <span class="status-badge status-published">CVPR 2025 Workshop</span>
+        </h2>
+        <p class="has-text-centered table-caption">An Open-Vocabulary RGB-Infrared Benchmark for Multi-Angle Segmentation across Aerial and Ground Perspectives</p>
+
+        <div class="columns is-centered">
+          <div class="column is-7">
+            <img src="static/images/aether_viewpoints.png" alt="AetherVision-Bench viewpoint comparison" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">Ground-level, slant-angle, and bird's-eye viewpoints, evaluated across RGB and IR sensors.</p>
+          </div>
+        </div>
+
+        <div class="content" style="max-width: 760px; margin: 1.5rem auto 0;">
+          <p>
+            Open-vocabulary semantic segmentation (OVSS) entails assigning semantic labels to each pixel in an image based on textual descriptions, leveraging world models like CLIP. However, these models face significant challenges in cross-domain generalization, hindering their practical efficacy in real-world applications. AetherVision-Bench introduces a benchmark for multi-angle segmentation across aerial and ground perspectives, facilitating an extensive evaluation of performance across different viewing angles and sensor modalities, and investigates the key factors that impact zero-shot transfer performance.
+          </p>
+          <p><strong>Key contributions:</strong></p>
+          <ul>
+            <li>A taxonomy grounded in quantitative analysis of segmentation datasets, organized by look-angle: ground-level, slant-angle, and bird's-eye view.</li>
+            <li>Evaluation across six RGB datasets (ISPRS, UAVid, IndraEye, CART, MSRS, MVSeg), four of which also provide co-registered IR imagery.</li>
+            <li>A comprehensive evaluation of state-of-the-art zero-shot models, revealing that OVSS performance is heavily influenced by class semantics, textual similarity, and sensor modality.</li>
+          </ul>
+        </div>
+
+        <div class="columns is-centered" style="margin-top: 1.5rem;">
+          <div class="column is-6">
+            <img src="static/images/aether_radar.png" alt="AetherVision-Bench dataset balance radar chart" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">Dataset balance across classes, resolution, volume, and total pixel volume (TPV).</p>
+          </div>
+        </div>
+
+        <h3 class="title is-5" style="margin-top: 2.5rem;">Trained on COCO-Stuff, evaluated on RGB &amp; IR (mIoU)</h3>
+        <p class="sort-hint">Click any column header to sort.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="7" style="text-align:center;">RGB</th>
+                <th colspan="5" style="text-align:center;">IR</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>ISPRS</th><th>UAVid</th><th>IndraEye</th><th>CART</th><th>MSRS</th><th>MVSeg</th><th>mIoU</th>
+                <th>IndraEye</th><th>CART</th><th>MSRS</th><th>MVSeg</th><th>mIoU</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SAN</td><td>37.56</td><td>41.65</td><td>7.84</td><td>37.36</td><td>20.35</td><td>21.96</td><td>27.79</td><td>4.91</td><td>25.35</td><td>19.93</td><td>11.93</td><td>15.53</td></tr>
+              <tr><td>Zegformer</td><td>14.04</td><td>17.85</td><td>12.92</td><td>17.18</td><td>12.48</td><td>11.6</td><td>14.34</td><td>3.21</td><td>3.34</td><td>7.38</td><td>3.4</td><td>4.33</td></tr>
+              <tr><td>OVSeg</td><td>17.52</td><td>33.69</td><td>13.4</td><td>31.67</td><td>19.36</td><td>14.87</td><td>21.75</td><td>6.82</td><td>16.46</td><td>13.91</td><td>5.29</td><td>10.62</td></tr>
+              <tr><td>CAT-Seg</td><td>45.36</td><td>41.55</td><td>12.84</td><td>39.66</td><td>26.63</td><td>22.27</td><td>31.39</td><td>6.7</td><td>20.02</td><td>17.85</td><td>12.62</td><td>14.30</td></tr>
+              <tr><td>OVSeg-L</td><td>31.03</td><td>38.79</td><td>16.44</td><td>35.21</td><td>19.98</td><td>19.58</td><td>26.84</td><td>12.48</td><td>20.7</td><td>15.53</td><td>9.01</td><td>14.43</td></tr>
+              <tr class="highlight-row"><td>CAT-Seg-L</td><td>50.92</td><td>41.9</td><td>16.22</td><td>39.85</td><td>20.77</td><td>26.47</td><td>32.69</td><td>11.74</td><td>25.84</td><td>19.44</td><td>15.32</td><td>18.09</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption has-text-centered">Sensor-shift remains the dominant failure mode: every method's mIoU roughly halves moving from RGB to IR, even for the strongest model, CAT-Seg-L.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="paper-divider container">
+
+  <!-- ============================================================ -->
+  <!-- PIXEL2PERSPECTIVE SECTION -->
+  <!-- ============================================================ -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 paper-section-title">
+          Pixel2Perspective <span class="status-badge status-review">ICRA 2026 &mdash; under review</span>
+        </h2>
+        <p class="has-text-centered table-caption">A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models</p>
+
+        <div class="content" style="max-width: 760px; margin: 0 auto;">
+          <p>
+            Embodied AI systems, such as drones and autonomous vehicles, improve navigation by enhancing perception in environments containing unseen objects. While Vision-Language Models (VLMs) offer strong image understanding, their real-world application is underexplored. Pixel2Perspective benchmarks multi-angle object localization and open-vocabulary segmentation across both aerial and ground perspectives, spanning varied outdoor conditions, sim-to-real scenarios, and multiple sensors, including infrared. We further introduce <strong>Multi-Source RGB&ndash;IR Uncertainty Quantification (MSRIQ)</strong>, which jointly models aleatoric and epistemic uncertainties across RGB and infrared imagery.
+          </p>
+          <p><strong>What's new relative to AetherVision-Bench:</strong></p>
+          <ul>
+            <li>Expanded from 6 to <strong>13 datasets</strong>, organized into four categories &mdash; General (MSRS, MVSeg, SemanticRT), Autonomous/adverse-weather (ACDC, MFNet, InfraParis), Slant-angle (CART, UAVid, IndraEye), and Bird's-eye view (ISPRS, WorldFloods, LoveDA, OpenEarthMap).</li>
+            <li>Adds an <strong>object-localization</strong> evaluation track, comparing Grad-CAM behavior of CLIP, SigLIP, and FG-CLIP across viewpoints, modalities, and night/IR conditions.</li>
+            <li>Introduces <strong>MSRIQ</strong>: <code>IoU(P<sub>RGB</sub> &cap; P<sub>IR</sub>) / IoU(P<sub>RGB</sub> &cup; P<sub>IR</sub>)</code>, quantifying pixel-level agreement between a model's RGB and IR predictions to flag regions of high cross-modal uncertainty without needing ground truth.</li>
+            <li>UMAP analysis showing viewpoint- and modality-specific clustering of CLIP features &mdash; direct evidence for why single-viewpoint fine-tuning fails to generalize.</li>
+          </ul>
+        </div>
+
+        <div class="columns is-centered" style="margin-top: 2rem;">
+          <div class="column is-7">
+            <img src="static/images/p2p_msriq.png" alt="MSRIQ uncertainty quantification qualitative example" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">MSRS night scene: CAT-Seg's RGB and IR predictions disagree exactly where MSRIQ flags high uncertainty &mdash; ground truth confirms the RGB sensor missed the person.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered" style="margin-top: 1.5rem;">
+          <div class="column is-7">
+            <img src="static/images/p2p_gradcam.png" alt="Grad-CAM comparison of CLIP, SigLIP, and FG-CLIP across viewpoints" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">FG-CLIP localizes more tightly across slant-angle, BEV, and night/IR conditions than CLIP or SigLIP, but all three degrade in low light.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered" style="margin-top: 1.5rem;">
+          <div class="column is-7">
+            <img src="static/images/p2p_umap.png" alt="UMAP visualization of viewpoint and modality feature clusters" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">RGB features cluster tightly by viewpoint (left); adding IR (right) introduces further cross-modal dispersion &mdash; visual evidence of compounding domain gaps.</p>
+          </div>
+        </div>
+
+        <h3 class="title is-5" style="margin-top: 2.5rem;">Trained on COCO-Stuff, evaluated on RGB (mIoU)</h3>
+        <p class="sort-hint">Click any column header to sort.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="3" style="text-align:center;">General</th>
+                <th colspan="3" style="text-align:center;">Autonomous</th>
+                <th colspan="3" style="text-align:center;">Slant-angle</th>
+                <th colspan="4" style="text-align:center;">BEV</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                <th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                <th>CART</th><th>UAVid</th><th>Indraeye</th>
+                <th>ISPRS</th><th>Worldfloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Zegformer</td><td>12.48</td><td>11.6</td><td>9.55</td><td>31.81</td><td>10.41</td><td>24.22</td><td>17.18</td><td>17.85</td><td>12.92</td><td>14.56</td><td>13.6</td><td>7.68</td><td>10.10</td></tr>
+              <tr><td>SAN</td><td>20.35</td><td>21.96</td><td>12.56</td><td>35.49</td><td>21.05</td><td>31.04</td><td>37.36</td><td>41.65</td><td>7.84</td><td>37.56</td><td>30.10</td><td>19.53</td><td>22.52</td></tr>
+              <tr><td>OVSeg</td><td>19.36</td><td>14.87</td><td>14.25</td><td>38.37</td><td>18.32</td><td>25.58</td><td>31.67</td><td>33.69</td><td>13.4</td><td>23.56</td><td>30.14</td><td>7.42</td><td>12.37</td></tr>
+              <tr><td>CAT-Seg</td><td>26.63</td><td>22.27</td><td>16.16</td><td>39.09</td><td>28.87</td><td>34.26</td><td>39.66</td><td>41.55</td><td>12.84</td><td>50.1</td><td>38.25</td><td>11.61</td><td>22.90</td></tr>
+              <tr><td>SAN-L</td><td>17.07</td><td>23.90</td><td>16.62</td><td>43.99</td><td>17.22</td><td>36.17</td><td>39.39</td><td>43.41</td><td>10.56</td><td>52.06</td><td>45.93</td><td>20.08</td><td>23.79</td></tr>
+              <tr><td>OVSeg-L</td><td>19.98</td><td>19.58</td><td>14.01</td><td>39.97</td><td>19.21</td><td>24.82</td><td>35.21</td><td>38.79</td><td>16.44</td><td>35.46</td><td>22.87</td><td>19.20</td><td>18.53</td></tr>
+              <tr class="highlight-row"><td>CAT-Seg-L</td><td>20.77</td><td>26.47</td><td>17.44</td><td>47.47</td><td>22.20</td><td>38.35</td><td>39.85</td><td>41.90</td><td>16.22</td><td>50.92</td><td>39.54</td><td>40.87</td><td>26.61</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-5" style="margin-top: 2.5rem;">Trained on COCO-Stuff, evaluated on IR (mIoU)</h3>
+        <p class="sort-hint">Click any column header to sort.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="3" style="text-align:center;">General</th>
+                <th colspan="2" style="text-align:center;">Autonomous</th>
+                <th colspan="2" style="text-align:center;">Slant-angle</th>
+                <th colspan="2" style="text-align:center;">BEV</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                <th>MFNet</th><th>Infraparis</th>
+                <th>CART</th><th>Indraeye</th>
+                <th>ISPRS (irrg)</th><th>Worldfloods</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Zegformer</td><td>7.38</td><td>3.4</td><td>3.65</td><td>4.44</td><td>5.59</td><td>3.34</td><td>3.21</td><td>12.36</td><td>12.3</td></tr>
+              <tr><td>SAN</td><td>19.93</td><td>11.93</td><td>11.2894</td><td>18.1561</td><td>12.7672</td><td>25.35</td><td>4.91</td><td>45.0565</td><td>31.7526</td></tr>
+              <tr><td>OVSeg</td><td>13.91</td><td>5.29</td><td>9.99</td><td>12.58</td><td>10.19</td><td>16.46</td><td>6.2</td><td>17.52</td><td>37.36</td></tr>
+              <tr><td>CAT-Seg</td><td>17.85</td><td>12.62</td><td>11.59</td><td>21.73</td><td>13.61</td><td>20.02</td><td>6.7</td><td>45.36</td><td>35.72</td></tr>
+              <tr><td>SAN-L</td><td>12.7325</td><td>14.812</td><td>12.3079</td><td>14.3064</td><td>16.0332</td><td>21.1193</td><td>7.5556</td><td>51.4542</td><td>48.2444</td></tr>
+              <tr><td>OVSeg-L</td><td>15.53</td><td>9.01</td><td>13.4947</td><td>10.9737</td><td>11.3728</td><td>20.7</td><td>12.48</td><td>31.0294</td><td>31.4848</td></tr>
+              <tr class="highlight-row"><td>CAT-Seg-L</td><td>19.44</td><td>15.32</td><td>17.6009</td><td>21.9945</td><td>15.6032</td><td>25.84</td><td>11.74</td><td>50.9261</td><td>44.4439</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption has-text-centered">CAT-Seg-L leads on both modalities, but the IR columns are consistently 2&ndash;3&times; lower than their RGB counterparts &mdash; sensor shift, not viewpoint alone, is the binding constraint.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End Pixel2Perspective -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{sikdar2025aethervision,
+  title={AetherVision-Bench: An Open-Vocabulary RGB-Infrared Benchmark for Multi-Angle Segmentation across Aerial and Ground Perspectives},
+  author={Sikdar, Aniruddh and Gandhamal, Aditya and Sundaram, Suresh},
+  booktitle={Workshop on Foundation Models Meet Embodied Agents at CVPR 2025 (Non-archival Track)},
+  year={2025},
+  note={Accepted (Non-archival)},
+  url={https://arxiv.org/abs/2506.03709}
+}
+
+@inproceedings{sikdar2026pixel2perspective,
+  title={Pixel2Perspective: A Benchmark for Multi-Modal and Multi-View Generalization in Vision-Language Models},
+  author={Sikdar, Aniruddh and Gandhamal, Aditya and Sundaram, Suresh},
+  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2026},
+  note={Under review}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              <a href="https://aniruddhsikdar1.github.io/" target="_blank">&larr; Back to Aniruddh Sikdar's homepage</a>
+            </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function animateCount(el) {
+      var raw = el.dataset.target;
+      var target = parseFloat(raw);
+      var decimals = (raw.split('.')[1] || '').length;
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = (target * progress).toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      var statObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            statObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.stat-number').forEach(function (el) { statObserver.observe(el); });
+    }
+
+    document.querySelectorAll('.sortable-table').forEach(function (table) {
+      var headers = table.querySelectorAll('thead tr:last-child th');
+      headers.forEach(function (th, idx) {
+        th.addEventListener('click', function () {
+          var tbody = table.querySelector('tbody');
+          var rows = Array.from(tbody.querySelectorAll('tr'));
+          var asc = th.classList.contains('sorted-asc') ? false : true;
+          rows.sort(function (a, b) {
+            var av = a.children[idx].textContent.trim();
+            var bv = b.children[idx].textContent.trim();
+            var an = parseFloat(av), bn = parseFloat(bv);
+            if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+            return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+          });
+          rows.forEach(function (r) { tbody.appendChild(r); });
+          headers.forEach(function (h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+          th.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

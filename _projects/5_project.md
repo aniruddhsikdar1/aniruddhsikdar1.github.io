@@ -13,5 +13,6 @@ Developing perception models that remain robust across drastically different vie
 
 **Key contributions:**
 - **AetherVision-Bench** (CVPRW 2025) — Large open-vocabulary RGB-IR benchmark covering multi-angle segmentation across aerial and ground perspectives.
+- **Pixel2Perspective** (ICRA 2026, under review) — Expands AetherVision-Bench to 13 datasets, adds an object-localization track for foundation VLMs, and introduces MSRIQ for quantifying cross-modal RGB-IR segmentation uncertainty. [Project page](/publications/pixel2perspective/)
 - **SAGA** (CVPRW 2025) — Semantic-aware gray color augmentation for visible-to-thermal cross-modal adaptation across drone and ground-based vision systems.
 - **VISTA-CLIP** (CVPRW 2025) — Visual incremental self-tuned adaptation for continual panoptic segmentation across diverse domain shifts.
