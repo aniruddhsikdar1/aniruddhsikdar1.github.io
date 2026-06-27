@@ -113,7 +113,7 @@ Another major direction of my research involves understanding and improving open
 
 **OV-COAST**
 
-In OV-COAST, we introduced a cost aggregation framework based on optimal transport for open-vocabulary semantic segmentation. The method improves alignment between visual and textual representations, enabling stronger generalization to unseen domains and categories.
+In OV-COAST, we introduced a cost aggregation framework based on optimal transport for open-vocabulary semantic segmentation. The method improves alignment between visual and textual representations, enabling stronger generalization to unseen domains and categories. [Project page](/publications/ov-coast/) · [Code](https://github.com/adityagandhamal/OV-COAST/)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -154,7 +154,7 @@ Extending OV-COAST's optimal transport formulation, CoLoRA is a prompt learning 
 - CROMPT: Adapting CLIP via Cross-Modal Prompting for Robust Zero-Shot Generalization under Adverse Weather
 
 **Open-Vocabulary Segmentation**
-- OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation — *CVPRW 2025*
+- OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation — *CVPRW 2025* — [project page](/publications/ov-coast/) · [code](https://github.com/adityagandhamal/OV-COAST/)
 - CoLoRA: Optimal Transport Meets LoRA for Multi-Domain Open-Vocabulary Segmentation — *IROS 2026* — [project page](/publications/colora/)
 
 ---
