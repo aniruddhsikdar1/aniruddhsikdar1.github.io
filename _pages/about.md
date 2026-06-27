@@ -30,16 +30,16 @@ I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a hr
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
   <p>
-    My research focuses on <strong>computer vision for robotics</strong>, with an emphasis on <strong>video understanding</strong>, <strong>multi-sensor fusion</strong>, <strong>continual learning</strong>, and <strong>generalization to unseen target domains</strong>. I am particularly interested in developing robust perception systems that can be reliably deployed in complex real-world environments.
+    My research lies at the intersection of <strong>computer vision and robotics</strong>, with a focus on <strong>video understanding</strong>, <strong>multi-sensor fusion</strong>, <strong>continual learning</strong>, and <strong>robust generalization to unseen domains</strong>. I am particularly interested in building reliable perception systems that can operate effectively in complex, dynamic, and safety-critical real-world environments.
   </p>
   <p>
-    During my tenure at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science, I contributed to several real-world research and deployment-oriented projects in collaboration with startups incubated at the Society for Innovation and Development (SID) and ARTPARK. My work involved evaluating and developing state-of-the-art deep learning models for segmentation, detection, and change detection across diverse robotic platforms, including ground vehicles, drones, and satellite systems. These systems leveraged multimodal sensing modalities such as RGB, Infrared (IR), Side-Scan Sonar, and Synthetic Aperture Radar (SAR).
+    I have worked extensively on deploying task-specific computer vision systems for sports analytics in fast-paced and highly dynamic settings, emphasizing robustness, real-time performance, and reliable operation under challenging real-world conditions.
   </p>
   <p>
-    I also have significant experience in sim-to-real evaluation pipelines and in leveraging generative AI techniques to improve model robustness, adaptation, and generalization under challenging operational conditions.
+    At the Artificial Intelligence and Robotics Lab and the Robert Bosch Centre for Cyber-Physical Systems, I contributed to multiple deployment-oriented research projects funded through academic and industrial collaborations, including initiatives associated with startups incubated at the Society for Innovation and Development and ARTPARK. My work involved the evaluation and development of state-of-the-art deep learning approaches for segmentation, object detection, and change detection across diverse robotic platforms, including ground vehicles, aerial systems, and satellite-based sensing platforms. These systems integrated multimodal sensing modalities such as RGB imagery, Infrared (IR), Side-Scan Sonar, and Synthetic Aperture Radar (SAR).
   </p>
   <p>
-    In addition, I have worked on deploying task-specific computer vision models for sports analytics in fast-paced and highly dynamic environments, with a focus on maintaining reliability and performance under unseen real-world scenarios.
+    In addition, my research interests include the development of sim-to-real evaluation frameworks and the use of generative AI techniques to enhance robustness, domain adaptation, and generalization in challenging operational environments.
   </p>
 </div>
 
