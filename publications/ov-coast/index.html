@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="OV-COAST - Aditya Gandhamal, Aniruddh Sikdar, Suresh Sundaram">
+  <meta name="description" content="OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation. CVPR 2025 Workshop on Transformers for Vision.">
+  <meta name="keywords" content="open-vocabulary segmentation, optimal transport, cost aggregation, CLIP, CAT-Seg, domain generalization, CVPR 2025">
+  <meta name="author" content="Aditya Gandhamal, Aniruddh Sikdar, Suresh Sundaram">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Artificial Intelligence and Robotics Lab (AIRL), IISc">
+  <meta property="og:title" content="OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation">
+  <meta property="og:description" content="A two-stage optimal transport framework that improves CAT-Seg's cross-domain generalization on the MESS benchmark.">
+  <meta property="og:url" content="https://aniruddhsikdar1.github.io/publications/ov-coast/">
+  <meta property="og:image" content="https://aniruddhsikdar1.github.io/publications/ov-coast/static/images/architecture.png">
+  <meta property="article:published_time" content="2025-06-04T00:00:00.000Z">
+  <meta property="article:author" content="Aniruddh Sikdar">
+  <meta property="article:section" content="Research">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation">
+  <meta name="twitter:description" content="A two-stage optimal transport framework that improves CAT-Seg's cross-domain generalization on the MESS benchmark.">
+  <meta name="twitter:image" content="https://aniruddhsikdar1.github.io/publications/ov-coast/static/images/architecture.png">
+
+  <meta name="citation_title" content="OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation">
+  <meta name="citation_author" content="Gandhamal, Aditya">
+  <meta name="citation_author" content="Sikdar, Aniruddh">
+  <meta name="citation_author" content="Sundaram, Suresh">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="Workshop on Transformers for Vision at CVPR 2025">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>OV-COAST: Cost Aggregation with Optimal Transport for OVSS | CVPR 2025 Workshop</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <style>
+    .results-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+    .results-table-wrap table { font-size: 0.78rem; white-space: nowrap; }
+    .results-table-wrap th, .results-table-wrap td { padding: 0.35em 0.6em !important; }
+    .highlight-row td, .highlight-row th { font-weight: 700 !important; color: var(--accent-color) !important; }
+    .table-caption { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; }
+
+    /* Animated stat counters */
+    .stats-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin: 1.5rem 0 0.5rem; }
+    .stat-item { text-align: center; min-width: 150px; }
+    .stat-number { display: block; font-size: 2.3rem; font-weight: 800; color: var(--accent-color); font-family: 'Inter', sans-serif; }
+    .stat-label { font-size: 0.8rem; color: var(--text-light); }
+
+    /* Before/after image compare slider */
+    .img-compare { position: relative; width: 100%; max-width: 560px; margin: 0 auto 0.75rem; border-radius: 6px; overflow: hidden; cursor: ew-resize; box-shadow: var(--shadow-lg); }
+    .img-compare .compare-img { display: block; width: 100%; height: auto; user-select: none; pointer-events: none; }
+    .img-compare .compare-clip { position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; clip-path: inset(0 50% 0 0); }
+    .img-compare .compare-clip img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+    .img-compare .compare-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 6px rgba(0,0,0,.6); }
+    .img-compare .compare-handle::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 34px; height: 34px; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+    .img-compare .compare-handle::before { content: '\2194'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 16px; color: #1e293b; z-index: 2; font-weight: 700; }
+    .img-compare .compare-label { position: absolute; bottom: 10px; padding: 4px 10px; background: rgba(15,23,42,.78); color: #fff; font-size: 0.72rem; border-radius: 4px; font-family: 'Inter', sans-serif; pointer-events: none; letter-spacing: 0.02em; }
+    .img-compare .label-before { left: 10px; }
+    .img-compare .label-after { right: 10px; }
+    .compare-caption { font-size: 0.8rem; color: var(--text-light); text-align: center; margin-bottom: 2rem; }
+
+    /* Sortable table headers */
+    .sortable-table thead th { cursor: pointer; }
+    .sortable-table thead th:hover { background: var(--border-color) !important; }
+    .sortable-table thead th.sorted-asc::after { content: ' \2191'; color: var(--accent-color); }
+    .sortable-table thead th.sorted-desc::after { content: ' \2193'; color: var(--accent-color); }
+    .sort-hint { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Aditya Gandhamal<sup>*,1</sup>,</span>
+              <span class="author-block">
+                <a href="https://aniruddhsikdar1.github.io/" target="_blank">Aniruddh Sikdar</a><sup>*,2</sup>,</span>
+              <span class="author-block">Suresh Sundaram<sup>2,3</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Kotak IISc AI-ML Centre &nbsp;
+              <sup>2</sup>Robert Bosch Centre for Cyber Physical Systems &nbsp;
+              <sup>3</sup>Department of Aerospace Engineering<br>Indian Institute of Science, Bengaluru, India<br>Workshop on Transformers for Vision, CVPR 2025 (Non-archival Track)</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.03706" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/adityagandhamal/OV-COAST/" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2506.03706" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/architecture.png" alt="OV-COAST overview" style="width:100%; max-width: 800px; display: block; margin: 0 auto; border-radius: 6px;">
+        <h2 class="subtitle has-text-centered">
+          OV-COAST aligns CLIP visual and textual embeddings via a Sinkhorn-distance optimal transport plan, then uses that alignment to guide CAT-Seg's cost-aggregation training for better cross-domain generalization.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser image -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Open-vocabulary semantic segmentation (OVSS) entails assigning semantic labels to each pixel in an image using textual descriptions, typically leveraging world models such as CLIP. To enhance out-of-domain generalization, we propose Cost Aggregation with Optimal Transport (OV-COAST) for open-vocabulary semantic segmentation. To align visual-language features within the framework of optimal transport theory, we employ cost volume to construct a cost matrix, which quantifies the distance between two distributions. Our approach adopts a two-stage optimization strategy: in the first stage, the optimal transport problem is solved using cost volume via Sinkhorn distance to obtain an alignment solution; in the second stage, this solution is used to guide the training of the CAT-Seg model. We evaluate state-of-the-art OVSS models on the MESS benchmark, where our approach notably improves the performance of the cost-aggregation model CAT-Seg with ViT-B backbone, achieving superior results, surpassing CAT-Seg by 1.72% and SAN-B by 4.9% mIoU.
+            </p>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-target="1.72" data-prefix="+">0</span>
+              <span class="stat-label">mIoU gain over CAT-Seg on MESS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4.94" data-prefix="+">0</span>
+              <span class="stat-label">mIoU gain over SAN-B</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="19">0</span>
+              <span class="stat-label">multi-domain evaluation datasets</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">stage optimal transport optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Method -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              <p><strong>Stage 1 &mdash; Optimal Transport Alignment.</strong> With visual and textual CLIP embeddings fixed, a cost matrix is built from the cost volume, and the optimal transport plan is solved via Sinkhorn distance, iterating until the change in the dual variable falls below a convergence threshold.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <p><strong>Stage 2 &mdash; Guided CAT-Seg Training.</strong> The transport plan is frozen, and CAT-Seg's spatial and class aggregation modules are trained for the segmentation task using cross-entropy loss &mdash; no additional prompt-learning tokens are introduced, unlike PLOT.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Method -->
+
+  <!-- Results -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+
+        <h3 class="title is-5">Multi-domain evaluation on MESS (mIoU, ViT-B)</h3>
+        <p class="table-caption">OV-COAST improves <strong>+1.72 mIoU</strong> over the CAT-Seg baseline and outperforms SAN-B by <strong>4.94 mIoU</strong>, evaluated across 19 datasets spanning significant domain shifts.</p>
+        <p class="sort-hint">Click any column header to sort the table by that dataset.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Dark Zurich</th><th>MHP v1</th><th>FoodSeg103</th><th>ATLANTIS</th><th>iSAID</th>
+                <th>ISPRS</th><th>WorldFloods</th><th>FloodNet</th><th>UAVid</th><th>Kvasir-inst.</th>
+                <th>CHASE DB1</th><th>CryoNuSeg</th><th>Corrosion CS</th><th>DeepCrack</th><th>PST900</th>
+                <th>ZeroWaste-f</th><th>SUIM</th><th>CUB-200</th><th>CWFID</th><th>Mean</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Random (L.B)</td>
+                <td>1.31</td><td>1.27</td><td>0.23</td><td>0.56</td><td>0.56</td><td>8.02</td><td>18.43</td><td>3.39</td><td>5.18</td><td>27.99</td><td>27.25</td><td>31.25</td><td>9.3</td><td>26.52</td><td>4.52</td><td>6.49</td><td>5.3</td><td>0.06</td><td>13.08</td><td>10.27</td>
+              </tr>
+              <tr>
+                <td>Best Sup. (U.B)</td>
+                <td>63.9</td><td>50.0</td><td>45.1</td><td>42.22</td><td>65.3</td><td>87.56</td><td>92.71</td><td>82.22</td><td>67.8</td><td>93.7</td><td>97.05</td><td>73.45</td><td>49.92</td><td>85.9</td><td>82.3</td><td>52.5</td><td>74.0</td><td>84.6</td><td>87.23</td><td>70.99</td>
+              </tr>
+              <tr>
+                <td>ZSSeg-B</td>
+                <td>16.86</td><td>7.08</td><td>8.17</td><td>22.19</td><td>3.8</td><td>11.57</td><td>23.25</td><td>20.98</td><td>30.27</td><td>46.93</td><td>37.0</td><td>38.7</td><td>3.06</td><td>25.39</td><td>18.76</td><td>8.78</td><td>30.16</td><td>4.35</td><td>32.46</td><td>22.73</td>
+              </tr>
+              <tr>
+                <td>ZegFormer-B</td>
+                <td>4.52</td><td>4.33</td><td>10.01</td><td>18.98</td><td>2.68</td><td>14.04</td><td>25.93</td><td>22.74</td><td>20.84</td><td>27.39</td><td>12.47</td><td>11.94</td><td>4.78</td><td>29.77</td><td>19.63</td><td>17.52</td><td>28.28</td><td>16.8</td><td>32.24</td><td>17.57</td>
+              </tr>
+              <tr>
+                <td>X-Decoder-T</td>
+                <td>24.16</td><td>3.54</td><td>2.61</td><td>27.51</td><td>2.43</td><td>31.47</td><td>26.23</td><td>8.83</td><td>25.65</td><td>55.77</td><td>10.16</td><td>11.94</td><td>1.72</td><td>24.65</td><td>19.44</td><td>15.44</td><td>24.75</td><td>0.51</td><td>29.25</td><td>19.8</td>
+              </tr>
+              <tr>
+                <td>SAN-B</td>
+                <td>24.35</td><td>8.87</td><td>19.27</td><td>36.51</td><td>4.77</td><td>37.56</td><td>31.75</td><td>37.44</td><td>41.65</td><td>69.88</td><td>17.85</td><td>11.95</td><td>19.73</td><td>50.27</td><td>19.67</td><td>21.27</td><td>22.64</td><td>16.91</td><td>5.67</td><td>26.21</td>
+              </tr>
+              <tr>
+                <td>OpenSeeD-T</td>
+                <td>28.13</td><td>2.06</td><td>9.0</td><td>18.55</td><td>1.45</td><td>31.07</td><td>30.11</td><td>23.14</td><td>39.78</td><td>59.69</td><td>46.88</td><td>33.76</td><td>13.38</td><td>47.84</td><td>2.5</td><td>2.28</td><td>19.45</td><td>0.13</td><td>11.478</td><td>21.82</td>
+              </tr>
+              <tr>
+                <td>Gr.-SAM-B</td>
+                <td>20.91</td><td>29.38</td><td>10.48</td><td>17.33</td><td>12.22</td><td>26.68</td><td>33.41</td><td>19.19</td><td>38.35</td><td>46.82</td><td>23.56</td><td>38.06</td><td>20.88</td><td>59.02</td><td>21.39</td><td>16.74</td><td>14.13</td><td>0.43</td><td>38.41</td><td>25.65</td>
+              </tr>
+              <tr>
+                <td>ODISE</td>
+                <td>28.88</td><td>7.31</td><td>16.62</td><td>36.73</td><td>11.71</td><td>54.83</td><td>26.30</td><td>35.06</td><td>43.46</td><td>28.02</td><td>20.60</td><td>12.27</td><td>10.74</td><td>24.34</td><td>20.18</td><td>5.74</td><td>26.24</td><td>4.62</td><td>30.43</td><td>23.37</td>
+              </tr>
+              <tr>
+                <td>CAT-Seg</td>
+                <td>28.86</td><td>23.74</td><td>26.69</td><td>40.31</td><td>19.34</td><td>45.36</td><td>35.72</td><td>37.57</td><td>41.55</td><td>48.2</td><td>16.99</td><td>15.7</td><td>12.29</td><td>31.67</td><td>19.88</td><td>17.52</td><td>44.71</td><td>10.23</td><td>42.77</td><td>29.42</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>OV-COAST (ours)</td>
+                <td>28.94</td><td>25.15</td><td>25.92</td><td>39.59</td><td>19.87</td><td>46.02</td><td>37.22</td><td>37.59</td><td>43.16</td><td>46.56</td><td>30.30</td><td>15.76</td><td>14.47</td><td>44.22</td><td>19.66</td><td>18.0</td><td>44.61</td><td>10.52</td><td>44.34</td><td>31.15</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-5" style="margin-top: 2.5rem;">Prompt learning + optimal transport ablation</h3>
+        <p class="table-caption">Unlike PLOT, naively combining prompt-learning techniques with optimal transport on CAT-Seg degrades performance &mdash; OV-COAST's two-stage strategy avoids this.</p>
+        <div class="results-table-wrap" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr><th>Method</th><th>mIoU (on MESS)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>CAT-Seg + VPT + Optimal Transport</td><td>20.68</td></tr>
+              <tr><td>CAT-Seg + CoPLOT</td><td>23.98</td></tr>
+              <tr><td>CAT-Seg + PLOT</td><td>26.61</td></tr>
+              <tr class="highlight-row"><td>OV-COAST (ours)</td><td>31.15</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Results -->
+
+  <!-- Qualitative Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <img src="static/images/qualitative_flicker.gif" alt="Animated comparison cycling through Ground Truth, CAT-Seg, and OV-COAST on the MHP dataset" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption">MHP sample, cycling Ground Truth &rarr; CAT-Seg &rarr; OV-COAST.</p>
+          </div>
+        </div>
+
+        <p class="has-text-centered table-caption" style="margin-top: 1rem;">
+          Drag the handle below to directly compare CAT-Seg against OV-COAST on a CWFID (crop/weed) sample from the MESS benchmark.
+        </p>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="img-compare">
+              <img class="compare-img compare-base" src="static/images/panel_cwfid_catseg.png" alt="CAT-Seg prediction on CWFID">
+              <div class="compare-clip">
+                <img class="compare-img" src="static/images/panel_cwfid_ours.png" alt="OV-COAST prediction on CWFID">
+              </div>
+              <div class="compare-handle"></div>
+              <span class="compare-label label-before">CAT-Seg</span>
+              <span class="compare-label label-after">OV-COAST</span>
+            </div>
+            <p class="compare-caption">CWFID sample &mdash; drag to compare</p>
+          </div>
+        </div>
+
+        <h3 class="title is-5 has-text-centered" style="margin-top: 2rem;">Grad-CAM: CLIP vision&ndash;text correlation</h3>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <img src="static/images/gradcam.png" alt="Grad-CAM comparison of CoPLOT, PLOT, and OV-COAST" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+          </div>
+        </div>
+        <p class="has-text-centered table-caption">
+          Logit heatmaps for the prompt "A photo of a ball in the scene." OV-COAST's optimal transport alignment concentrates activation more tightly on the actual ball than CoPLOT or PLOT.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End Qualitative Results -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{gandhamal2025ovcoast,
+  title={OV-COAST: Cost Aggregation with Optimal Transport for Open-Vocabulary Semantic Segmentation},
+  author={Gandhamal, Aditya and Sikdar, Aniruddh and Sundaram, Suresh},
+  booktitle={Workshop on Transformers for Vision at CVPR 2025 (Non-archival Track)},
+  year={2025},
+  note={Accepted (Non-archival)},
+  url={https://arxiv.org/abs/2506.03706}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              <a href="https://aniruddhsikdar1.github.io/" target="_blank">&larr; Back to Aniruddh Sikdar's homepage</a>
+            </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.img-compare').forEach(function (container) {
+      var clip = container.querySelector('.compare-clip');
+      var handle = container.querySelector('.compare-handle');
+      var dragging = false;
+
+      function setPercent(p) {
+        p = Math.max(0, Math.min(100, p));
+        clip.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+        handle.style.left = p + '%';
+      }
+      function moveAt(clientX) {
+        var rect = container.getBoundingClientRect();
+        setPercent(((clientX - rect.left) / rect.width) * 100);
+      }
+      container.addEventListener('mousedown', function (e) { dragging = true; moveAt(e.clientX); e.preventDefault(); });
+      window.addEventListener('mousemove', function (e) { if (dragging) moveAt(e.clientX); });
+      window.addEventListener('mouseup', function () { dragging = false; });
+      container.addEventListener('touchstart', function (e) { dragging = true; moveAt(e.touches[0].clientX); }, { passive: true });
+      container.addEventListener('touchmove', function (e) { if (dragging) moveAt(e.touches[0].clientX); }, { passive: true });
+      window.addEventListener('touchend', function () { dragging = false; });
+      setPercent(50);
+    });
+
+    function animateCount(el) {
+      var raw = el.dataset.target;
+      var target = parseFloat(raw);
+      var decimals = (raw.split('.')[1] || '').length;
+      var prefix = el.dataset.prefix || '';
+      var suffix = el.dataset.suffix || '';
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = prefix + (target * progress).toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window) {
+      var statObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            statObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.stat-number').forEach(function (el) { statObserver.observe(el); });
+    }
+
+    document.querySelectorAll('.sortable-table').forEach(function (table) {
+      var headers = table.querySelectorAll('thead th');
+      headers.forEach(function (th, idx) {
+        th.addEventListener('click', function () {
+          var tbody = table.querySelector('tbody');
+          var rows = Array.from(tbody.querySelectorAll('tr'));
+          var asc = th.classList.contains('sorted-asc') ? false : true;
+          rows.sort(function (a, b) {
+            var av = a.children[idx].textContent.trim();
+            var bv = b.children[idx].textContent.trim();
+            var an = parseFloat(av), bn = parseFloat(bv);
+            if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+            return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+          });
+          rows.forEach(function (r) { tbody.appendChild(r); });
+          headers.forEach(function (h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+          th.classList.add(asc ? 'sorted-asc' : 'sorted-desc');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
