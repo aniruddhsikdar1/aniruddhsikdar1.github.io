@@ -20,14 +20,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 
 social: true # includes social icons at the bottom of the page
 ---
-I am a Project Scientist 1 at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), working under the supervision of Prof. Suresh Sundaram
-(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>).
+I am currently a Project Scientist-I at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), where I also serve as a Co-Principal Investigator for an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a>. The course is designed to advance practical education in autonomous navigation and aerial robotics.
 
-I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>), IISc Bengaluru. In the initial stages of my Ph.D., I also briefly worked with <a href="https://ensundara.wordpress.com/biography/" target="_blank">Prof. Sundarrajan</a>, <a href="https://chandan-iiti.github.io" target="_blank">Dr. Chandan Gautham</a>, and <a href="https://www.arjunjain.co.in" target="_blank">Dr. Arjun Jain</a>.
+In addition, I worked as a consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, where I developed computer vision solutions for noisy, high-speed environments, particularly in the domain of sports analytics, with an emphasis on robustness and real-time performance.
 
-I also worked as a consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, where I developed computer vision solutions for noisy, high-speed environments, particularly in sports analytics, with a focus on robustness and real-time performance. I also served as a Co-PI in launching an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a>, aimed at advancing practical autonomous navigation and aerial robotics education.
-
-I am motivated to advance challenging real-world computer vision research through publications in top-tier conferences, and my contributions have been recognized through multiple oral presentations as well as outstanding reviewer awards for service to the research community.
+I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>) at Indian Institute of Science under the supervision of Suresh Sundaram
+(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>). During the early stages of my doctoral research, I also had the opportunity to work with <a href="https://ensundara.wordpress.com/biography/" target="_blank">Sundarrajan</a>, <a href="https://chandan-iiti.github.io" target="_blank">Chandan Gautham</a>, and <a href="https://www.arjunjain.co.in" target="_blank">Arjun Jain</a>.
 
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
