@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/bin/git commit -m ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(pip3 install *)"
+    ]
+  }
+}
