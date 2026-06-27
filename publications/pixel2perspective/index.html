@@ -75,6 +75,49 @@
     .status-published { background: rgba(16,185,129,0.12); color: #047857; border: 1px solid rgba(16,185,129,0.35); }
     .status-preprint { background: rgba(245,158,11,0.12); color: #92400e; border: 1px solid rgba(245,158,11,0.35); }
     .paper-section-title { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+
+    /* Category-band table headers (General / Autonomous / Slant-angle / BEV) */
+    .cat-band-1 { background: #e2f0d9 !important; color: #2d4a1e !important; }
+    .cat-band-2 { background: #c6e0b4 !important; color: #2d4a1e !important; }
+    .cat-band-3 { background: #a9d18e !important; color: #1f3614 !important; }
+    .cat-band-4 { background: #70ad47 !important; color: #fff !important; }
+    .ir-table .cat-band-1 { background: #dce6f1 !important; color: #1c3a5e !important; }
+    .ir-table .cat-band-2 { background: #bdd7ee !important; color: #1c3a5e !important; }
+    .ir-table .cat-band-3 { background: #9dc3e6 !important; color: #15314f !important; }
+    .ir-table .cat-band-4 { background: #2e75b6 !important; color: #fff !important; }
+    .results-table-wrap table.sortable-table thead th.cat-band-1:hover,
+    .results-table-wrap table.sortable-table thead th.cat-band-2:hover,
+    .results-table-wrap table.sortable-table thead th.cat-band-3:hover,
+    .results-table-wrap table.sortable-table thead th.cat-band-4:hover { filter: brightness(0.95); }
+
+    /* Train-on-X tab widget */
+    .transfer-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 1.5rem 0 1.75rem; }
+    .transfer-tab-btn {
+      padding: 0.55rem 1.3rem; border-radius: 999px; border: 1.5px solid var(--border-color);
+      background: var(--background-secondary); color: var(--text-light); font-weight: 600;
+      font-size: 0.88rem; cursor: pointer; transition: all 0.15s ease;
+    }
+    .transfer-tab-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
+    .transfer-tab-btn.is-active { background: var(--accent-color); border-color: var(--accent-color); color: #fff; }
+    .transfer-tab-panel { display: none; }
+    .transfer-tab-panel.is-active { display: block; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .insight-callout {
+      max-width: 760px; margin: 0.75rem auto 1.75rem; padding: 0.85rem 1.1rem;
+      background: rgba(99,102,241,0.07); border-left: 3px solid var(--accent-color);
+      border-radius: 6px; font-size: 0.92rem; color: var(--text-light);
+    }
+    .insight-callout strong { color: var(--text-primary); }
+    .findings-box {
+      max-width: 800px; margin: 1.5rem auto 0; padding: 1.25rem 1.5rem;
+      background: var(--background-secondary); border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+    .findings-box h4 { margin-top: 0; margin-bottom: 0.75rem; }
+    .findings-box ol { margin-bottom: 0; padding-left: 1.3rem; }
+    .findings-box li { margin-bottom: 0.5rem; font-size: 0.93rem; }
+    .dataset-comp-table td.cell-yes { color: #047857; font-weight: 700; text-align: center; }
+    .dataset-comp-table td.cell-no { color: #d1d5db; text-align: center; }
   </style>
 </head>
 <body>
@@ -228,8 +271,8 @@
             <thead>
               <tr>
                 <th>Method</th>
-                <th colspan="7" style="text-align:center;">RGB</th>
-                <th colspan="5" style="text-align:center;">IR</th>
+                <th colspan="7" style="text-align:center;" class="cat-band-1">RGB</th>
+                <th colspan="5" style="text-align:center;" class="cat-band-4">IR</th>
               </tr>
               <tr>
                 <th></th>
@@ -278,6 +321,35 @@
           </ul>
         </div>
 
+        <h3 class="title is-5 has-text-centered" style="margin-top: 2.5rem;">Dataset composition</h3>
+        <p class="table-caption has-text-centered">The 13 datasets span all three viewpoints, both sensor modalities, and a range of adverse weather/lighting conditions.</p>
+        <div class="results-table-wrap">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth dataset-comp-table">
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th><th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                <th>CART</th><th>UAVid</th><th>Indraeye</th><th>ISPRS</th><th>WorldFloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="14" style="background: var(--background-secondary); font-weight: 700;">View Angle</td></tr>
+              <tr><td style="padding-left:1.2em;">Ground view</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td style="padding-left:1.2em;">Slant-angle view</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td style="padding-left:1.2em;">Bird's-eye view</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td></tr>
+              <tr><td colspan="14" style="background: var(--background-secondary); font-weight: 700;">Modality</td></tr>
+              <tr><td style="padding-left:1.2em;">RGB</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td></tr>
+              <tr><td style="padding-left:1.2em;">IR</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td colspan="14" style="background: var(--background-secondary); font-weight: 700;">Weather / Lighting</td></tr>
+              <tr><td style="padding-left:1.2em;">Night</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td style="padding-left:1.2em;">Clear</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td><td class="cell-yes">&#10003;</td></tr>
+              <tr><td style="padding-left:1.2em;">Snow</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td style="padding-left:1.2em;">Rain</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+              <tr><td style="padding-left:1.2em;">Fog</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-yes">&#10003;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td><td class="cell-no">&#10007;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="columns is-centered" style="margin-top: 2rem;">
           <div class="column is-7">
             <img src="static/images/p2p_msriq.png" alt="MSRIQ uncertainty quantification qualitative example" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
@@ -306,10 +378,10 @@
             <thead>
               <tr>
                 <th>Method</th>
-                <th colspan="3" style="text-align:center;">General</th>
-                <th colspan="3" style="text-align:center;">Autonomous</th>
-                <th colspan="3" style="text-align:center;">Slant-angle</th>
-                <th colspan="4" style="text-align:center;">BEV</th>
+                <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                <th colspan="3" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                <th colspan="3" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                <th colspan="4" style="text-align:center;" class="cat-band-4">BEV</th>
               </tr>
               <tr>
                 <th></th>
@@ -334,14 +406,14 @@
         <h3 class="title is-5" style="margin-top: 2.5rem;">Trained on COCO-Stuff, evaluated on IR (mIoU)</h3>
         <p class="sort-hint">Click any column header to sort.</p>
         <div class="results-table-wrap">
-          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+          <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table ir-table">
             <thead>
               <tr>
                 <th>Method</th>
-                <th colspan="3" style="text-align:center;">General</th>
-                <th colspan="2" style="text-align:center;">Autonomous</th>
-                <th colspan="2" style="text-align:center;">Slant-angle</th>
-                <th colspan="2" style="text-align:center;">BEV</th>
+                <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                <th colspan="2" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                <th colspan="2" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                <th colspan="2" style="text-align:center;" class="cat-band-4">BEV</th>
               </tr>
               <tr>
                 <th></th>
@@ -363,6 +435,336 @@
           </table>
         </div>
         <p class="table-caption has-text-centered">CAT-Seg-L leads on both modalities, but the IR columns are consistently 2&ndash;3&times; lower than their RGB counterparts &mdash; sensor shift, not viewpoint alone, is the binding constraint.</p>
+
+        <hr class="paper-divider" style="margin: 3rem 0 2rem;">
+
+        <h3 class="title is-4 has-text-centered">Cross-Domain Generalization: Train on One, Evaluate on All</h3>
+        <div class="content has-text-justified" style="max-width: 760px; margin: 0 auto;">
+          <p>
+            Beyond COCO-Stuff zero-shot transfer, we fine-tune ZegFormer, SAN, OVSeg, and CAT-Seg on a single RGB training source &mdash; MSRS, ACDC, IndraEye, or OpenEarthMap &mdash; and evaluate every model on all 13 RGB datasets and the available IR datasets. This reveals how well a model trained on <em>one</em> viewpoint/domain transfers to every other viewpoint, weather condition, and sensor modality.
+          </p>
+        </div>
+
+        <div class="transfer-tabs" role="tablist">
+          <button class="transfer-tab-btn is-active" data-tab="msrs" type="button">Trained on MSRS</button>
+          <button class="transfer-tab-btn" data-tab="acdc" type="button">Trained on ACDC</button>
+          <button class="transfer-tab-btn" data-tab="indraeye" type="button">Trained on IndraEye</button>
+          <button class="transfer-tab-btn" data-tab="openearthmap" type="button">Trained on OpenEarthMap</button>
+        </div>
+
+        <!-- MSRS tab -->
+        <div class="transfer-tab-panel is-active" id="tab-msrs">
+          <h4 class="title is-6 has-text-centered">Trained on MSRS (RGB) &mdash; evaluated on RGB</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort.</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="4" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>UAVid</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>71.49</td><td>4.9</td><td>15.64</td><td>6.49</td><td>82.44</td><td>5.79</td><td>3.41</td><td>4.76</td><td>6.68</td><td>4.6</td><td>13.44</td><td>2.46</td><td>0.483</td></tr>
+                <tr><td>SAN</td><td>68.63</td><td>7.77</td><td>10.8413</td><td>8.9212</td><td>76.6457</td><td>10.8413</td><td>12.27</td><td>13.86</td><td>5.02</td><td>11.6547</td><td>23.4404</td><td>3.0824</td><td>5.8102</td></tr>
+                <tr><td>OVSeg</td><td>65</td><td>4.55</td><td>9.39</td><td>7.21</td><td>57.12</td><td>4.89</td><td>2.81</td><td>4.18</td><td>5.16</td><td>2.18</td><td>17.33</td><td>2.81</td><td>1.1983</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>71.93</td><td>9.24</td><td>18.46</td><td>20.5</td><td>77.52</td><td>15.02</td><td>22.87</td><td>28.34</td><td>7.06</td><td>18.34</td><td>42</td><td>5.78</td><td>0.9767</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="title is-6 has-text-centered" style="margin-top: 2rem;">Trained on MSRS (RGB) &mdash; evaluated on IR</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort. (&ndash; = no IR imagery available for this dataset)</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table ir-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>34.83</td><td>1.86</td><td>14.45</td><td>26.38</td><td>4.88</td><td>3.76</td><td>8.06</td><td>4.59</td><td>14.5</td></tr>
+                <tr><td>SAN</td><td>30.18</td><td>2.2</td><td>13.0918</td><td>25.7378</td><td>4.5396</td><td>5.9</td><td>2.29</td><td>10.1078</td><td>20.9599</td></tr>
+                <tr><td>OVSeg</td><td>28.66</td><td>1.39</td><td>10.02</td><td>22.87</td><td>3.87</td><td>2.65</td><td>3.81</td><td>2.1</td><td>10.39</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>33.59</td><td>4.47</td><td>17.43</td><td>30.51</td><td>7.48</td><td>10.34</td><td>4.33</td><td>13.59</td><td>40.16</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ACDC tab -->
+        <div class="transfer-tab-panel" id="tab-acdc">
+          <h4 class="title is-6 has-text-centered">Trained on ACDC (RGB) &mdash; evaluated on RGB</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort.</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="4" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>UAVid</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>4.27</td><td>7.43</td><td>6.52</td><td>52.3</td><td>3.88</td><td>30.54</td><td>8.39</td><td>11.22</td><td>4.05</td><td>11.36</td><td>8.65</td><td>4.33</td><td>4.8937</td></tr>
+                <tr><td>SAN</td><td>18.1951</td><td>20.9443</td><td>9.6991</td><td>57.0125</td><td>16.3903</td><td>36.1579</td><td>18.3803</td><td>34.3446</td><td>6.8412</td><td>34.9013</td><td>29.5156</td><td>14.5769</td><td>16.2331</td></tr>
+                <tr><td>OVSeg</td><td>20.83</td><td>14.65</td><td>6.89</td><td>62.96</td><td>13.24</td><td>29.04</td><td>9.48</td><td>10.63</td><td>2.89</td><td>11.3</td><td>23.8</td><td>6.14</td><td>5.5678</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>16.42</td><td>27.9</td><td>12.21</td><td>66.63</td><td>14</td><td>33.05</td><td>23.75</td><td>38.38</td><td>7.85</td><td>44.95</td><td>39.63</td><td>9.11</td><td>17.6908</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="title is-6 has-text-centered" style="margin-top: 2rem;">Trained on ACDC (RGB) &mdash; evaluated on IR</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort. (&ndash; = no IR imagery available for this dataset)</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table ir-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>0.45</td><td>0.4</td><td>4.38</td><td>0.2</td><td>6.8</td><td>6.4</td><td>3.19</td><td>11.12</td><td>8.59</td></tr>
+                <tr><td>SAN</td><td>15.17</td><td>10.8006</td><td>9.7962</td><td>12.9782</td><td>15.7008</td><td>11.2828</td><td>4.9676</td><td>29.6112</td><td>25.5942</td></tr>
+                <tr><td>OVSeg</td><td>13.04</td><td>4</td><td>2.98</td><td>5.07</td><td>10.07</td><td>6.04</td><td>0.64</td><td>9.11</td><td>21.31</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>14.77</td><td>13.43</td><td>11.86</td><td>11.3</td><td>17.5</td><td>13.82</td><td>5.95</td><td>38.63</td><td>39.96</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="columns is-centered" style="margin-top: 1.75rem;">
+            <div class="column is-9">
+              <img src="static/images/p2p_acdc_transfer_charts.jpg" alt="Scatter plot and radar chart of ACDC-trained model mIoU across all 13 datasets, RGB and IR" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            </div>
+          </div>
+
+          <div class="insight-callout">
+            <strong>Observations:</strong> CAT-Seg is the strongest model in most settings. Training on ACDC &mdash; a ground-level, adverse-weather dataset &mdash; transfers reasonably well to other ground-level domains, but mIoU drops sharply on slant-angle and bird's-eye-view datasets, and degrades further still when evaluated on IR.
+          </div>
+        </div>
+
+        <!-- IndraEye tab -->
+        <div class="transfer-tab-panel" id="tab-indraeye">
+          <h4 class="title is-6 has-text-centered">Trained on IndraEye (RGB) &mdash; evaluated on RGB</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort.</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="4" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>UAVid</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>4.72</td><td>2.9</td><td>12.28</td><td>5.29</td><td>4.58</td><td>4.82</td><td>3.51</td><td>7.32</td><td>75.52</td><td>8.02</td><td>18.42</td><td>0.86</td><td>2.188</td></tr>
+                <tr><td>SAN</td><td>9.28</td><td>6.12</td><td>7.5344</td><td>7.2805</td><td>12.547</td><td>7.4496</td><td>6.04</td><td>15.57</td><td>75.84</td><td>14.5294</td><td>23.7154</td><td>4.0761</td><td>6.1339</td></tr>
+                <tr><td>OVSeg</td><td>5.68</td><td>4.12</td><td>14.11</td><td>6.87</td><td>9.99</td><td>5.44</td><td>9</td><td>16.23</td><td>61.8</td><td>10.81</td><td>20.48</td><td>0.61</td><td>2.9598</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>4.03</td><td>8.84</td><td>8.36</td><td>10.93</td><td>4.27</td><td>12.63</td><td>15.3</td><td>17.62</td><td>58.88</td><td>19.76</td><td>32.37</td><td>4.53</td><td>15.6952</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="title is-6 has-text-centered" style="margin-top: 2rem;">Trained on IndraEye (RGB) &mdash; evaluated on IR</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort. (&ndash; = no IR imagery available for this dataset)</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table ir-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>2.66</td><td>0.48</td><td>9.34</td><td>2.04</td><td>1.35</td><td>2.31</td><td>28.05</td><td>7.8</td><td>21.05</td></tr>
+                <tr><td>SAN</td><td>10.51</td><td>3.12</td><td>11.7557</td><td>13.11</td><td>3.6677</td><td>3.21</td><td>23.24</td><td>13.3299</td><td>26.1542</td></tr>
+                <tr><td>OVSeg</td><td>2.53</td><td>1.55</td><td>13.21</td><td>7.1</td><td>1</td><td>5.12</td><td>22.41</td><td>10.07</td><td>20.48</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>4.99</td><td>4.94</td><td>9.14</td><td>3.96</td><td>5.31</td><td>8.07</td><td>33.9</td><td>17.21</td><td>28.25</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="insight-callout">
+            <strong>Observation:</strong> IndraEye is a slant-angle dataset, and models trained on it transfer markedly worse to other domains than ground-level training does &mdash; performance drops further once evaluated on a slant-angle view that differs from the training distribution, underscoring that slant-angle is the most brittle viewpoint to generalize from.
+          </div>
+        </div>
+
+        <!-- OpenEarthMap tab -->
+        <div class="transfer-tab-panel" id="tab-openearthmap">
+          <h4 class="title is-6 has-text-centered">Trained on OpenEarthMap (RGB) &mdash; evaluated on RGB</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort.</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="4" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>ACDC</th><th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>UAVid</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th><th>LoveDA</th><th>OpenEarthMap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>0.99</td><td>0.13</td><td>0.11</td><td>2.28</td><td>0.87</td><td>2.95</td><td>6.46</td><td>18.26</td><td>0.15</td><td>27</td><td>10.43</td><td>28.76</td><td>65.859</td></tr>
+                <tr><td>SAN</td><td>1.7445</td><td>4.5935</td><td>1.2526</td><td>5.4772</td><td>5.9503</td><td>5.8559</td><td>16.2881</td><td>29.1109</td><td>4.0448</td><td>27.3944</td><td>22.4425</td><td>32.6261</td><td>66.622</td></tr>
+                <tr><td>OVSeg</td><td>1.53</td><td>0.56</td><td>1.7</td><td>2.64</td><td>1.04</td><td>4.05</td><td>4.9</td><td>17.52</td><td>0.85</td><td>16.84</td><td>19.9</td><td>32.43</td><td>41.7448</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>4.36</td><td>7.89</td><td>4.88</td><td>24.31</td><td>4.73</td><td>17.19</td><td>30.64</td><td>32.49</td><td>6.98</td><td>38.64</td><td>45.51</td><td>48.7</td><td>70.1242</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="title is-6 has-text-centered" style="margin-top: 2rem;">Trained on OpenEarthMap (RGB) &mdash; evaluated on IR</h4>
+          <p class="sort-hint has-text-centered">Click any column header to sort. (&ndash; = no IR imagery available for this dataset)</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table ir-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th colspan="3" style="text-align:center;" class="cat-band-1">General</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-2">Autonomous</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-3">Slant-angle</th>
+                  <th colspan="2" style="text-align:center;" class="cat-band-4">BEV</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>MSRS</th><th>MVSeg</th><th>SemanticRT</th>
+                  <th>MFNet</th><th>Infraparis</th>
+                  <th>CART</th><th>Indraeye</th>
+                  <th>ISPRS</th><th>Worldfloods</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>0.31</td><td>0.01</td><td>0.12</td><td>0.1</td><td>0.21</td><td>2.46</td><td>0.31</td><td>24.82</td><td>28.31</td></tr>
+                <tr><td>SAN</td><td>6.2642</td><td>2.2673</td><td>4.2731</td><td>5.8894</td><td>1.932</td><td>8.0642</td><td>5.2681</td><td>22.2158</td><td>32.9886</td></tr>
+                <tr><td>OVSeg</td><td>0.37</td><td>0.1</td><td>0.7</td><td>0.21</td><td>0.46</td><td>3.71</td><td>0.72</td><td>13.29</td><td>27.93</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>1.43</td><td>2.2</td><td>4.59</td><td>1.15</td><td>4.65</td><td>14.03</td><td>2.08</td><td>32.72</td><td>54.35</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="insight-callout">
+            <strong>Observation:</strong> Evaluated on IR, every model scores lower than its RGB counterpart on the same dataset, in most cases by a wide margin &mdash; confirming the RGB&rarr;IR sensor gap persists regardless of which domain the model was fine-tuned on.
+          </div>
+
+          <h4 class="title is-6 has-text-centered" style="margin-top: 2.5rem;">Sim-to-real transfer: OpenEarthMap</h4>
+          <p class="table-caption has-text-centered">Models fine-tuned on simulated OpenEarthMap imagery, evaluated on simulation (in-domain) vs. four real-world RGB targets and one SAR target.</p>
+          <div class="results-table-wrap">
+            <table class="table is-bordered is-striped is-narrow is-fullwidth sortable-table">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>mIoU on Sim</th>
+                  <th>OpenEarthMap (RGB)</th>
+                  <th>ISPRS (RGB)</th>
+                  <th>Worldfloods (RGB)</th>
+                  <th>LoveDA (RGB)</th>
+                  <th>OpenEarthMap (SAR)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Zegformer</td><td>82.77</td><td>21.00</td><td>21.23</td><td>17.04</td><td>13.60</td><td>5.65</td></tr>
+                <tr><td>SAN</td><td>72.31</td><td>26.61</td><td>30.22</td><td>31.56</td><td>15.52</td><td>3.09</td></tr>
+                <tr><td>OVSeg</td><td>70.64</td><td>14.02</td><td>17.36</td><td>24.02</td><td>8.88</td><td>4.37</td></tr>
+                <tr class="highlight-row"><td>CAT-Seg</td><td>75.49</td><td>20.45</td><td>32.32</td><td>38.55</td><td>23.94</td><td>4.23</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption has-text-centered">Every model exhibits a sharp accuracy drop moving from simulation to real-world RGB data &mdash; CAT-Seg falls from 75.49 mIoU on sim to 20.45 on real OpenEarthMap RGB &mdash; and drops further still on SAR.</p>
+        </div>
+
+        <!-- Cross-cutting analysis -->
+        <div class="columns is-centered" style="margin-top: 2.5rem;">
+          <div class="column is-9">
+            <img src="static/images/p2p_mmd_heatmap.jpg" alt="MMD distance between domain feature distributions, zero-shot vs fine-tuned" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">MMD distance between domain feature distributions is moderate in the zero-shot CLIP encoder (left) but increases after fine-tuning (right) &mdash; embeddings diverge further across domains, which works against cross-domain generalization even as in-domain accuracy improves.</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered" style="margin-top: 1.75rem;">
+          <div class="column is-9">
+            <img src="static/images/p2p_catseg_ft_gradcam.jpg" alt="CAT-Seg Grad-CAM for the CLIP encoder, zero-shot vs fine-tuned on ground-level, slant-angle, and bird's-eye-view data" style="width:100%; border-radius: 6px; box-shadow: var(--shadow-lg);">
+            <p class="compare-caption" style="text-align:center; margin-top:0.5rem;">Grad-CAM for CAT-Seg's CLIP encoder, localizing a car under ground-level (GL), slant-angle (SA), bird's-eye-view (BEV), low-light, and IR conditions. The model fine-tuned on slant-angle view (FT(SA)) produces the noisiest, least-localized activations of the three &mdash; slant-angle is the hardest viewpoint to fine-tune on.</p>
+          </div>
+        </div>
+
+        <div class="findings-box">
+          <h4 class="title is-6 has-text-centered">Key findings from the cross-domain study</h4>
+          <ol>
+            <li>CAT-Seg is the most robust model across nearly every training/evaluation combination, regardless of which domain it was fine-tuned on.</li>
+            <li>Training on a ground-level dataset (ACDC) transfers reasonably well to other ground-level domains, but mIoU drops sharply on slant-angle and BEV targets.</li>
+            <li>Training on a slant-angle dataset (IndraEye) generalizes worse overall than ground-level training &mdash; slant-angle is the most brittle viewpoint to fine-tune from.</li>
+            <li>IR evaluation trails RGB by a wide margin under every training source, confirming sensor shift compounds with viewpoint shift rather than substituting for it.</li>
+            <li>Domain feature divergence (MMD) increases after fine-tuning, suggesting that adapting to one domain pulls the encoder's features further from other domains.</li>
+            <li>Sim-to-real transfer causes a sharp accuracy drop for every model, even the strongest (CAT-Seg: 75.49 mIoU on sim &rarr; 20.45 on real OpenEarthMap RGB).</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -442,6 +844,16 @@
       }, { threshold: 0.5 });
       document.querySelectorAll('.stat-number').forEach(function (el) { statObserver.observe(el); });
     }
+
+    document.querySelectorAll('.transfer-tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.dataset.tab;
+        document.querySelectorAll('.transfer-tab-btn').forEach(function (b) { b.classList.remove('is-active'); });
+        document.querySelectorAll('.transfer-tab-panel').forEach(function (p) { p.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        document.getElementById('tab-' + target).classList.add('is-active');
+      });
+    });
 
     document.querySelectorAll('.sortable-table').forEach(function (table) {
       var headers = table.querySelectorAll('thead tr:last-child th');
