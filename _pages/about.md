@@ -24,8 +24,8 @@ I am currently a Project Scientist-I at the Artificial Intelligence and Robotics
 
 In addition, I worked as a consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, where I developed computer vision solutions for noisy, high-speed environments, particularly in the domain of sports analytics, with an emphasis on robustness and real-time performance.
 
-I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>) at Indian Institute of Science under the supervision of Suresh Sundaram
-(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>). During the early stages of my doctoral research, I also had the opportunity to work with <a href="https://ensundara.wordpress.com/biography/" target="_blank">Sundarrajan</a>, <a href="https://chandan-iiti.github.io" target="_blank">Chandan Gautham</a>, and <a href="https://www.arjunjain.co.in" target="_blank">Arjun Jain</a>.
+I earned my Ph.D. from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>) at Indian Institute of Science under the supervision of Prof. Suresh Sundaram
+(<a href="https://www.linkedin.com/company/artificial-intelligence-and-robotics-laboratory/posts/?feedView=all" target="_blank">AIRL – IISc</a>). During the early stages of my doctoral research, I also had the opportunity to work with Prof. <a href="https://ensundara.wordpress.com/biography/" target="_blank">Sundarrajan</a>, Dr. <a href="https://chandan-iiti.github.io" target="_blank">Chandan Gautham</a>, and Dr. <a href="https://www.arjunjain.co.in" target="_blank">Arjun Jain</a>.
 
 <div class="profile-section">
   <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
