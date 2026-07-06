@@ -4,21 +4,34 @@ title: about
 permalink: /
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Meiji Jingu, Shibuya,</p>
-    <p>Tokyo, Japan. (2024)</p>
+  image_circular: false
+
+sidebar_links:
+  - label: Email
+    url: "mailto:aniruddhss@iisc.ac.in"
+  - label: Scholar
+    url: "https://scholar.google.com/citations?user=FdgpBuoAAAAJ&hl=en"
+    target: "_blank"
+  - label: GitHub
+    url: "https://github.com/aniruddhsikdar1"
+    target: "_blank"
+
+research_domains:
+  - Computer Vision
+  - Multi-Sensor Fusion
+  - Domain Generalization
+  - Continual Learning
+  - Open-Vocab Segmentation
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: # leave blank to include all the news in the `_news` folder, scrollbar keeps the box from growing indefinitely
+  enabled: true
+  scrollable: true
+  limit:
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: true
 
-social: true # includes social icons at the bottom of the page
+social: true
 ---
 I am currently a Project Scientist-I at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), where I also serve as a Co-Principal Investigator for an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a>. The course is designed to advance practical education in autonomous navigation and aerial robotics.
 

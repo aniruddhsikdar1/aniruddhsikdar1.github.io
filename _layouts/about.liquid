@@ -1,93 +1,217 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+<style>
+  /* ── Homepage two-column layout ── */
+  .hp-wrap {
+    display: flex;
+    gap: 3.5rem;
+    align-items: flex-start;
+  }
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
+  /* ── Sidebar ── */
+  .hp-sidebar {
+    width: 205px;
+    min-width: 205px;
+    position: sticky;
+    top: 5rem;
+  }
+
+  .hp-photo {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 0.75rem;
+  }
+
+  .hp-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 0.2rem;
+    color: var(--global-text-color);
+    line-height: 1.3;
+  }
+
+  .hp-position {
+    font-size: 0.74rem;
+    text-align: center;
+    color: var(--global-text-color-light);
+    margin: 0 0 1rem;
+    line-height: 1.55;
+  }
+
+  .hp-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .hp-links a {
+    font-size: 0.71rem;
+    font-weight: 500;
+    color: var(--global-theme-color);
+    text-decoration: none;
+    padding: 2px 8px;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 3px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .hp-links a:hover {
+    background: var(--global-theme-color);
+    color: #fff;
+  }
+
+  .hp-rule {
+    border: none;
+    border-top: 1px solid var(--global-divider-color);
+    margin: 1.1rem 0;
+  }
+
+  .hp-slabel {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.55rem;
+  }
+
+  .hp-domains {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hp-domains li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .hp-dn {
+    font-size: 0.58rem;
+    font-family: monospace;
+    color: var(--global-text-color-light);
+    min-width: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .hp-dl {
+    font-size: 0.77rem;
+    color: var(--global-text-color);
+  }
+
+  .hp-aff {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+  }
+
+  /* ── Main content ── */
+  .hp-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 767px) {
+    .hp-wrap {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .hp-sidebar {
+      width: 100%;
+      min-width: unset;
+      position: static;
+    }
+    .hp-links {
+      justify-content: center;
+    }
+    .hp-aff {
+      justify-content: center;
+    }
+  }
+</style>
+
+<div class="hp-wrap">
+  <!-- ── Sidebar ── -->
+  <aside class="hp-sidebar">
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <img src="{{ profile_image_path | relative_url }}"
+           alt="{{ site.first_name }} {{ site.last_name }}"
+           class="hp-photo z-depth-1" />
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="hp-name">{{ site.first_name }} {{ site.last_name }}</div>
+    <div class="hp-position">Project Scientist-I<br>AIRL, IISc &amp; RBCCPS</div>
 
-    <!-- News -->
+    <div class="hp-links">
+      {% for lnk in page.sidebar_links %}
+        <a href="{{ lnk.url }}"{% if lnk.target %} target="{{ lnk.target }}"{% endif %}>{{ lnk.label }}</a>
+      {% endfor %}
+    </div>
+
+    <hr class="hp-rule">
+
+    {% if page.research_domains %}
+      <p class="hp-slabel">Research Domains</p>
+      <ul class="hp-domains">
+        {% for d in page.research_domains %}
+          <li>
+            <span class="hp-dn">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+            <span class="hp-dl">{{ d }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <hr class="hp-rule">
+    {% endif %}
+
+    <p class="hp-slabel">Affiliations</p>
+    <div class="hp-aff">
+      <a href="https://www.inria.fr/en" target="_blank">
+        <img src="{{ '/assets/img/inria.svg' | relative_url }}" alt="INRIA" style="height: 30px;" />
+      </a>
+      <a href="https://cps.iisc.ac.in" target="_blank">
+        <img src="{{ '/assets/img/rbccps.png' | relative_url }}" alt="RBCCPS" style="height: 36px;" />
+      </a>
+    </div>
+  </aside>
+
+  <!-- ── Main content ── -->
+  <main class="hp-content">
+    {{ content }}
+
     {% if page.announcements and page.announcements.enabled %}
       <div class="profile-section">
-        <h2>
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-        </h2>
+        <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a></h2>
         {% include news.liquid limit=true %}
       </div>
     {% endif %}
 
-    <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <div class="profile-section">
-        <h2>
-          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-        </h2>
+        <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a></h2>
         {% include latest_posts.liquid %}
       </div>
     {% endif %}
 
-    <!-- Selected papers -->
     {% if page.selected_papers %}
       <div class="profile-section">
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-        </h2>
+        <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a></h2>
         {% include selected_papers.liquid %}
       </div>
     {% endif %}
 
-    <!-- Affiliations -->
-    <div class="profile-section">
-      <h2>affiliations</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
-        <a href="https://www.inria.fr/en" target="_blank">
-          <img src="/assets/img/inria.svg" alt="INRIA Logo" style="height: 52px;" />
-        </a>
-        <a href="https://cps.iisc.ac.in" target="_blank">
-          <img src="/assets/img/rbccps.png" alt="RBCCPS Logo" style="height: 60px;" />
-        </a>
-      </div>
-    </div>
-
-    <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
@@ -95,5 +219,5 @@ layout: default
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
-  </article>
+  </main>
 </div>
