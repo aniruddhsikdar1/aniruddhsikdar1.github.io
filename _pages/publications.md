@@ -9,12 +9,15 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
-<!-- Bibsearch Feature -->
-
 {% include bib_search.liquid %}
 
 <div class="publications">
 
 {% bibliography %}
 
+</div>
+
+<div class="publications" style="margin-top: 2rem;">
+  <h2 class="year" style="margin-top: 0;">Patents &amp; Intellectual Property</h2>
+  {% bibliography --file patents %}
 </div>
