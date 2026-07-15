@@ -7,17 +7,73 @@ nav: true
 nav_order: 2
 ---
 
-<!-- _pages/publications.md -->
+<style>
+  .pub-tab-bar {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--global-divider-color);
+    margin-bottom: 1.5rem;
+  }
 
-{% include bib_search.liquid %}
+  .pub-tab-btn {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--global-text-color-light);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
 
-<div class="publications">
+  .pub-tab-btn:hover {
+    color: var(--global-text-color);
+  }
 
-{% bibliography %}
+  .pub-tab-btn.is-active {
+    color: var(--global-theme-color);
+    border-bottom-color: var(--global-theme-color);
+  }
 
+  .pub-tab-panel {
+    display: none;
+  }
+
+  .pub-tab-panel.is-active {
+    display: block;
+  }
+</style>
+
+<!-- Tab bar -->
+<div class="pub-tab-bar">
+  <button class="pub-tab-btn is-active" data-tab="pubs">Publications</button>
+  <button class="pub-tab-btn" data-tab="patents">Patents &amp; Intellectual Property</button>
 </div>
 
-<div class="publications" style="margin-top: 2rem;">
-  <h2 class="year" style="margin-top: 0;">Patents &amp; Intellectual Property</h2>
-  {% bibliography --file patents %}
+<!-- Publications panel -->
+<div id="pub-tab-pubs" class="pub-tab-panel is-active">
+  {% include bib_search.liquid %}
+  <div class="publications">
+    {% bibliography %}
+  </div>
 </div>
+
+<!-- Patents panel -->
+<div id="pub-tab-patents" class="pub-tab-panel">
+  <div class="publications">
+    {% bibliography --file patents %}
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.pub-tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.pub-tab-btn').forEach(function (b) { b.classList.remove('is-active'); });
+      document.querySelectorAll('.pub-tab-panel').forEach(function (p) { p.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      document.getElementById('pub-tab-' + btn.dataset.tab).classList.add('is-active');
+    });
+  });
+</script>
