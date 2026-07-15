@@ -16,6 +16,9 @@ sidebar_links:
   - label: GitHub
     url: "https://github.com/aniruddhsikdar1"
     target: "_blank"
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/aniruddh-sikdar-723112b8/"
+    target: "_blank"
 
 research_domains:
   - Computer Vision
