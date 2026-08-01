@@ -22,6 +22,10 @@
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
 linkedin_username: aniruddh-sikdar-723112b8
+youtube_personal:
+  logo: https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg
+  title: YouTube
+  url: https://www.youtube.com/watch?v=GEYRJsyct4c
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
 # orcid_id: # your ORCID ID

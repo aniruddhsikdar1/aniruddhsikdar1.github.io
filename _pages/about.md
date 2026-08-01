@@ -19,6 +19,9 @@ sidebar_links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/aniruddh-sikdar-723112b8/"
     target: "_blank"
+  - label: YouTube
+    url: "https://www.youtube.com/watch?v=GEYRJsyct4c"
+    target: "_blank"
 
 research_domains:
   - Computer Vision
@@ -36,7 +39,7 @@ selected_papers: true
 
 social: true
 ---
-I am currently a Project Scientist-I at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), where I also serve as a Co-Principal Investigator for an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a>. The course is designed to advance practical education in autonomous navigation and aerial robotics.
+I am currently a Project Scientist-I at the Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), where I also serve as a Co-Principal Investigator for an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a> (<a href="https://www.youtube.com/watch?v=tQ7kX5Xpf70&list=PLgMDNELGJ1CZZLI8nL0sDXJ6vPOj5p4Hv&index=15" target="_blank">watch on YouTube</a>). The course is designed to advance practical education in autonomous navigation and aerial robotics.
 
 In addition, I worked as a consultant at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, where I developed computer vision solutions for noisy, high-speed environments, particularly in the domain of sports analytics, with an emphasis on robustness and real-time performance.
 
