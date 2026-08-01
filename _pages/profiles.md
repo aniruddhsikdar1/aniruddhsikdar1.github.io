@@ -3,7 +3,7 @@ layout: profiles
 permalink: /people/
 title: Projects
 description: I work at the intersection of AI, robotics, and computer vision, developing practical solutions across funded projects, consultancies, course projects, and applied research, with a strong focus on efficient inference pipelines and scalable ML processing stacks that bridge innovative algorithms with deployable, real-world systems.
-nav: true
+nav: false # TO BE UPDATED — set back to true when ready
 nav_order: 7
 
 profiles:
