@@ -44,13 +44,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-projects",
-          title: "Projects",
-          description: "I work at the intersection of AI, robotics, and computer vision, developing practical solutions across funded projects, consultancies, course projects, and applied research, with a strong focus on efficient inference pipelines and scalable ML processing stacks that bridge innovative algorithms with deployable, real-world systems.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
