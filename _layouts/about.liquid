@@ -150,7 +150,7 @@ layout: default
     {% endif %}
 
     <div class="hp-name">{{ site.first_name }} {{ site.last_name }}</div>
-    <div class="hp-position">Project Scientist-I<br>AIRL, IISc &amp; RBCCPS</div>
+    <div class="hp-position">{% if page.sidebar_position %}{{ page.sidebar_position }}{% else %}Researcher{% endif %}</div>
 
     <div class="hp-links">
       {% for lnk in page.sidebar_links %}
