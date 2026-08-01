@@ -462,8 +462,8 @@ ninja.data = [{
           section: "News",},{id: "news-received-the-outstanding-reviewer-award-at-iccv-2025-for-service-to-the-research-community",
           title: 'Received the Outstanding Reviewer Award at ICCV 2025 for service to the research...',
           description: "",
-          section: "News",},{id: "news-released-an-nptel-course-on-ai-driven-perception-mapping-and-planning-for-autonomous-drones-view-course",
-          title: 'Released an NPTEL course on AI-Driven Perception, Mapping and Planning for Autonomous Drones....',
+          section: "News",},{id: "news-released-an-nptel-course-on-ai-driven-perception-learning-and-mapping-for-drones-view-course-watch-on-youtube",
+          title: 'Released an NPTEL course on AI-Driven Perception, Learning and Mapping for Drones. View...',
           description: "",
           section: "News",},{id: "news-received-the-gold-reviewer-award-at-icml-2026-placed-among-the-top-reviewers-for-the-conference",
           title: 'Received the Gold Reviewer Award at ICML 2026, placed among the top reviewers...',
@@ -525,6 +525,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/aniruddh-sikdar-723112b8", "_blank");
+        },
+      },{
+        id: 'social-youtube_personal',
+        title: 'Youtube_personal',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.youtube.com/watch?v=GEYRJsyct4c", "_blank");
         },
       },{
         id: 'social-custom_social',
