@@ -3,7 +3,7 @@ layout: page
 title: Research
 permalink: /projects/
 description: Research areas spanning domain generalization, multi-spectral learning, target tracking, generative AI, view-agnostic perception, and complex-valued deep learning.
-nav: true
+nav: false # TO BE UPDATED — set back to true when ready
 nav_order: 3
 display_categories: [Research]
 horizontal: false
