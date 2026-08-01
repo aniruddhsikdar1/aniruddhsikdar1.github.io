@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-research",
-          title: "Research",
-          description: "Research areas spanning domain generalization, multi-spectral learning, target tracking, generative AI, view-agnostic perception, and complex-valued deep learning.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "nav-service",
           title: "Service",
           description: "",
