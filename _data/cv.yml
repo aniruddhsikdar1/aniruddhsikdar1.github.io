@@ -3,54 +3,54 @@
   contents:
     - name: Full Name
       value: Dr. Aniruddh Sikdar
+    - name: Position
+      value: Postdoctoral Fellow, 3IA Côte d'Azur / Inria, Sophia Antipolis, France
+    - name: Email
+      value: aniruddhss@iisc.ac.in
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), Indian Institute of Science, Bangalore, India
-      year: 2025
+    - title: PhD, Cyber-Physical Systems
+      institution: Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), Indian Institute of Science (IISc), Bangalore, India
+      year: 2021 – 2025
       description:
-        - "Advisor: Prof. Suresh Sundaram, Artificial Intelligence and Robotics Lab (AIRL)"
-    - title: MTech (Research)
-      institution: TODO — institution, year
-      year: TODO
-      description:
-        - TODO — add specialization / thesis title
+        - "Advisor: <a href='https://aero.iisc.ac.in/people/sureshsundaram/' target='_blank'>Prof. Suresh Sundaram</a>, <a href='https://airl-iisc.in/home' target='_blank'>Artificial Intelligence and Robotics Lab (AIRL)</a>"
+        - Thesis — Development of Perception Systems to Enhance Robustness for Robotic Applications
 
 - title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Postdoctoral Fellow
+      institution: "Inria – Université Côte d'Azur, Sophia Antipolis, France"
+      department: "3IA Côte d'Azur · STARS Team"
+      year: Sep 2026 –
+      maindescription: >-
+        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+          <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">
+            <img src="/assets/img/3ia.png" alt="3IA Côte d'Azur" style="height:32px; object-fit:contain;">
+          </a>
+          <a href="https://www.inria.fr/en" target="_blank">
+            <img src="/assets/img/inria.svg" alt="INRIA" style="height:32px; object-fit:contain;">
+          </a>
+        </div>
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - "Working with the <a href='https://team.inria.fr/stars/' target='_blank'>STARS team</a> under <a href='https://www-sop.inria.fr/members/Francois.Bremond/' target='_blank'>Prof. François Brémond</a>."
+        - Research on video understanding and reasoning, anomaly detection, and human-to-human interaction analysis.
+
+    - title: Project Scientist-I
+      institution: "Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), Bangalore, India"
+      year: 2024 – 2026
       description:
-        - Description 1.
-        - Description 2.
+        - Co-Principal Investigator for the NPTEL course on AI-driven perception, learning, and mapping for drones.
+        - Contributed to deployment-oriented research projects on segmentation, detection, and change detection across ground, aerial, and satellite platforms.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Consultant
+      institution: "Visist.AI, Bangalore, India"
+      year: 2024 – 2025
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
+        - Developed computer vision solutions for noisy, high-speed environments in sports analytics.
+        - Emphasis on robustness, real-time performance, and reliable operation under challenging conditions.
 
 - title: Honors and Awards
   type: time_table
@@ -63,7 +63,3 @@
       items:
         - Outstanding Reviewer Award, CVPR 2025 (Top 711 out of 12,593 reviewers)
         - Outstanding Reviewer Award, ICCV 2025
-
-
-
-
