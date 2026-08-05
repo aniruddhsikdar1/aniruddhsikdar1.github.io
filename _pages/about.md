@@ -47,9 +47,8 @@ Previously, I was a <strong>Project Scientist-I</strong> at the <a href="https:/
 
 I earned my <strong>Ph.D.</strong> from the Robert Bosch Centre for Cyber-Physical Systems (<a href="https://cps.iisc.ac.in" target="_blank">RBCCPS</a>), IISc, under the supervision of <strong><a href="https://aero.iisc.ac.in/people/sureshsundaram/" target="_blank">Prof. Suresh Sundaram</a></strong> (<a href="https://airl-iisc.in/home" target="_blank">AIRL–IISc</a>). During my doctoral research, I also had the opportunity to work with <strong>Prof. <a href="https://ensundara.wordpress.com/biography/" target="_blank">Sundarrajan</a></strong>, <strong>Dr. <a href="https://chandan-iiti.github.io" target="_blank">Chandan Gautham</a></strong>, and <strong>Dr. <a href="https://www.arjunjain.co.in" target="_blank">Arjun Jain</a></strong>.
 
-<!-- TO BE UPDATED — uncomment and modify when ready
 <div class="profile-section">
-  <h2><a href="/projects/" style="color: inherit">research interests</a></h2>
+  <h2><a href="/projects/" style="color: inherit">research statement</a></h2>
   <p>
     My research lies at the intersection of <strong>computer vision and robotics</strong>, with a focus on <strong>video understanding</strong>, <strong>multi-sensor fusion</strong>, <strong>continual learning</strong>, and <strong>robust generalization to unseen domains</strong>. I am particularly interested in building reliable perception systems that can operate effectively in complex, dynamic, and safety-critical real-world environments.
   </p>
@@ -63,7 +62,6 @@ I earned my <strong>Ph.D.</strong> from the Robert Bosch Centre for Cyber-Physic
     In addition, my research interests include the development of sim-to-real evaluation frameworks and the use of generative AI techniques to enhance robustness, domain adaptation, and generalization in challenging operational environments.
   </p>
 </div>
--->
 
 <!-- #Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->   
   <!-- <p>Meiji Jingu, Shibuya,</p>
