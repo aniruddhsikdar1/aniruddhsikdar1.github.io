@@ -10,7 +10,7 @@ nav_order: 6
 <style>
   .ac-section { margin: 2.5rem 0 1.2rem; }
   .ac-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     border-left: 4px solid var(--global-theme-color);
     padding-left: 0.75rem;
@@ -18,7 +18,7 @@ nav_order: 6
     color: var(--global-text-color);
   }
   .ac-section-desc {
-    font-size: 0.81rem;
+    font-size: 0.87rem;
     color: var(--global-text-color-light);
     margin: 0 0 0.9rem 1rem;
   }
@@ -26,50 +26,55 @@ nav_order: 6
   /* Cards */
   .ac-card {
     border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
     margin-bottom: 1rem;
     background: var(--global-card-bg-color);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
   }
+  .ac-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.09); }
   .ac-card-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--global-text-color);
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.3rem;
   }
   .ac-card-meta {
-    font-size: 0.77rem;
+    font-size: 0.83rem;
     color: var(--global-text-color-light);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.65rem;
   }
-  .ac-card p, .ac-card li { font-size: 0.84rem; margin-bottom: 0.3rem; }
+  .ac-card p, .ac-card li { font-size: 0.91rem; margin-bottom: 0.3rem; }
   .ac-card ul { padding-left: 1.2rem; margin: 0.4rem 0; }
 
   /* Badges */
   .ac-badge {
     display: inline-block;
-    font-size: 0.68rem;
+    font-size: 0.73rem;
     font-weight: 600;
-    padding: 2px 8px;
+    padding: 2px 9px;
     border-radius: 20px;
     margin-right: 0.3rem;
     margin-bottom: 0.3rem;
   }
-  .badge-gold   { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
-  .badge-silver { background: #e9ecef; color: #495057; border: 1px solid #adb5bd; }
-  .badge-org    { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
-  .badge-venue  { background: #eef2ff; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); }
+  .badge-gold     { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+  .badge-silver   { background: #e9ecef; color: #495057; border: 1px solid #adb5bd; }
+  .badge-org      { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+  .badge-venue    { background: #eef2ff; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); }
   .badge-role-copi { background: #d4edda; color: #155724; border: 1px solid #28a745; font-weight: 700; }
   .badge-role-ta   { background: #fff3cd; color: #856404; border: 1px solid #ffc107; font-weight: 700; }
+  .badge-upcoming  { background: #e8f4fd; color: #1a6fa8; border: 1px solid #90cdf4; }
 
   /* Scrollable container for talks */
   .ac-scroll-box {
-    max-height: 420px;
+    max-height: 440px;
     overflow-y: auto;
     border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
-    padding: 0 0.8rem;
+    border-radius: 10px;
+    padding: 0 0.9rem;
     background: var(--global-card-bg-color);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
   }
   .ac-scroll-box::-webkit-scrollbar { width: 5px; }
   .ac-scroll-box::-webkit-scrollbar-thumb { background: var(--global-divider-color); border-radius: 4px; }
@@ -79,49 +84,75 @@ nav_order: 6
   .ac-timeline li {
     display: flex;
     gap: 1rem;
-    padding: 0.7rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid var(--global-divider-color);
+    transition: background 0.15s;
   }
   .ac-timeline li:last-child { border-bottom: none; }
   .ac-tl-date {
-    min-width: 88px;
-    font-size: 0.71rem;
+    min-width: 92px;
+    font-size: 0.78rem;
     color: var(--global-text-color-light);
     font-family: monospace;
     padding-top: 3px;
     flex-shrink: 0;
   }
-  .ac-tl-title { font-size: 0.86rem; font-weight: 600; margin: 0 0 0.1rem; }
-  .ac-tl-venue { font-size: 0.77rem; color: var(--global-text-color-light); margin: 0; }
-  .ac-tl-paper { font-size: 0.77rem; font-style: italic; color: var(--global-text-color-light); margin: 0.12rem 0 0; }
+  .ac-tl-title { font-size: 0.93rem; font-weight: 600; margin: 0 0 0.12rem; }
+  .ac-tl-venue { font-size: 0.83rem; color: var(--global-text-color-light); margin: 0; }
+  .ac-tl-paper { font-size: 0.83rem; font-style: italic; color: var(--global-text-color-light); margin: 0.14rem 0 0; }
 
   /* Course cards */
   .ac-course {
     border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
   }
+  .ac-course:hover { box-shadow: 0 3px 14px rgba(0,0,0,0.09); }
   .ac-course-header {
     background: var(--global-theme-color);
     color: #fff;
-    padding: 0.55rem 1.1rem;
+    padding: 0.65rem 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
   }
   .ac-course-num {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     font-weight: 700;
     opacity: 0.8;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
     white-space: nowrap;
+    background: rgba(255,255,255,0.18);
+    padding: 2px 7px;
+    border-radius: 4px;
   }
-  .ac-course-header h3 { font-size: 0.93rem; font-weight: 700; margin: 0; color: #fff; }
-  .ac-course-body { padding: 0.85rem 1.1rem; }
-  .ac-course-body p, .ac-course-body li { font-size: 0.83rem; margin-bottom: 0.3rem; }
+  .ac-course-header h3 { font-size: 1rem; font-weight: 700; margin: 0; color: #fff; }
+  .ac-course-body { padding: 0.95rem 1.2rem; }
+  .ac-course-body p, .ac-course-body li { font-size: 0.9rem; margin-bottom: 0.35rem; }
   .ac-course-body ul { padding-left: 1.2rem; margin: 0.4rem 0 0; }
-  .ac-course-placeholder { font-size: 0.83rem; color: var(--global-text-color-light); font-style: italic; }
+
+  /* Topic pill tags */
+  .ac-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+  .ac-topic {
+    font-size: 0.74rem;
+    font-weight: 500;
+    padding: 3px 11px;
+    border-radius: 14px;
+    background: var(--global-theme-color);
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+  .ac-topic-label {
+    font-size: 0.73rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--global-text-color-light);
+    margin: 0.75rem 0 0.1rem;
+  }
 </style>
 
 <!-- ═══════════════════════════════════════ -->
@@ -288,7 +319,7 @@ nav_order: 6
   <p class="ac-section-desc">Courses where I served as Co-Principal Investigator or Teaching Assistant.</p>
 
   <!-- NPTEL Courses -->
-  <h3 style="font-size:1rem; font-weight:600; margin: 1.2rem 0 0.6rem; color: var(--global-text-color);">NPTEL Courses</h3>
+  <h3 style="font-size:1.05rem; font-weight:700; margin: 1.2rem 0 0.65rem; color: var(--global-text-color); letter-spacing: 0.01em;">NPTEL Courses</h3>
 
   <div class="ac-course">
     <div class="ac-course-header">
@@ -316,13 +347,31 @@ nav_order: 6
       <h3>Advanced Perception for Autonomous Systems</h3>
     </div>
     <div class="ac-course-body">
-      <p><span class="ac-badge badge-role-copi">Co-Principal Investigator</span></p>
-      <p class="ac-course-placeholder">Details coming soon. This course will cover advanced topics in visual perception, multi-modal sensing, and deep learning for autonomous robotic systems.</p>
+      <p>
+        <span class="ac-badge badge-role-copi">Co-Principal Investigator</span>
+        <span class="ac-badge badge-upcoming">Upcoming · NPTEL</span>
+      </p>
+      <p>This course provides an in-depth exploration of modern perception techniques for autonomous systems, with a focus on the latest advances in foundation models and efficient adaptation strategies for real-world deployment.</p>
+      <ul>
+        <li>Large-scale <strong>foundation models</strong> for vision — architectures, pre-training paradigms, and zero-shot capabilities.</li>
+        <li><strong>Parameter-Efficient Fine-Tuning (PEFT)</strong> — LoRA, adapters, prompt tuning, and their application to perception tasks.</li>
+        <li><strong>Video understanding</strong> — temporal modelling, action recognition, multi-object tracking, and anomaly detection in video streams.</li>
+        <li><strong>Vision-Language Actions (VLAs)</strong> — grounding language in visual perception for robotic planning and autonomous decision-making.</li>
+      </ul>
+      <p class="ac-topic-label">Topics at a Glance</p>
+      <div class="ac-topics">
+        <span class="ac-topic">Foundation Models</span>
+        <span class="ac-topic">PEFT / LoRA</span>
+        <span class="ac-topic">Video Understanding</span>
+        <span class="ac-topic">Vision-Language Actions</span>
+        <span class="ac-topic">Temporal Modelling</span>
+        <span class="ac-topic">Zero-Shot Generalization</span>
+      </div>
     </div>
   </div>
 
   <!-- TA Course -->
-  <h3 style="font-size:1rem; font-weight:600; margin: 1.4rem 0 0.6rem; color: var(--global-text-color);">Graduate Courses</h3>
+  <h3 style="font-size:1.05rem; font-weight:700; margin: 1.5rem 0 0.65rem; color: var(--global-text-color); letter-spacing: 0.01em;">Graduate Courses</h3>
 
   <div class="ac-card">
     <div class="ac-card-title">Neural Computation</div>
