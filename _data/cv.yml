@@ -28,10 +28,10 @@
       maindescription: >-
         <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
           <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">
-            <img src="/assets/img/3ia.png" alt="3IA Côte d'Azur" style="height:32px; object-fit:contain;">
+            <img src="/assets/img/3ia.png" alt="3IA Côte d'Azur" style="height:30px; object-fit:contain;">
           </a>
           <a href="https://www.inria.fr/en" target="_blank">
-            <img src="/assets/img/inria.svg" alt="INRIA" style="height:32px; object-fit:contain;">
+            <img src="/assets/img/inria.svg" alt="INRIA" style="height:30px; object-fit:contain;">
           </a>
         </div>
       description:
@@ -41,13 +41,51 @@
     - title: Project Scientist-I
       institution: "Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), Bangalore, India"
       year: 2024 – 2026
+      maindescription: >-
+        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+          <a href="https://www.iisc.ac.in" target="_blank">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
+          </a>
+        </div>
       description:
         - Co-Principal Investigator for the NPTEL course on AI-driven perception, learning, and mapping for drones.
         - Contributed to deployment-oriented research projects on segmentation, detection, and change detection across ground, aerial, and satellite platforms.
 
+    - title: Research Associate II
+      institution: "Department of Aerospace Engineering, Indian Institute of Science (IISc), Bangalore, India"
+      year: 2023 – 2024
+      maindescription: >-
+        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+          <a href="https://aero.iisc.ac.in" target="_blank">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
+          </a>
+        </div>
+      description:
+        - Research in multi-spectral perception and domain adaptation under the Artificial Intelligence and Robotics Lab (AIRL).
+        - Contributed to funded projects on robust segmentation and detection for aerial robotic platforms.
+
+    - title: Research Associate I
+      institution: "Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), Indian Institute of Science (IISc), Bangalore, India"
+      year: 2021 – 2023
+      maindescription: >-
+        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+          <a href="https://cps.iisc.ac.in" target="_blank">
+            <img src="/assets/img/rbccps.png" alt="RBCCPS" style="height:30px; object-fit:contain;">
+          </a>
+        </div>
+      description:
+        - Early doctoral research on complex-valued deep learning and multi-modal perception for robotic systems.
+        - Work on building segmentation in satellite imagery and SAR-based mine detection.
+
     - title: Consultant
       institution: "Visist.AI, Bangalore, India"
       year: 2024 – 2025
+      maindescription: >-
+        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+          <a href="https://www.iisc.ac.in" target="_blank">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
+          </a>
+        </div>
       description:
         - Developed computer vision solutions for noisy, high-speed environments in sports analytics.
         - Emphasis on robustness, real-time performance, and reliable operation under challenging conditions.
