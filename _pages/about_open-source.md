@@ -48,65 +48,6 @@ title: About Newton
 
 </div>
 
-<!-- GitHub and PyPI icons -->
-<div style="display: flex; align-items: center; margin-bottom: 1em; gap: 1em;">
-  <h3 style="margin: 0; flex: 1;">CLIP-CAM-Video: Explainable CLIP Image–Text Alignment for Video</h3>
-
-  <!-- GitHub icon -->
-  <a href="https://github.com/adityagandhamal/clip_cam" target="_blank" style="text-decoration: none;">
-    <i class="fab fa-github" style="font-size: 1.5em;"></i>
-  </a>
-
-  <!-- PyPI link (emoji icon) -->
-  <!-- <a href="https://pypi.org/project/clip-cam/" 
-     target="_blank" 
-     style="text-decoration: none; font-size: 1.4em;">
-    🌐
-  </a> -->
-</div>
-
-
-<!-- Main content with image on the right -->
-<div style="display: flex; align-items: flex-start; gap: 1em; flex-wrap: wrap;">
-
-  <!-- Left side: text content -->
-<div style="flex: 1; min-width: 250px;">
-  <p>
-    <strong>CLIP-CAM</strong> is an open-source Python package for 
-    <strong>video understanding and cross-modal alignment</strong> using 
-    <strong>CLIP-based vision–language models</strong>. It enables interpretable 
-    text–video matching by identifying and ranking the most relevant frames 
-    corresponding to a described activity.
-  </p>
-  <ul>
-    <li>
-      Extended <strong>CLIP-CAM</strong> to support <strong>video-text alignment</strong>, 
-      leveraging CLIP image–text matching to analyze temporal sequences.
-    </li>
-    <li>
-      Implemented a framework that <strong>identifies the most relevant frame</strong> 
-      in a video for a given textual activity description.
-    </li>
-    <li>
-      Designed a <strong>frame-ranking mechanism</strong> that orders video frames 
-      based on similarity scores between frame embeddings and text embeddings.
-    </li>
-    <li>
-      Enabled interpretable insights into <strong>activity localization</strong> 
-      through similarity-based heatmaps and relevance scoring across frames.
-    </li>
-  </ul>
-</div>
-
-  <!-- Right side: image with description below -->
-  <div style="text-align: center; max-width: 320px;">
-    <img src="/assets/images/clip_cam.png" alt="IndraEye" style="width: 100%; height: auto; display: block; margin-bottom: 0.5em;">
-    <div>
-      <strong>Example visualization showing attention heatmap over the image for the provided text prompt.</strong>
-    </div>
-  </div>
-
-</div>
 
 <!-- ### Dataset Contributions
 
