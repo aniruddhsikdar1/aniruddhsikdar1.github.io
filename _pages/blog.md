@@ -18,12 +18,7 @@ profiles:
       # <p>123 your address street</p>
       # <p>Your City, State 12345</p>
 
-  - align: left
-    # image: newton.jpg
-    content: about_datasets.md
-    image_circular: true
-    # more_info: >
-    #   <p>Office: 555-456</p>
+  # about_datasets.md removed — dataset contributions now live in about_open-source.md
 
   - align: left
     # image: newton.jpg
