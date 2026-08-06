@@ -3,7 +3,9 @@ title: About Newton
 --- -->
 
 <style>
-  /* ── Section headers ── */
+  /* ══════════════════════════════════════
+     Section headers
+     ══════════════════════════════════════ */
   .os-section { margin: 2.5rem 0 1.2rem; }
   .os-section h2 {
     font-size: 1.25rem;
@@ -19,7 +21,9 @@ title: About Newton
     margin: 0 0 0.9rem 1rem;
   }
 
-  /* ── Package card ── */
+  /* ══════════════════════════════════════
+     Package card
+     ══════════════════════════════════════ */
   .os-card {
     border: 1px solid var(--global-divider-color);
     border-radius: 10px;
@@ -30,7 +34,6 @@ title: About Newton
     transition: box-shadow 0.2s;
   }
   .os-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
-
   .os-card-header {
     padding: 0.75rem 1.3rem;
     border-bottom: 1px solid var(--global-divider-color);
@@ -47,23 +50,6 @@ title: About Newton
     flex: 1;
     min-width: 0;
   }
-  .os-link-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 3px 11px;
-    border-radius: 20px;
-    text-decoration: none;
-    border: 1px solid var(--global-theme-color);
-    color: var(--global-theme-color);
-    white-space: nowrap;
-    transition: background 0.15s, color 0.15s;
-  }
-  .os-link-pill:hover { background: var(--global-theme-color); color: #fff; }
-  .os-link-pill svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
-
   .os-card-body {
     padding: 1rem 1.3rem;
     display: flex;
@@ -75,164 +61,122 @@ title: About Newton
   .os-card-text p { font-size: 0.91rem; margin-bottom: 0.5rem; line-height: 1.65; }
   .os-card-text ul { padding-left: 1.2rem; margin: 0.4rem 0; }
   .os-card-text li { font-size: 0.91rem; margin-bottom: 0.35rem; line-height: 1.6; }
-
-  .os-card-img-wrap {
-    flex-shrink: 0;
-    width: 280px;
-    max-width: 100%;
-    text-align: center;
-  }
+  .os-card-img-wrap { flex-shrink: 0; width: 280px; max-width: 100%; text-align: center; }
   .os-card-img-wrap img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid var(--global-divider-color);
-    display: block;
+    width: 100%; height: auto; border-radius: 6px;
+    border: 1px solid var(--global-divider-color); display: block;
   }
   .os-card-img-caption {
-    font-size: 0.77rem;
-    color: var(--global-text-color-light);
-    margin-top: 0.4rem;
-    font-style: italic;
-    line-height: 1.4;
+    font-size: 0.77rem; color: var(--global-text-color-light);
+    margin-top: 0.4rem; font-style: italic; line-height: 1.4;
   }
 
-  /* ── Topic / tech tags ── */
-  .os-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+  /* ══════════════════════════════════════
+     Shared: link pills, topic tags
+     ══════════════════════════════════════ */
+  .os-link-pill {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.75rem; font-weight: 600; padding: 3px 11px;
+    border-radius: 20px; text-decoration: none;
+    border: 1px solid var(--global-theme-color);
+    color: var(--global-theme-color); white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  .os-link-pill:hover { background: var(--global-theme-color); color: #fff; }
+  .os-link-pill svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+
+  .os-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
   .os-topic {
-    font-size: 0.74rem;
-    font-weight: 500;
-    padding: 3px 11px;
-    border-radius: 14px;
-    background: var(--global-theme-color);
-    color: #fff;
-    letter-spacing: 0.01em;
+    font-size: 0.74rem; font-weight: 500; padding: 3px 11px;
+    border-radius: 14px; background: var(--global-theme-color);
+    color: #fff; letter-spacing: 0.01em;
   }
   .os-topic-label {
-    font-size: 0.73rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--global-text-color-light);
+    font-size: 0.73rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.07em; color: var(--global-text-color-light);
     margin: 0.85rem 0 0.15rem;
   }
 
-  /* ════════════════════════════════
-     Dataset cards (creative layout)
-     ════════════════════════════════ */
+  /* ══════════════════════════════════════
+     Dataset cards
+     ══════════════════════════════════════ */
+  .ds-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+  @media (max-width: 860px) { .ds-grid { grid-template-columns: 1fr; } }
+
   .ds-card {
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 1.6rem;
     background: var(--global-card-bg-color);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid var(--global-divider-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.22s, transform 0.22s;
   }
   .ds-card:hover {
-    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    transform: translateY(-3px);
   }
 
-  /* Coloured banner at top of each dataset card */
-  .ds-banner {
-    height: 6px;
-    width: 100%;
-  }
+  /* Gradient top strip — set via inline style */
+  .ds-banner { height: 5px; width: 100%; flex-shrink: 0; }
 
-  .ds-inner {
-    padding: 1.1rem 1.4rem 1.25rem;
+  /* Preview image fills top of card, below banner */
+  .ds-img-wrap { position: relative; overflow: hidden; max-height: 160px; }
+  .ds-img-wrap img {
+    width: 100%; height: 160px; object-fit: cover; display: block;
+    filter: brightness(0.92);
+    transition: filter 0.25s, transform 0.35s;
   }
+  .ds-card:hover .ds-img-wrap img { filter: brightness(1); transform: scale(1.03); }
 
-  .ds-head {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 0.9rem;
+  /* Floating status pill over the image */
+  .ds-status {
+    position: absolute; top: 0.6rem; right: 0.7rem;
+    font-size: 0.68rem; font-weight: 700; padding: 3px 9px;
+    border-radius: 20px; letter-spacing: 0.04em; backdrop-filter: blur(4px);
   }
-  .ds-name-block { flex: 1; min-width: 0; }
+  .ds-status-public   { background: rgba(16,185,129,0.9); color: #fff; }
+  .ds-status-internal { background: rgba(99,102,241,0.9); color: #fff; }
+  .ds-status-kaggle   { background: rgba(32,129,226,0.9); color: #fff; }
+
+  .ds-body { padding: 0.95rem 1.1rem 1.1rem; flex: 1; display: flex; flex-direction: column; }
+
+  .ds-head { margin-bottom: 0.6rem; }
   .ds-name {
-    font-size: 1.15rem;
-    font-weight: 800;
-    margin: 0 0 0.15rem;
-    color: var(--global-text-color);
-    letter-spacing: -0.01em;
+    font-size: 1.08rem; font-weight: 800; margin: 0 0 0.1rem;
+    color: var(--global-text-color); letter-spacing: -0.01em;
   }
   .ds-subtitle {
-    font-size: 0.82rem;
-    color: var(--global-text-color-light);
-    margin: 0;
-    font-style: italic;
+    font-size: 0.8rem; color: var(--global-text-color-light);
+    margin: 0; font-style: italic;
   }
-  .ds-links { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
 
-  /* Stats row */
-  .ds-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
+  /* Stats chips row */
+  .ds-stats { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0; }
   .ds-stat {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
+    display: inline-flex; align-items: center; gap: 0.3rem;
     background: var(--global-bg-color, #f8f9fa);
     border: 1px solid var(--global-divider-color);
-    border-radius: 8px;
-    padding: 0.3rem 0.75rem;
+    border-radius: 7px; padding: 0.25rem 0.65rem;
   }
-  @media (prefers-color-scheme: dark) {
-    .ds-stat { background: rgba(255,255,255,0.05); }
-  }
-  :root[data-theme="dark"] .ds-stat { background: rgba(255,255,255,0.05); }
-  .ds-stat-icon { font-size: 0.95rem; line-height: 1; }
-  .ds-stat-val  { font-size: 0.88rem; font-weight: 700; color: var(--global-text-color); }
-  .ds-stat-key  { font-size: 0.76rem; color: var(--global-text-color-light); }
+  :root[data-theme="dark"] .ds-stat,
+  @media (prefers-color-scheme: dark) { .ds-stat { background: rgba(255,255,255,0.06); } }
+  .ds-stat-icon { font-size: 0.85rem; line-height: 1; }
+  .ds-stat-val  { font-size: 0.83rem; font-weight: 700; color: var(--global-text-color); }
+  .ds-stat-key  { font-size: 0.72rem; color: var(--global-text-color-light); }
 
-  /* Two-column body inside dataset card */
-  .ds-body {
-    display: flex;
-    gap: 1.4rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-  .ds-desc { flex: 1; min-width: 200px; }
-  .ds-desc p { font-size: 0.91rem; line-height: 1.65; margin-bottom: 0.5rem; }
-  .ds-desc ul { padding-left: 1.2rem; margin: 0.3rem 0; }
-  .ds-desc li { font-size: 0.91rem; line-height: 1.6; margin-bottom: 0.35rem; }
+  .ds-desc { font-size: 0.88rem; line-height: 1.63; color: var(--global-text-color); margin-bottom: 0.5rem; }
 
-  .ds-preview {
-    flex-shrink: 0;
-    width: 260px;
-    max-width: 100%;
-  }
-  .ds-preview img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid var(--global-divider-color);
-    display: block;
-  }
-  .ds-preview-caption {
-    font-size: 0.76rem;
-    color: var(--global-text-color-light);
-    font-style: italic;
-    margin-top: 0.4rem;
-    text-align: center;
-    line-height: 1.4;
-  }
-
-  /* Sensor / modality badges */
-  .ds-modalities { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+  /* Modality badges */
+  .ds-modalities { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.5rem; }
   .ds-mod {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.73rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 6px;
+    font-size: 0.71rem; font-weight: 600; padding: 2px 9px;
+    border-radius: 6px; display: inline-flex; align-items: center; gap: 0.2rem;
   }
   .ds-mod-rgb    { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
   .ds-mod-ir     { background: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
@@ -240,10 +184,13 @@ title: About Newton
   .ds-mod-sonar  { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
   .ds-mod-aerial { background: #fce7f3; color: #9d174d; border: 1px solid #f9a8d4; }
   .ds-mod-ground { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; }
+  .ds-mod-sim    { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+  .ds-mod-synth  { background: #fff7ed; color: #9a3412; border: 1px solid #fdba74; }
 
-  @media (max-width: 620px) {
-    .os-card-img-wrap, .ds-preview { width: 100%; }
-  }
+  /* Footer links row */
+  .ds-links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 0.75rem; }
+
+  @media (max-width: 600px) { .os-card-img-wrap { width: 100%; } }
 </style>
 
 <!-- ═══════════════════════════════════════ -->
@@ -288,7 +235,7 @@ title: About Newton
         </p>
         <ul>
           <li>Modular and extensible framework for visualizing cross-modal attention in CLIP, built around <strong>Grad-CAM–based heatmap generation</strong>.</li>
-          <li>Customised for CLIP's dual-encoder architecture, allowing fine-grained interpretation of which image patches contribute most to a given text query.</li>
+          <li>Customised for CLIP's dual-encoder architecture, revealing which image patches contribute most to a given text query.</li>
           <li>Lightweight API — works with standard HuggingFace and OpenAI CLIP checkpoints with minimal setup.</li>
         </ul>
         <p class="os-topic-label">Tech Stack &amp; Topics</p>
@@ -316,153 +263,156 @@ title: About Newton
   <h2>🗄️ Dataset Contributions</h2>
   <p class="os-section-desc">Benchmarks and datasets released to advance research in multi-modal perception and autonomous systems.</p>
 
-  <!-- ── IndraEye ── -->
-  <div class="ds-card">
-    <div class="ds-banner" style="background: linear-gradient(90deg, #f97316, #ef4444);"></div>
-    <div class="ds-inner">
-      <div class="ds-head">
-        <div class="ds-name-block">
+  <div class="ds-grid">
+
+    <!-- ── IndraEye ── -->
+    <div class="ds-card">
+      <div class="ds-banner" style="background: linear-gradient(90deg, #f97316, #ef4444);"></div>
+      <div class="ds-img-wrap">
+        <img src="/assets/img/publication_preview/indraeye.png" alt="IndraEye dataset" />
+        <span class="ds-status ds-status-kaggle">Kaggle · Public</span>
+      </div>
+      <div class="ds-body">
+        <div class="ds-head">
           <h3 class="ds-name">IndraEye</h3>
-          <p class="ds-subtitle">Multi-Spectral UAV Dataset for Aerial Perception</p>
+          <p class="ds-subtitle">Multi-Spectral UAV Dataset · Aerial Object Detection</p>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat"><span class="ds-stat-icon">📷</span><span class="ds-stat-val">EO + IR</span><span class="ds-stat-key">Modalities</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🚁</span><span class="ds-stat-val">UAV</span><span class="ds-stat-key">Platform</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🏆</span><span class="ds-stat-val">82 Teams</span><span class="ds-stat-key">Competition</span></div>
+        </div>
+        <p class="ds-desc">
+          Paired <strong>Electro-Optical (RGB)</strong> and <strong>Infrared</strong> aerial imagery captured at slant angles from UAV platforms, designed for drone-based object detection under challenging real-world conditions. Hosted as India's first drone object detection Kaggle competition at ETAAV, IISc, sponsored by SwaYaan (MeitY, GoI).
+        </p>
+        <div class="ds-modalities">
+          <span class="ds-mod ds-mod-rgb">📷 EO / RGB</span>
+          <span class="ds-mod ds-mod-ir">🌡️ Infrared</span>
+          <span class="ds-mod ds-mod-aerial">🚁 Aerial</span>
+        </div>
+        <div class="os-topics">
+          <span class="os-topic">Object Detection</span>
+          <span class="os-topic">Multi-Spectral Fusion</span>
+          <span class="os-topic">Domain Adaptation</span>
         </div>
         <div class="ds-links">
-          <a href="https://www.kaggle.com/competitions/etaav-eo-ir" target="_blank" class="os-link-pill">
-            Kaggle ↗
-          </a>
-          <a href="https://ieeexplore.ieee.org/document/10052789" target="_blank" class="os-link-pill">
-            Paper ↗
-          </a>
-        </div>
-      </div>
-
-      <div class="ds-stats">
-        <div class="ds-stat">
-          <span class="ds-stat-icon">📷</span>
-          <span class="ds-stat-val">2</span>
-          <span class="ds-stat-key">Modalities</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">🚁</span>
-          <span class="ds-stat-val">UAV</span>
-          <span class="ds-stat-key">Platform</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">🎯</span>
-          <span class="ds-stat-val">Slant-Angle</span>
-          <span class="ds-stat-key">View</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">🏆</span>
-          <span class="ds-stat-val">ETAAV</span>
-          <span class="ds-stat-key">Competition</span>
-        </div>
-      </div>
-
-      <div class="ds-body">
-        <div class="ds-desc">
-          <p>
-            <strong>IndraEye</strong> is a multi-spectral aerial dataset captured from UAV platforms at slant angles, providing paired <strong>Electro-Optical (RGB)</strong> and <strong>Infrared (IR)</strong> imagery for drone-based object detection and perception research.
-          </p>
-          <ul>
-            <li>Paired EO–IR imagery from a slant-angle UAV viewpoint, capturing challenging real-world lighting and weather conditions.</li>
-            <li>Used as the official dataset for <strong>India's first drone-based object detection competition</strong> at ETAAV, IISc Bangalore, hosted on Kaggle with 82 competing teams.</li>
-            <li>Sponsored by <strong>SwaYaan (MeitY, Government of India)</strong>; supports research in multi-modal aerial perception and domain generalization.</li>
-            <li>Underpins multiple publications in multi-spectral fusion, visible-to-thermal domain adaptation, and UAV perception.</li>
-          </ul>
-          <div class="ds-modalities">
-            <span class="ds-mod ds-mod-rgb">📷 EO / RGB</span>
-            <span class="ds-mod ds-mod-ir">🌡️ Infrared (IR)</span>
-            <span class="ds-mod ds-mod-aerial">🚁 Aerial / UAV</span>
-          </div>
-          <p class="os-topic-label">Tasks &amp; Applications</p>
-          <div class="os-topics">
-            <span class="os-topic">Object Detection</span>
-            <span class="os-topic">Multi-Spectral Fusion</span>
-            <span class="os-topic">Domain Adaptation</span>
-            <span class="os-topic">Aerial Perception</span>
-          </div>
-        </div>
-        <div class="ds-preview">
-          <img src="/assets/img/publication_preview/indraeye.png" alt="IndraEye dataset sample imagery" />
-          <p class="ds-preview-caption">Sample EO–IR imagery pairs from the IndraEye dataset.</p>
+          <a href="https://www.kaggle.com/competitions/etaav-eo-ir" target="_blank" class="os-link-pill">Kaggle ↗</a>
+          <a href="https://ieeexplore.ieee.org/document/10052789" target="_blank" class="os-link-pill">Paper ↗</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ── AetherVision-Bench ── -->
-  <div class="ds-card">
-    <div class="ds-banner" style="background: linear-gradient(90deg, #6366f1, #0ea5e9);"></div>
-    <div class="ds-inner">
-      <div class="ds-head">
-        <div class="ds-name-block">
+    <!-- ── AetherVision-Bench ── -->
+    <div class="ds-card">
+      <div class="ds-banner" style="background: linear-gradient(90deg, #6366f1, #0ea5e9);"></div>
+      <div class="ds-img-wrap">
+        <img src="/assets/img/publication_preview/bench4.drawio.png" alt="AetherVision-Bench" />
+        <span class="ds-status ds-status-public">Public · Benchmark</span>
+      </div>
+      <div class="ds-body">
+        <div class="ds-head">
           <h3 class="ds-name">AetherVision-Bench</h3>
-          <p class="ds-subtitle">Open-Vocabulary RGB-Infrared Benchmark · Multi-Angle Segmentation</p>
+          <p class="ds-subtitle">Open-Vocabulary RGB-IR Benchmark · Multi-Angle Segmentation</p>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat"><span class="ds-stat-icon">🗂️</span><span class="ds-stat-val">13+</span><span class="ds-stat-key">Datasets</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">📐</span><span class="ds-stat-val">MSRIQ</span><span class="ds-stat-key">Novel Metric</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🔭</span><span class="ds-stat-val">CVPR '25</span><span class="ds-stat-key">Workshop</span></div>
+        </div>
+        <p class="ds-desc">
+          Large-scale benchmark consolidating <strong>13+ datasets</strong> across RGB and infrared modalities for open-vocabulary segmentation evaluation across aerial and ground perspectives. Introduces <strong>MSRIQ</strong>, a novel metric for cross-modal segmentation uncertainty, and an object-localization track for foundation VLMs.
+        </p>
+        <div class="ds-modalities">
+          <span class="ds-mod ds-mod-rgb">📷 RGB</span>
+          <span class="ds-mod ds-mod-ir">🌡️ Infrared</span>
+          <span class="ds-mod ds-mod-aerial">🚁 Aerial</span>
+          <span class="ds-mod ds-mod-ground">🚶 Ground</span>
+        </div>
+        <div class="os-topics">
+          <span class="os-topic">Open-Vocab Segmentation</span>
+          <span class="os-topic">VLM Evaluation</span>
+          <span class="os-topic">Multi-View</span>
         </div>
         <div class="ds-links">
-          <a href="https://arxiv.org/abs/2506.03709" target="_blank" class="os-link-pill">
-            arXiv ↗
-          </a>
-          <a href="/publications/pixel2perspective/" class="os-link-pill">
-            Webpage ↗
-          </a>
-        </div>
-      </div>
-
-      <div class="ds-stats">
-        <div class="ds-stat">
-          <span class="ds-stat-icon">🗂️</span>
-          <span class="ds-stat-val">13+</span>
-          <span class="ds-stat-key">Datasets</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">📡</span>
-          <span class="ds-stat-val">2</span>
-          <span class="ds-stat-key">Modalities</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">🔭</span>
-          <span class="ds-stat-val">Multi-Angle</span>
-          <span class="ds-stat-key">Perspective</span>
-        </div>
-        <div class="ds-stat">
-          <span class="ds-stat-icon">📐</span>
-          <span class="ds-stat-val">MSRIQ</span>
-          <span class="ds-stat-key">Novel Metric</span>
-        </div>
-      </div>
-
-      <div class="ds-body">
-        <div class="ds-desc">
-          <p>
-            <strong>AetherVision-Bench</strong> is a large-scale open-vocabulary benchmark for <strong>RGB–Infrared segmentation</strong>, spanning both <strong>aerial and ground-level perspectives</strong>. It challenges vision-language models with cross-modal, multi-view generalization.
-          </p>
-          <ul>
-            <li>Consolidates <strong>13+ datasets</strong> across modalities and viewpoints into a unified evaluation framework for open-vocabulary segmentation models.</li>
-            <li>Introduces <strong>MSRIQ</strong> — a novel metric for quantifying cross-modal RGB-IR segmentation uncertainty, enabling principled uncertainty-aware evaluation.</li>
-            <li>Adds an <strong>object-localization track</strong> for foundation Vision-Language Models (VLMs), enabling grounded evaluation beyond standard segmentation metrics.</li>
-            <li>Accepted at the <em>Foundation Models Meet Embodied Agents</em> workshop at <strong>CVPR 2025</strong>; expanded as <strong>Pixel2Perspective</strong>.</li>
-          </ul>
-          <div class="ds-modalities">
-            <span class="ds-mod ds-mod-rgb">📷 RGB</span>
-            <span class="ds-mod ds-mod-ir">🌡️ Infrared (IR)</span>
-            <span class="ds-mod ds-mod-aerial">🚁 Aerial</span>
-            <span class="ds-mod ds-mod-ground">🚶 Ground-Level</span>
-          </div>
-          <p class="os-topic-label">Tasks &amp; Applications</p>
-          <div class="os-topics">
-            <span class="os-topic">Open-Vocab Segmentation</span>
-            <span class="os-topic">VLM Evaluation</span>
-            <span class="os-topic">Cross-Modal Generalization</span>
-            <span class="os-topic">Benchmark</span>
-            <span class="os-topic">Multi-View</span>
-          </div>
-        </div>
-        <div class="ds-preview">
-          <img src="/assets/img/publication_preview/bench4.drawio.png" alt="AetherVision-Bench overview" />
-          <p class="ds-preview-caption">AetherVision-Bench spans aerial and ground perspectives across RGB and infrared modalities.</p>
+          <a href="https://arxiv.org/abs/2506.03709" target="_blank" class="os-link-pill">arXiv ↗</a>
+          <a href="/publications/pixel2perspective/" class="os-link-pill">Webpage ↗</a>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- ── Side Scan Sonar Dataset ── -->
+    <div class="ds-card">
+      <div class="ds-banner" style="background: linear-gradient(90deg, #0d9488, #0284c7);"></div>
+      <div class="ds-img-wrap">
+        <img src="/assets/img/publication_preview/m1_m2_detection_2.png" alt="Side Scan Sonar Dataset" />
+        <span class="ds-status ds-status-public">Public · Research</span>
+      </div>
+      <div class="ds-body">
+        <div class="ds-head">
+          <h3 class="ds-name">Side Scan Sonar Dataset</h3>
+          <p class="ds-subtitle">Syn2Real Underwater Mine-Like Object Detection</p>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat"><span class="ds-stat-icon">🌊</span><span class="ds-stat-val">SSS</span><span class="ds-stat-key">Sensor</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">💣</span><span class="ds-stat-val">Mine-Like</span><span class="ds-stat-key">Target</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🔄</span><span class="ds-stat-val">Syn + Real</span><span class="ds-stat-key">Domains</span></div>
+        </div>
+        <p class="ds-desc">
+          Paired <strong>synthetic and real Side-Scan Sonar (SSS)</strong> imagery curated for Syn2Real domain generalization research in underwater mine-like object detection. Supports evaluation of models trained on simulated environments and tested under real underwater acoustic imaging conditions.
+        </p>
+        <div class="ds-modalities">
+          <span class="ds-mod ds-mod-sonar">🔊 Side-Scan Sonar</span>
+          <span class="ds-mod ds-mod-sim">🖥️ Synthetic</span>
+          <span class="ds-mod ds-mod-ground">🌊 Underwater</span>
+        </div>
+        <div class="os-topics">
+          <span class="os-topic">Syn2Real</span>
+          <span class="os-topic">Domain Generalization</span>
+          <span class="os-topic">Object Detection</span>
+          <span class="os-topic">Underwater Perception</span>
+        </div>
+        <div class="ds-links">
+          <a href="https://ieeexplore.ieee.org/document/10919029/" target="_blank" class="os-link-pill">Paper ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Simulated IR Dataset ── -->
+    <div class="ds-card">
+      <div class="ds-banner" style="background: linear-gradient(90deg, #7c3aed, #db2777);"></div>
+      <div class="ds-img-wrap">
+        <img src="/assets/img/publication_preview/adain_final.drawio.png" alt="Simulated IR Dataset" />
+        <span class="ds-status ds-status-internal">Research · Internal</span>
+      </div>
+      <div class="ds-body">
+        <div class="ds-head">
+          <h3 class="ds-name">Simulated IR Dataset</h3>
+          <p class="ds-subtitle">Semi-Supervised RGB-to-IR Translation for Perception Training</p>
+        </div>
+        <div class="ds-stats">
+          <div class="ds-stat"><span class="ds-stat-icon">🌡️</span><span class="ds-stat-val">Infrared</span><span class="ds-stat-key">Modality</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🖥️</span><span class="ds-stat-val">Simulated</span><span class="ds-stat-key">Source</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🤖</span><span class="ds-stat-val">SSL</span><span class="ds-stat-key">Approach</span></div>
+        </div>
+        <p class="ds-desc">
+          Synthetically generated <strong>Infrared (IR) imagery</strong> produced via semi-supervised <strong>RGB-to-IR image translation</strong> for augmenting training pipelines in semantic segmentation and object detection tasks. Designed to bridge the modality gap where paired real IR data is scarce, enabling robust training of IR-capable perception models.
+        </p>
+        <div class="ds-modalities">
+          <span class="ds-mod ds-mod-rgb">📷 RGB (Source)</span>
+          <span class="ds-mod ds-mod-ir">🌡️ Infrared (Generated)</span>
+          <span class="ds-mod ds-mod-synth">⚙️ Synthetic</span>
+        </div>
+        <div class="os-topics">
+          <span class="os-topic">Image Translation</span>
+          <span class="os-topic">Semi-Supervised</span>
+          <span class="os-topic">Data Augmentation</span>
+          <span class="os-topic">IR Perception</span>
+        </div>
+        <div class="ds-links">
+          <a href="https://ieeexplore.ieee.org/document/10802815" target="_blank" class="os-link-pill">Paper ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .ds-grid -->
 </div>
