@@ -270,34 +270,42 @@ title: About Newton
       <div class="ds-banner" style="background: linear-gradient(90deg, #f97316, #ef4444);"></div>
       <div class="ds-img-wrap">
         <img src="/assets/img/publication_preview/indraeye.png" alt="IndraEye dataset" />
-        <span class="ds-status ds-status-kaggle">Kaggle · Public</span>
+        <span class="ds-status ds-status-kaggle">CVPR-W · Public</span>
       </div>
       <div class="ds-body">
         <div class="ds-head">
           <h3 class="ds-name">IndraEye</h3>
-          <p class="ds-subtitle">Multi-Spectral UAV Dataset · Aerial Object Detection</p>
+          <p class="ds-subtitle">First Multi-View Drone RGB-IR Dataset from the Indian Subcontinent</p>
         </div>
         <div class="ds-stats">
-          <div class="ds-stat"><span class="ds-stat-icon">📷</span><span class="ds-stat-val">EO + IR</span><span class="ds-stat-key">Modalities</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">🚁</span><span class="ds-stat-val">UAV</span><span class="ds-stat-key">Platform</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">🏆</span><span class="ds-stat-val">82 Teams</span><span class="ds-stat-key">Competition</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">📷</span><span class="ds-stat-val">RGB + IR</span><span class="ds-stat-key">Modalities</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🚁</span><span class="ds-stat-val">Multi-View</span><span class="ds-stat-key">Drone</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🌅</span><span class="ds-stat-val">Multi-ToD</span><span class="ds-stat-key">Illumination</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">📋</span><span class="ds-stat-val">PBVS '25</span><span class="ds-stat-key">Published</span></div>
         </div>
         <p class="ds-desc">
-          Paired <strong>Electro-Optical (RGB)</strong> and <strong>Infrared</strong> aerial imagery captured at slant angles from UAV platforms, designed for drone-based object detection under challenging real-world conditions. Hosted as India's first drone object detection Kaggle competition at ETAAV, IISc, sponsored by SwaYaan (MeitY, GoI).
+          The <strong>first multi-view drone-based RGB-IR dataset from the Indian subcontinent</strong>, built to support robust and accurate real-world vision systems. Captures diverse conditions spanning multiple viewpoints, altitudes, and backgrounds, with variations across times of day to evaluate robustness under changing illumination.
         </p>
+        <ul style="font-size:0.87rem; padding-left:1.2rem; margin:0.3rem 0 0.5rem; line-height:1.6;">
+          <li>Benchmarked for <strong>object detection</strong> and <strong>semantic segmentation</strong> tasks.</li>
+          <li>Multi-altitude captures covering slant-angle, nadir, and oblique drone perspectives.</li>
+          <li>Illumination diversity: dawn, daylight, dusk, and low-light conditions included.</li>
+        </ul>
         <div class="ds-modalities">
-          <span class="ds-mod ds-mod-rgb">📷 EO / RGB</span>
+          <span class="ds-mod ds-mod-rgb">📷 RGB</span>
           <span class="ds-mod ds-mod-ir">🌡️ Infrared</span>
-          <span class="ds-mod ds-mod-aerial">🚁 Aerial</span>
+          <span class="ds-mod ds-mod-aerial">🚁 Aerial / Drone</span>
         </div>
         <div class="os-topics">
           <span class="os-topic">Object Detection</span>
-          <span class="os-topic">Multi-Spectral Fusion</span>
-          <span class="os-topic">Domain Adaptation</span>
+          <span class="os-topic">Semantic Segmentation</span>
+          <span class="os-topic">Multi-Spectral</span>
+          <span class="os-topic">Sim-to-Real</span>
         </div>
         <div class="ds-links">
           <a href="https://www.kaggle.com/competitions/etaav-eo-ir" target="_blank" class="os-link-pill">Kaggle ↗</a>
-          <a href="https://ieeexplore.ieee.org/document/10052789" target="_blank" class="os-link-pill">Paper ↗</a>
+          <a href="https://arxiv.org/pdf/2212.07039" target="_blank" class="os-link-pill">CVPR-W ↗</a>
+          <span class="os-link-pill" style="opacity:0.55; cursor:default;">Dataset — coming soon</span>
         </div>
       </div>
     </div>
@@ -345,21 +353,27 @@ title: About Newton
       <div class="ds-banner" style="background: linear-gradient(90deg, #0d9488, #0284c7);"></div>
       <div class="ds-img-wrap">
         <img src="/assets/img/publication_preview/m1_m2_detection_2.png" alt="Side Scan Sonar Dataset" />
-        <span class="ds-status ds-status-public">Public · Research</span>
+        <span class="ds-status ds-status-public">IEEE OCEANS · Public</span>
       </div>
       <div class="ds-body">
         <div class="ds-head">
           <h3 class="ds-name">Side Scan Sonar Dataset</h3>
-          <p class="ds-subtitle">Syn2Real Underwater Mine-Like Object Detection</p>
+          <p class="ds-subtitle">Diffusion-Synthesised SSS Data for Underwater Mine Detection</p>
         </div>
         <div class="ds-stats">
-          <div class="ds-stat"><span class="ds-stat-icon">🌊</span><span class="ds-stat-val">SSS</span><span class="ds-stat-key">Sensor</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">💣</span><span class="ds-stat-val">Mine-Like</span><span class="ds-stat-key">Target</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">🔄</span><span class="ds-stat-val">Syn + Real</span><span class="ds-stat-key">Domains</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🔊</span><span class="ds-stat-val">SSS</span><span class="ds-stat-key">Sensor</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🧬</span><span class="ds-stat-val">Diffusion</span><span class="ds-stat-key">Synthesis</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🔄</span><span class="ds-stat-val">Syn2Real</span><span class="ds-stat-key">Domain</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">📋</span><span class="ds-stat-val">GRSL '25</span><span class="ds-stat-key">Published</span></div>
         </div>
         <p class="ds-desc">
-          Paired <strong>synthetic and real Side-Scan Sonar (SSS)</strong> imagery curated for Syn2Real domain generalization research in underwater mine-like object detection. Supports evaluation of models trained on simulated environments and tested under real underwater acoustic imaging conditions.
+          A <strong>synthetic side-scan sonar (SSS) dataset</strong> generated via diffusion-based modelling, addressing the critical scarcity of real-world SSS data that causes overfitting and poor generalisation in underwater deep learning pipelines. Enables robust training for mine-like object detection and segmentation in unseen underwater environments.
         </p>
+        <ul style="font-size:0.87rem; padding-left:1.2rem; margin:0.3rem 0 0.5rem; line-height:1.6;">
+          <li>Highlights data scarcity as a root cause of degraded generalisation, and proposes synthetic augmentation as a scalable fix.</li>
+          <li>Demonstrates significant improvements in <strong>object detection</strong> and <strong>semantic segmentation</strong> on downstream benchmarks.</li>
+          <li>Published at <strong>IEEE OCEANS</strong> and <strong>IEEE Geoscience &amp; Remote Sensing Letters</strong>.</li>
+        </ul>
         <div class="ds-modalities">
           <span class="ds-mod ds-mod-sonar">🔊 Side-Scan Sonar</span>
           <span class="ds-mod ds-mod-sim">🖥️ Synthetic</span>
@@ -367,12 +381,13 @@ title: About Newton
         </div>
         <div class="os-topics">
           <span class="os-topic">Syn2Real</span>
+          <span class="os-topic">Diffusion Models</span>
           <span class="os-topic">Domain Generalization</span>
-          <span class="os-topic">Object Detection</span>
           <span class="os-topic">Underwater Perception</span>
         </div>
         <div class="ds-links">
-          <a href="https://ieeexplore.ieee.org/document/10919029/" target="_blank" class="os-link-pill">Paper ↗</a>
+          <a href="https://ieeexplore.ieee.org/document/10919029/" target="_blank" class="os-link-pill">IEEE GRSL ↗</a>
+          <span class="os-link-pill" style="opacity:0.55; cursor:default;">Dataset — coming soon</span>
         </div>
       </div>
     </div>
@@ -382,34 +397,41 @@ title: About Newton
       <div class="ds-banner" style="background: linear-gradient(90deg, #7c3aed, #db2777);"></div>
       <div class="ds-img-wrap">
         <img src="/assets/img/publication_preview/adain_final.drawio.png" alt="Simulated IR Dataset" />
-        <span class="ds-status ds-status-internal">Research · Internal</span>
+        <span class="ds-status ds-status-internal">IROS 2024 · Research</span>
       </div>
       <div class="ds-body">
         <div class="ds-head">
           <h3 class="ds-name">Simulated IR Dataset</h3>
-          <p class="ds-subtitle">Semi-Supervised RGB-to-IR Translation for Perception Training</p>
+          <p class="ds-subtitle">SSL-RGB2IR · Self-Supervised Infrared Generation for Perception Training</p>
         </div>
         <div class="ds-stats">
           <div class="ds-stat"><span class="ds-stat-icon">🌡️</span><span class="ds-stat-val">Infrared</span><span class="ds-stat-key">Modality</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">🖥️</span><span class="ds-stat-val">Simulated</span><span class="ds-stat-key">Source</span></div>
-          <div class="ds-stat"><span class="ds-stat-icon">🤖</span><span class="ds-stat-val">SSL</span><span class="ds-stat-key">Approach</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🤖</span><span class="ds-stat-val">Self-Supervised</span><span class="ds-stat-key">Method</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">🔁</span><span class="ds-stat-val">Sim-to-Real</span><span class="ds-stat-key">Scenario</span></div>
+          <div class="ds-stat"><span class="ds-stat-icon">📋</span><span class="ds-stat-val">IROS '24</span><span class="ds-stat-key">Published</span></div>
         </div>
         <p class="ds-desc">
-          Synthetically generated <strong>Infrared (IR) imagery</strong> produced via semi-supervised <strong>RGB-to-IR image translation</strong> for augmenting training pipelines in semantic segmentation and object detection tasks. Designed to bridge the modality gap where paired real IR data is scarce, enabling robust training of IR-capable perception models.
+          Infrared imagery dataset generated via <strong>SSL-RGB2IR</strong>, a self-supervised RGB-to-IR image-to-image translation framework, supporting thermal perception and multi-modal learning for robotics in low-light environments.
         </p>
+        <ul style="font-size:0.87rem; padding-left:1.2rem; margin:0.3rem 0 0.5rem; line-height:1.6;">
+          <li>Deep learning models trained on SSL-RGB2IR–generated IR images consistently <strong>outperform models trained on other translation methods</strong>.</li>
+          <li>Demonstrates consistent performance gains in <strong>semantic segmentation</strong> and <strong>object detection</strong>, particularly in sim-to-real transfer scenarios.</li>
+          <li>Bridges the modality gap where paired real IR data is scarce or costly to collect.</li>
+        </ul>
         <div class="ds-modalities">
           <span class="ds-mod ds-mod-rgb">📷 RGB (Source)</span>
           <span class="ds-mod ds-mod-ir">🌡️ Infrared (Generated)</span>
           <span class="ds-mod ds-mod-synth">⚙️ Synthetic</span>
         </div>
         <div class="os-topics">
-          <span class="os-topic">Image Translation</span>
-          <span class="os-topic">Semi-Supervised</span>
-          <span class="os-topic">Data Augmentation</span>
+          <span class="os-topic">Self-Supervised Learning</span>
+          <span class="os-topic">Image-to-Image Translation</span>
+          <span class="os-topic">Sim-to-Real</span>
           <span class="os-topic">IR Perception</span>
         </div>
         <div class="ds-links">
-          <a href="https://ieeexplore.ieee.org/document/10802815" target="_blank" class="os-link-pill">Paper ↗</a>
+          <a href="https://ieeexplore.ieee.org/document/10802815" target="_blank" class="os-link-pill">IROS 2024 ↗</a>
+          <span class="os-link-pill" style="opacity:0.55; cursor:default;">Dataset — coming soon</span>
         </div>
       </div>
     </div>
