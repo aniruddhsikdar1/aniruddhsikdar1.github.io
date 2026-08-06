@@ -26,13 +26,15 @@
       department: "3IA Côte d'Azur · STARS Team"
       year: Sep 2026 –
       maindescription: >-
-        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
-          <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">
-            <img src="/assets/img/3ia.png" alt="3IA Côte d'Azur" style="height:30px; object-fit:contain;">
+        <div style="margin:8px 0 12px 0;">
+          <a href="https://3ia.univ-cotedazur.eu/about" target="_blank" style="display:inline-block;">
+            <img src="/assets/img/3ia_uca_banner.png" alt="3IA Côte d'Azur – Université Côte d'Azur" style="height:56px; border-radius:6px; object-fit:cover; display:block;">
           </a>
-          <a href="https://www.inria.fr/en" target="_blank">
-            <img src="/assets/img/inria.svg" alt="INRIA" style="height:30px; object-fit:contain;">
-          </a>
+          <div style="display:flex; gap:14px; align-items:center; margin-top:10px;">
+            <a href="https://www.inria.fr/en" target="_blank">
+              <img src="/assets/img/inria.svg" alt="INRIA" style="height:30px; object-fit:contain;">
+            </a>
+          </div>
         </div>
       description:
         - "Working with the <a href='https://team.inria.fr/stars/' target='_blank'>STARS team</a> under <a href='https://www-sop.inria.fr/members/Francois.Bremond/' target='_blank'>Prof. François Brémond</a>."

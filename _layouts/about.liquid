@@ -174,16 +174,18 @@ layout: default
     {% endif %}
 
     <p class="hp-slabel">Affiliations</p>
-    <div class="hp-aff">
+    <div class="hp-aff" style="flex-direction: column; align-items: flex-start; gap: 8px;">
       <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">
-        <img src="{{ '/assets/img/3ia.png' | relative_url }}" alt="3IA Côte d'Azur" style="height: 26px;" />
+        <img src="{{ '/assets/img/3ia_uca_banner.png' | relative_url }}" alt="3IA Côte d'Azur – Université Côte d'Azur" style="height: 44px; border-radius: 5px;" />
       </a>
-      <a href="https://www.inria.fr/en" target="_blank">
-        <img src="{{ '/assets/img/inria.svg' | relative_url }}" alt="INRIA" style="height: 30px;" />
-      </a>
-      <a href="https://cps.iisc.ac.in" target="_blank">
-        <img src="{{ '/assets/img/rbccps.png' | relative_url }}" alt="RBCCPS" style="height: 36px;" />
-      </a>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <a href="https://www.inria.fr/en" target="_blank">
+          <img src="{{ '/assets/img/inria.svg' | relative_url }}" alt="INRIA" style="height: 28px;" />
+        </a>
+        <a href="https://cps.iisc.ac.in" target="_blank">
+          <img src="{{ '/assets/img/rbccps.png' | relative_url }}" alt="RBCCPS" style="height: 34px;" />
+        </a>
+      </div>
     </div>
   </aside>
 
