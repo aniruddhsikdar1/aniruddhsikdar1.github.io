@@ -3,33 +3,28 @@ layout: default
 ---
 <style>
 /* ══════════════════════════════════════════
-   CV — Enhanced Visual Design
+   CV — Clean Minimal Design
    ══════════════════════════════════════════ */
 
 /* ── Section cards ── */
 div.cv div.card {
   border: 1px solid var(--global-divider-color) !important;
-  border-left: 4px solid var(--global-theme-color) !important;
-  border-radius: 10px !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
-  margin-top: 1.4rem !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  margin-top: 1.2rem !important;
   overflow: visible !important;
-  transition: box-shadow 0.2s ease;
-}
-div.cv div.card:hover {
-  box-shadow: 0 5px 22px rgba(0,0,0,0.11) !important;
 }
 
 /* ── Section headings ── */
 div.cv h3.card-title {
-  font-size: 0.70rem !important;
-  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.13em !important;
-  color: var(--global-theme-color) !important;
-  padding-bottom: 0.5rem !important;
-  margin-bottom: 0.1rem !important;
+  letter-spacing: 0.12em !important;
+  color: var(--global-text-color-light) !important;
   border-bottom: 1px solid var(--global-divider-color) !important;
+  padding-bottom: 0.4rem !important;
+  margin-bottom: 0 !important;
 }
 
 /* ── List items (timeline rows) ── */
@@ -37,83 +32,81 @@ div.cv .list-group-item {
   background: transparent !important;
   border: none !important;
   border-bottom: 1px solid var(--global-divider-color) !important;
-  padding: 1rem 0.4rem !important;
-  transition: background 0.15s;
+  padding: 0.9rem 0.3rem !important;
 }
 div.cv .list-group-item:last-child {
   border-bottom: none !important;
 }
-div.cv .list-group-item:hover {
-  background: rgba(0,0,0,0.025) !important;
-  border-radius: 6px;
-}
 
-/* ── Year / date badge ── */
+/* ── Year / date badge — muted pill ── */
 div.cv .badge.danger-color-dark {
-  background-color: var(--global-theme-color) !important;
-  color: #fff !important;
-  border-radius: 7px !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  padding: 4px 10px !important;
-  letter-spacing: 0.04em !important;
-  min-width: 66px !important;
+  background: transparent !important;
+  color: var(--global-text-color-light) !important;
+  border: 1px solid var(--global-divider-color) !important;
+  border-radius: 5px !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  padding: 3px 8px !important;
+  letter-spacing: 0.02em !important;
+  min-width: 70px !important;
   text-align: center !important;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.20) !important;
+  box-shadow: none !important;
   text-transform: none !important;
+  line-height: 1.5 !important;
 }
 
 /* ── Entry title ── */
 div.cv h6.title {
-  font-size: 0.98rem !important;
+  font-size: 0.95rem !important;
   font-weight: 700 !important;
   color: var(--global-text-color) !important;
-  margin-bottom: 0.25rem !important;
+  margin-bottom: 0.2rem !important;
   line-height: 1.4 !important;
 }
 
 /* ── Institution / department ── */
 div.cv table.institution {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.4rem !important;
 }
 div.cv td.institution {
-  font-size: 0.86rem !important;
+  font-size: 0.85rem !important;
   line-height: 1.5 !important;
   color: var(--global-text-color) !important;
 }
 div.cv td.department {
-  font-size: 0.80rem !important;
+  font-size: 0.79rem !important;
   color: var(--global-text-color-light) !important;
 }
 
 /* ── Description bullets ── */
 div.cv ul.items {
-  margin-top: 0.35rem !important;
-  padding-left: 1.1rem !important;
+  margin-top: 0.3rem !important;
+  padding-left: 1rem !important;
 }
 div.cv ul.items li .item,
 div.cv ul.items li .subitem {
-  font-size: 0.87rem !important;
-  line-height: 1.63 !important;
+  font-size: 0.86rem !important;
+  line-height: 1.6 !important;
+  color: var(--global-text-color) !important;
 }
 div.cv ul.items li .item-title {
-  font-size: 0.90rem !important;
+  font-size: 0.88rem !important;
   font-weight: 600 !important;
 }
 
 /* ── General Info map table ── */
 div.cv .table-cv.table-sm td {
-  padding: 0.35rem 0.5rem !important;
-  font-size: 0.88rem !important;
+  padding: 0.3rem 0.45rem !important;
+  font-size: 0.87rem !important;
   line-height: 1.5 !important;
   vertical-align: middle !important;
 }
 
 /* ── Link / download buttons ── */
 div.cv a.btncv {
-  border-radius: 5px !important;
-  font-size: 0.68rem !important;
-  padding: 3px 10px !important;
+  border-radius: 4px !important;
+  font-size: 0.67rem !important;
+  padding: 2px 9px !important;
   transition: background 0.15s, color 0.15s !important;
 }
 div.cv a.btncv:hover {
@@ -124,8 +117,8 @@ div.cv a.btncv:hover {
 
 /* ── Location ── */
 div.cv p.location {
-  font-size: 0.68rem !important;
-  margin-top: 4px !important;
+  font-size: 0.67rem !important;
+  margin-top: 3px !important;
   color: var(--global-text-color-light) !important;
 }
 </style>

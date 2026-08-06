@@ -26,15 +26,13 @@
       department: "3IA Côte d'Azur · STARS Team"
       year: Sep 2026 –
       maindescription: >-
-        <div style="margin:8px 0 12px 0;">
-          <a href="https://3ia.univ-cotedazur.eu/about" target="_blank" style="display:inline-block;">
-            <img src="/assets/img/3ia_uca_banner.png" alt="3IA Côte d'Azur – Université Côte d'Azur" style="height:56px; border-radius:6px; object-fit:cover; display:block;">
+        <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:6px 0 10px 0;">
+          <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">
+            <img src="/assets/img/3ia_uca_banner.png" alt="3IA Côte d'Azur – Université Côte d'Azur" style="height:38px; border-radius:4px; object-fit:cover;">
           </a>
-          <div style="display:flex; gap:14px; align-items:center; margin-top:10px;">
-            <a href="https://www.inria.fr/en" target="_blank">
-              <img src="/assets/img/inria.svg" alt="INRIA" style="height:30px; object-fit:contain;">
-            </a>
-          </div>
+          <a href="https://www.inria.fr/en" target="_blank">
+            <img src="/assets/img/inria.svg" alt="INRIA" style="height:26px; object-fit:contain;">
+          </a>
         </div>
       description:
         - "Working with the <a href='https://team.inria.fr/stars/' target='_blank'>STARS team</a> under <a href='https://www-sop.inria.fr/members/Francois.Bremond/' target='_blank'>Prof. François Brémond</a>."
@@ -44,9 +42,9 @@
       institution: "Artificial Intelligence and Robotics Lab (AIRL), Indian Institute of Science (IISc), Bangalore, India"
       year: 2024 – 2026
       maindescription: >-
-        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+        <div style="display:flex; gap:12px; align-items:center; margin:6px 0 10px 0;">
           <a href="https://www.iisc.ac.in" target="_blank">
-            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:28px; object-fit:contain;">
           </a>
         </div>
       description:
@@ -57,9 +55,9 @@
       institution: "Department of Aerospace Engineering, Indian Institute of Science (IISc), Bangalore, India"
       year: 2023 – 2024
       maindescription: >-
-        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+        <div style="display:flex; gap:12px; align-items:center; margin:6px 0 10px 0;">
           <a href="https://aero.iisc.ac.in" target="_blank">
-            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:28px; object-fit:contain;">
           </a>
         </div>
       description:
@@ -70,9 +68,12 @@
       institution: "Robert Bosch Centre for Cyber-Physical Systems (RBCCPS), Indian Institute of Science (IISc), Bangalore, India"
       year: 2021 – 2023
       maindescription: >-
-        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
+        <div style="display:flex; gap:12px; align-items:center; margin:6px 0 10px 0;">
           <a href="https://cps.iisc.ac.in" target="_blank">
-            <img src="/assets/img/rbccps.png" alt="RBCCPS" style="height:30px; object-fit:contain;">
+            <img src="/assets/img/rbccps.png" alt="RBCCPS" style="height:28px; object-fit:contain;">
+          </a>
+          <a href="https://www.iisc.ac.in" target="_blank">
+            <img src="/assets/img/iisc.png" alt="IISc" style="height:28px; object-fit:contain;">
           </a>
         </div>
       description:
@@ -82,12 +83,6 @@
     - title: Consultant
       institution: "Visist.AI, Bangalore, India"
       year: 2024 – 2025
-      maindescription: >-
-        <div style="display:flex; gap:14px; align-items:center; margin:6px 0 10px 0;">
-          <a href="https://www.iisc.ac.in" target="_blank">
-            <img src="/assets/img/iisc.png" alt="IISc" style="height:30px; object-fit:contain;">
-          </a>
-        </div>
       description:
         - Developed computer vision solutions for noisy, high-speed environments in sports analytics.
         - Emphasis on robustness, real-time performance, and reliable operation under challenging conditions.
