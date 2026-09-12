@@ -318,8 +318,37 @@ nav_order: 6
   <h2>📚 Teaching Activities</h2>
   <p class="ac-section-desc">Courses where I served as Co-Principal Investigator or Teaching Assistant.</p>
 
+  <!-- Inria / UCA Master Course -->
+  <h3 style="font-size:1.05rem; font-weight:700; margin: 1.2rem 0 0.65rem; color: var(--global-text-color); letter-spacing: 0.01em;">Master's Courses — Inria / 3IA UCA</h3>
+
+  <div class="ac-course">
+    <div class="ac-course-header">
+      <span class="ac-course-num">INRIA · UCA</span>
+      <h3>Deep Learning for Computer Vision</h3>
+    </div>
+    <div class="ac-course-body">
+      <p>
+        <span class="ac-badge badge-role-copi">Instructor</span>
+        <span class="ac-badge badge-venue">Winter 2026–27 · Université Côte d'Azur</span>
+        <a href="https://www-sop.inria.fr/members/Francois.Bremond/MSclass/deepLearningWinterSchool27/UCA_master/index.html" target="_blank">Course Website ↗</a>
+      </p>
+      <p>Graduate-level course at <strong>Université Côte d'Azur</strong>, delivered by the Inria STARS team in partnership with 3IA Côte d'Azur. Held every Friday, 1:30–4:30 PM, beginning October 9, 2026. Co-taught with Prof. François Brémond, Diana Laura Borza, Aglind Reka, Mahmoud Ali, and Seongro Yoon.</p>
+      <ul>
+        <li><strong>Introduction to PyTorch</strong> — tensors, autograd, building and training neural networks from scratch.</li>
+        <li><strong>Semantic Segmentation</strong> — pixel-level scene understanding, encoder-decoder architectures, and evaluation on real-world benchmarks.</li>
+        <li><strong>Target Tracking</strong> — single and multi-object tracking, motion models, and appearance-based methods.</li>
+      </ul>
+      <p class="ac-topic-label">My Modules</p>
+      <div class="ac-topics">
+        <span class="ac-topic">Intro to PyTorch</span>
+        <span class="ac-topic">Semantic Segmentation</span>
+        <span class="ac-topic">Target Tracking</span>
+      </div>
+    </div>
+  </div>
+
   <!-- NPTEL Courses -->
-  <h3 style="font-size:1.05rem; font-weight:700; margin: 1.2rem 0 0.65rem; color: var(--global-text-color); letter-spacing: 0.01em;">NPTEL Courses</h3>
+  <h3 style="font-size:1.05rem; font-weight:700; margin: 1.5rem 0 0.65rem; color: var(--global-text-color); letter-spacing: 0.01em;">NPTEL Courses</h3>
 
   <div class="ac-course">
     <div class="ac-course-header">
