@@ -344,6 +344,21 @@ nav_order: 6
         <span class="ac-topic">Semantic Segmentation</span>
         <span class="ac-topic">Target Tracking</span>
       </div>
+      <p class="ac-topic-label" style="margin-top:0.9rem;">Lecture Videos</p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.3rem;">
+        <a href="https://www-sop.inria.fr/members/Francois.Bremond/MSclass/deepLearningWinterSchool27/UCA_master/videos/GMT20261009_Anirudh_1920x1080.mp4" target="_blank"
+           style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.78rem; font-weight:600; padding:4px 13px; border-radius:6px; border:1px solid var(--global-theme-color); color:var(--global-theme-color); text-decoration:none; transition:background 0.15s,color 0.15s;"
+           onmouseover="this.style.background='var(--global-theme-color)';this.style.color='#fff';"
+           onmouseout="this.style.background='';this.style.color='var(--global-theme-color)';">
+          ▶ PyTorch Basics
+        </a>
+        <a href="https://www-sop.inria.fr/members/Francois.Bremond/MSclass/deepLearningWinterSchool27/UCA_master/videos/Object_Tracking_Anirudh.mp4" target="_blank"
+           style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.78rem; font-weight:600; padding:4px 13px; border-radius:6px; border:1px solid var(--global-theme-color); color:var(--global-theme-color); text-decoration:none; transition:background 0.15s,color 0.15s;"
+           onmouseover="this.style.background='var(--global-theme-color)';this.style.color='#fff';"
+           onmouseout="this.style.background='';this.style.color='var(--global-theme-color)';">
+          ▶ Object Tracking 1
+        </a>
+      </div>
     </div>
   </div>
 
