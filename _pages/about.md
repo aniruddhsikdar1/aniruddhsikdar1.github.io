@@ -40,6 +40,10 @@ selected_papers: false
 social: true
 ---
 I am currently a <strong>Postdoctoral Fellow</strong> at <a href="https://3ia.univ-cotedazur.eu/about" target="_blank">3IA Côte d'Azur</a>, working with the <a href="https://team.inria.fr/stars/" target="_blank">STARS team</a> at <a href="https://www.inria.fr/en/inria-centre-universite-cote-azur" target="_blank">Inria – Université Côte d'Azur</a> under <a href="https://www-sop.inria.fr/members/Francois.Bremond/" target="_blank">Prof. François Brémond</a>. My research focuses on video understanding and reasoning, with an emphasis on anomaly detection and human-to-human interaction analysis.
+<ul style="margin-top:0.5rem; margin-bottom:0; padding-left:1.4rem; font-size:0.95rem;">
+  <li>Anomaly detection and human interaction analysis in collaboration with <a href="https://www.tri.global" target="_blank">Toyota Research Institute</a> (Europe &amp; Japan).</li>
+  <li>Human behaviour understanding in collaboration with <a href="https://www.cobtek.fr" target="_blank">CobTek</a>, Université Côte d'Azur.</li>
+</ul>
 
 Previously, I was a <strong>Project Scientist-I</strong> at the <a href="https://airl-iisc.in/home" target="_blank">Artificial Intelligence and Robotics Lab (AIRL)</a>, Indian Institute of Science (<a href="https://www.iisc.ac.in" target="_blank">IISc</a>), where I also served as a <strong>Co-Principal Investigator</strong> for an <a href="https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_ee96" target="_blank">NPTEL course on AI-driven perception, learning, and mapping for drones</a> (<a href="https://www.youtube.com/watch?v=tQ7kX5Xpf70&list=PLgMDNELGJ1CZZLI8nL0sDXJ6vPOj5p4Hv&index=15" target="_blank">watch on YouTube</a>), focused on practical education in autonomous navigation and aerial robotics. I have also worked as a <strong>Consultant</strong> at <a href="https://www.visist.ai/#/" target="_blank">Visist.AI</a>, developing computer vision solutions for noisy, high-speed environments, particularly in <strong>sports analytics</strong>, with an emphasis on robustness and real-time performance.
 
